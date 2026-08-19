@@ -30,4 +30,4 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap
-Sitemap: https://turbinando-experts.pages.dev/sitemap.xml
+Sitemap: https://turbinandoexperts.com/sitemap.xml
