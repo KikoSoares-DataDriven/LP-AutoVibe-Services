@@ -91,18 +91,10 @@ Landing page "Turbinando Experts" — **sistemas sob medida com IA** para pequen
 
 `https://wa.me/5551920000513?text=Quero+a+an%C3%A1lise+gratuita+do+meu+neg%C3%B3cio`
 
-## 🚀 Deploy Pendente
+## 🚀 Deploy Realizado ✅
 
-```bash
-# 1. Git init + commit + push pra GitHub
-git init && git add . && git commit -m "Turbinando Experts v3.0 — sistemas sob medida"
-git remote add origin <repo-url>
-git push -u origin main
-
-# 2. Cloudflare Pages
-# → Workers & Pages → Create → Pages → Connect to Git
-# → Build command: (vazio) · Output: /
-```
+O repositório do GitHub [LP-AutoVibe-Services](https://github.com/KikoSoares-DataDriven/LP-AutoVibe-Services) está conectado ao Cloudflare Pages.
+Qualquer `git push` no branch `main` irá disparar um novo deploy automaticamente.
 
 ## 📝 Conteúdo a Customizar (placeholders ou versões iniciais)
 
@@ -123,14 +115,12 @@ git push -u origin main
 
 ## 🔄 Próximos Passos Sugeridos
 
-1. Subir pro Cloudflare Pages
-2. Cadastrar em Google Search Console + Bing Webmaster
-3. Trocar `turbinando-experts.pages.dev` pelo domínio custom (se houver)
-4. Atualizar og-image.svg com nova copy v3.0 (ou PNG)
-5. Adicionar Google Analytics / Plausible
-6. A/B test no CTA (texto, cor, posição)
-7. Adicionar depoimentos reais (com permissão) e remover "caso ilustrativo"
-8. Adicionar seção "Cases reais" quando houver 2-3 pra mostrar
+1. Cadastrar em Google Search Console + Bing Webmaster
+2. Configurar o domínio customizado (se houver) no painel do Cloudflare Pages
+3. Atualizar og-image.svg com nova copy v3.0 (ou PNG)
+4. Adicionar código de rastreamento (Google Analytics / Plausible) se necessário
+5. Adicionar depoimentos reais e remover marcações de "caso ilustrativo"
+6. Adicionar seção de "Cases reais" quando disponíveis
 
 ## 💡 Skills Carregadas neste Projeto
 
@@ -140,6 +130,6 @@ git push -u origin main
 
 ---
 
-**Última atualização:** 04/jun/2026 23h15
-**Status:** Pronto pra deploy ✅
+**Última atualização:** 07/jun/2026 04h05
+**Status:** Implantado no Cloudflare Pages e conectado ao GitHub 🚀
 **Modo conversa:** Caveman full (padrão)
