@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#050807">
+  <meta name="color-scheme" content="dark">
+
+  <title>Política de Privacidade · Turbinando Experts</title>
+  <meta name="description" content="Política de Privacidade do site Turbinando Experts — como coletamos, usamos e protegemos seus dados pessoais, em conformidade com a LGPD.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://turbinandoexperts.com/politica-de-privacidade.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-0: #050807;
+      --bg-1: #0A0F0B;
+      --bg-2: #111814;
+      --border: #1A2520;
+      --border-strong: #243329;
+      --green: #00E676;
+      --green-dim: #00B85F;
+      --text-0: #F4FFF4;
+      --text-1: #B8C8BC;
+      --text-2: #6A7A70;
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Manrope', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      --r-md: 10px;
+      --space: clamp(16px, 4vw, 32px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-0);
+      color: var(--text-1);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--green); }
+    .top-bar {
+      border-bottom: 1px solid var(--border);
+      padding: 20px var(--space);
+    }
+    .top-bar-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text-0);
+    }
+    .logo span { color: var(--green); }
+    .logo-icon {
+      width: 26px; height: 26px;
+      background: var(--green);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--bg-0);
+    }
+    .logo-icon svg { width: 14px; height: 14px; }
+    .back-link {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      color: var(--text-2);
+      border: 1px solid var(--border-strong);
+      padding: 8px 14px;
+      border-radius: 999px;
+    }
+    .back-link:hover { color: var(--green); border-color: var(--green); }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 56px var(--space) 96px;
+    }
+    .doc-eyebrow {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--green);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      padding: 5px 12px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: var(--font-display);
+      color: var(--text-0);
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .doc-updated {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-2);
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-family: var(--font-display);
+      color: var(--text-0);
+      font-size: 19px;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+    h2 span { color: var(--green); font-family: var(--font-mono); font-size: 14px; margin-right: 8px; }
+    p { margin-bottom: 14px; color: var(--text-1); }
+    ul { margin: 0 0 14px 20px; }
+    li { margin-bottom: 8px; color: var(--text-1); }
+    strong { color: var(--text-0); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--green);
+      background: var(--bg-1);
+    }
+    .contact-box {
+      margin-top: 48px;
+      padding: 24px;
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+    }
+    .contact-box p { margin-bottom: 6px; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px var(--space);
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-2);
+    }
+    footer a { color: var(--text-2); }
+    footer a:hover { color: var(--green); }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <a href="index.html" class="logo" aria-label="Turbinando Experts início">
+        <span class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </span>
+        Turbinando <span>Experts</span>
+      </a>
+      <a href="index.html" class="back-link">← Voltar ao site</a>
+    </div>
+  </div>
+
+  <main>
+    <span class="doc-eyebrow">// documento legal · LGPD</span>
+    <h1>Política de Privacidade</h1>
+    <p class="doc-updated">Última atualização: agosto de 2026</p>
+
+    <p>A privacidade e a proteção dos seus dados pessoais são levadas a sério pela <strong>Turbinando Experts</strong>. Esta Política de Privacidade explica, de forma clara e transparente, como coletamos, usamos, armazenamos, compartilhamos e protegemos os dados pessoais de quem visita o site <strong>turbinandoexperts.com</strong> ("Site") ou entra em contato pelos canais nele disponibilizados, em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD)</strong>.</p>
+
+    <h2><span>1.</span>Quem é o controlador dos dados</h2>
+    <p>O controlador dos dados pessoais tratados por meio deste Site é <strong>Hormy Soares Filho (Kiko Soares)</strong>, atuando sob a marca <strong>Turbinando Experts</strong>, com sede em Porto Alegre/RS, Brasil. Para qualquer assunto relacionado a esta Política, utilize os canais de contato listados na seção 9.</p>
+
+    <h2><span>2.</span>Quais dados coletamos</h2>
+    <p>Coletamos apenas os dados necessários para viabilizar o atendimento e a comunicação comercial. Isso inclui:</p>
+    <table>
+      <tr><th>Dado</th><th>Quando é coletado</th></tr>
+      <tr><td>Nome</td><td>Quando informado voluntariamente em conversa via WhatsApp ou formulário de contato</td></tr>
+      <tr><td>Número de telefone / WhatsApp</td><td>Ao clicar em botões de contato que direcionam ao WhatsApp, ou ao informar o número em formulário</td></tr>
+      <tr><td>E-mail</td><td>Quando informado voluntariamente em conversa ou formulário de contato</td></tr>
+      <tr><td>Informações sobre o negócio do Usuário</td><td>Quando compartilhadas espontaneamente durante o atendimento comercial (ex.: segmento, dores, objetivos)</td></tr>
+      <tr><td>Dados técnicos de navegação</td><td>Registros básicos de acesso ao Site (ex.: data/hora, endereço IP), gerados automaticamente pela infraestrutura de hospedagem</td></tr>
+    </table>
+    <p>Atualmente, o Site <strong>não utiliza cookies de rastreamento ou pixels de publicidade</strong> (como Google Analytics ou Meta Pixel). Caso essa realidade mude no futuro, esta Política será atualizada para refletir com precisão as ferramentas em uso, e o consentimento adequado será solicitado quando exigido por lei.</p>
+
+    <h2><span>3.</span>Para que usamos seus dados</h2>
+    <ul>
+      <li>Responder a contatos e solicitações de orçamento ou análise gratuita do negócio;</li>
+      <li>Conduzir o atendimento comercial e apresentar propostas de serviços;</li>
+      <li>Manter comunicação sobre o andamento de projetos contratados;</li>
+      <li>Cumprir obrigações legais ou regulatórias, quando aplicável;</li>
+      <li>Garantir a segurança e o funcionamento adequado do Site.</li>
+    </ul>
+    <p>Não utilizamos os dados coletados para tomada de decisão totalmente automatizada que produza efeitos jurídicos ou impacto significativo sobre o Usuário.</p>
+
+    <h2><span>4.</span>Base legal para o tratamento</h2>
+    <p>O tratamento dos dados pessoais descritos nesta Política se fundamenta principalmente em:</p>
+    <ul>
+      <li><strong>Consentimento</strong> (art. 7º, I, LGPD), quando você inicia voluntariamente um contato via WhatsApp ou formulário;</li>
+      <li><strong>Execução de procedimentos preliminares relacionados a contrato</strong> (art. 7º, V, LGPD), no contexto de elaboração de propostas e orçamentos a seu pedido;</li>
+      <li><strong>Legítimo interesse</strong> (art. 7º, IX, LGPD), para fins de segurança e melhoria contínua do Site, sempre respeitando seus direitos e expectativas de privacidade.</li>
+    </ul>
+
+    <h2><span>5.</span>Com quem compartilhamos seus dados</h2>
+    <p>Não vendemos nem alugamos dados pessoais a terceiros. O compartilhamento ocorre de forma limitada e necessária, com:</p>
+    <ul>
+      <li><strong>WhatsApp / Meta Platforms</strong>, como canal de comunicação escolhido pelo próprio Usuário para iniciar contato;</li>
+      <li><strong>Provedores de hospedagem e infraestrutura</strong> (ex.: Cloudflare), estritamente para manter o Site no ar e funcionando;</li>
+      <li><strong>Autoridades públicas</strong>, quando exigido por lei, ordem judicial ou requisição regulatória.</li>
+    </ul>
+
+    <h2><span>6.</span>Por quanto tempo guardamos seus dados</h2>
+    <p>Os dados pessoais são mantidos pelo tempo necessário para cumprir as finalidades descritas nesta Política, para atender obrigações legais e contratuais aplicáveis, ou até que você solicite sua exclusão, o que ocorrer primeiro — observadas eventuais hipóteses legais de retenção obrigatória (ex.: obrigações fiscais e contratuais).</p>
+
+    <h2><span>7.</span>Como protegemos seus dados</h2>
+    <p>Adotamos medidas técnicas e organizacionais razoáveis, compatíveis com o porte da operação, para proteger os dados pessoais contra acessos não autorizados, perda, alteração ou divulgação indevida, incluindo o uso de canais oficiais de comunicação e infraestrutura de hospedagem com práticas de segurança adequadas.</p>
+
+    <h2><span>8.</span>Seus direitos como titular de dados</h2>
+    <p>Nos termos do art. 18 da LGPD, você tem direito a, mediante solicitação:</p>
+    <ul>
+      <li>Confirmar a existência de tratamento de seus dados;</li>
+      <li>Acessar os dados pessoais que temos sobre você;</li>
+      <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+      <li>Solicitar anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade com a lei;</li>
+      <li>Solicitar a portabilidade dos dados a outro fornecedor de serviço, mediante requisição expressa;</li>
+      <li>Solicitar a eliminação dos dados tratados com base em consentimento;</li>
+      <li>Obter informação sobre as entidades com as quais os dados foram compartilhados;</li>
+      <li>Revogar o consentimento a qualquer momento, sem prejuízo da licitude do tratamento realizado anteriormente;</li>
+      <li>Solicitar revisão de decisões tomadas unicamente com base em tratamento automatizado, quando aplicável.</li>
+    </ul>
+    <p>Para exercer qualquer desses direitos, entre em contato pelos canais indicados na seção 9. Responderemos dentro dos prazos previstos na LGPD.</p>
+
+    <h2><span>9.</span>Contato do controlador / encarregado</h2>
+    <div class="contact-box">
+      <p><strong>Turbinando Experts — Kiko Soares</strong></p>
+      <p>Porto Alegre/RS · Brasil</p>
+      <p>WhatsApp: <a href="https://wa.me/5551920000513" target="_blank" rel="noopener noreferrer">+55 (51) 92000-0513</a></p>
+      <p>Assunto sugerido: "Privacidade / LGPD"</p>
+    </div>
+
+    <h2><span>10.</span>Alterações desta Política</h2>
+    <p>Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças nas práticas de tratamento de dados, em novas funcionalidades do Site ou em exigências legais. A data da última atualização está sempre indicada no topo desta página. Recomendamos revisitar este documento periodicamente.</p>
+
+    <p>Consulte também nossos <a href="termos-de-uso.html">Termos de Uso</a>.</p>
+  </main>
+
+  <footer>
+    <p>© 2026 Turbinando Experts · <a href="index.html">turbinandoexperts.com</a> · <a href="termos-de-uso.html">Termos de Uso</a></p>
+  </footer>
+
+</body>
+</html>
