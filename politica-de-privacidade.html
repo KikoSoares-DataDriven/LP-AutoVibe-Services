@@ -58,24 +58,31 @@
       gap: 16px;
     }
     .logo {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       text-decoration: none;
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 16px;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
       color: var(--text-0);
     }
-    .logo span { color: var(--green); }
+    .logo-text span { color: var(--green); }
     .logo-icon {
-      width: 26px; height: 26px;
+      width: 32px;
+      height: 32px;
       background: var(--green);
-      border-radius: 7px;
-      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--bg-0);
+      box-shadow: 0 0 24px rgba(0, 230, 118, 0.35);
+      flex-shrink: 0;
     }
-    .logo-icon svg { width: 14px; height: 14px; }
+    .logo-icon svg { width: 18px; height: 18px; }
     .back-link {
       font-family: var(--font-mono);
       font-size: 12px;
@@ -178,7 +185,7 @@
         <span class="logo-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
         </span>
-        Turbinando <span>Experts</span>
+        <span class="logo-text">Turbinando <span>Experts</span></span>
       </a>
       <a href="index.html" class="back-link">← Voltar ao site</a>
     </div>

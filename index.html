@@ -6,13 +6,13 @@
   <meta name="theme-color" content="#050807">
   <meta name="color-scheme" content="dark">
 
-  <title>Seu negócio atendendo e vendendo no automático · Turbinando Experts</title>
-  <meta name="description" content="Estrutura digital e automação sob medida para pequenas empresas — Landing Pages de alta conversão, Agentes de IA no WhatsApp, Dashboards e CRM. Comece com 1 módulo e escale depois.">
-  <meta name="keywords" content="landing page alta conversao, site para empresas, agente IA WhatsApp, atendimento automatico, vendas no automatico, sistemas sob medida, IA para negocios, dashboards, CRM, automacao, pequenas empresas, Porto Alegre">
+  <title>Automações e IA para negócios em Porto Alegre/RS · Turbinando Experts</title>
+  <meta name="description" content="Automações e IA para negócios: Sites, Landing Pages, WebApps, Agentes de IA no WhatsApp, CRM e Dashboards sob medida. Porto Alegre/RS e atendimento remoto em todo o Brasil.">
+  <meta name="keywords" content="turbinando experts, turbinando expert, automacoes e ia poa rs, automações e ia para negócios, automação porto alegre, sites profissionais, landing page alta conversao, agente IA WhatsApp, atendimento automatico, webapps, dashboards, crm sob medida, sistemas personalizados, porto alegre rs, soluções digitais">
   <meta name="author" content="Kiko Soares">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
-  <meta name="article:modified_time" content="2026-08-20">
+  <meta name="article:modified_time" content="2026-09-25">
 
   <link rel="canonical" href="https://turbinandoexperts.com/">
   <link rel="alternate" hreflang="pt-BR" href="https://turbinandoexperts.com/">
@@ -25,18 +25,18 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://turbinandoexperts.com/">
   <meta property="og:site_name" content="Turbinando Experts">
-  <meta property="og:title" content="Seu negócio atendendo e vendendo no automático · Turbinando Experts">
-  <meta property="og:description" content="Estrutura digital e automação sob medida — Landing Pages, Agentes de IA no WhatsApp, Dashboards e CRM. Comece com 1 módulo e escale depois.">
+  <meta property="og:title" content="Automações e IA para negócios em Porto Alegre/RS · Turbinando Experts">
+  <meta property="og:description" content="Automações e IA para negócios: Sites, Landing Pages, WebApps, Agentes de IA no WhatsApp, CRM e Dashboards sob medida. Porto Alegre/RS e atendimento remoto em todo o Brasil.">
   <meta property="og:image" content="https://turbinandoexperts.com/og-image.svg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Turbinando Experts — Estrutura Digital e Sistemas Sob Medida">
-  <meta property="article:modified_time" content="2026-08-20">
+  <meta property="article:modified_time" content="2026-09-25">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Seu negócio atendendo e vendendo no automático · Turbinando Experts">
-  <meta name="twitter:description" content="Estrutura digital e automação sob medida — Landing Pages, Agentes de IA no WhatsApp, Dashboards e CRM. Comece com 1 módulo e escale depois.">
+  <meta name="twitter:title" content="Automações e IA para negócios em Porto Alegre/RS · Turbinando Experts">
+  <meta name="twitter:description" content="Automações e IA para negócios: Sites, Landing Pages, WebApps, Agentes de IA no WhatsApp, CRM e Dashboards sob medida. Porto Alegre/RS e atendimento remoto em todo o Brasil.">
   <meta name="twitter:image" content="https://turbinandoexperts.com/og-image.svg">
 
   <!-- Fonts & DNS Preconnect -->
@@ -57,6 +57,7 @@
       --green: #00E676;
       --green-bright: #39FF88;
       --green-dim: #00B85F;
+      --cyan: #00E5FF;
       --amber: #FFB020;
       --red: #FF4D4D;
       --text-0: #F4FFF4;
@@ -68,9 +69,11 @@
       --r-sm: 6px;
       --r-md: 10px;
       --r-lg: 16px;
+      --r-xl: 24px;
       --space: clamp(16px, 4vw, 32px);
       --shadow-glow: 0 0 24px rgba(0, 230, 118, 0.18);
       --shadow-glow-strong: 0 0 40px rgba(0, 230, 118, 0.32);
+      --shadow-glow-cyan: 0 0 28px rgba(0, 229, 255, 0.2);
     }
 
     *, *::before, *::after {
@@ -160,6 +163,7 @@
       font-family: var(--font-mono);
       font-size: 13px;
       letter-spacing: 0.05em;
+      transition: top 0.2s;
     }
     .skip-link:focus {
       top: 16px;
@@ -189,11 +193,28 @@
       border: 1px solid var(--border-accent);
       border-radius: var(--r-sm);
       background: rgba(0, 230, 118, 0.04);
+      margin-bottom: 16px;
     }
     .mono::before {
       content: '// ';
       color: var(--green);
       font-size: 10px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: rgba(0, 230, 118, 0.1);
+      border: 1px solid var(--border-accent);
+      color: var(--green-bright);
     }
 
     /* ============================================================
@@ -203,7 +224,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(5, 8, 7, 0.85);
+      background: rgba(5, 8, 7, 0.88);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-bottom: 1px solid var(--border);
@@ -213,7 +234,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 60px;
+      height: 64px;
       gap: 16px;
     }
 
@@ -247,10 +268,11 @@
     .nav {
       display: none;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 860px) {
       .nav {
         display: flex;
-        gap: 24px;
+        gap: 20px;
+        align-items: center;
         font-size: 13px;
         font-weight: 600;
         color: var(--text-1);
@@ -264,14 +286,20 @@
       .nav a:hover { color: var(--green); }
     }
 
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .btn-header-wa {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       background: rgba(0, 230, 118, 0.08);
       color: var(--green);
       border: 1px solid var(--border-accent);
-      padding: 6px 12px;
+      padding: 8px 14px;
       border-radius: var(--r-sm);
       font-family: var(--font-mono);
       font-size: 11px;
@@ -286,36 +314,41 @@
       color: var(--bg-0);
       box-shadow: var(--shadow-glow);
     }
+    .btn-header-wa svg { width: 14px; height: 14px; }
 
     /* ============================================================
        TOP BANNER
     ============================================================ */
     .top-banner {
-      background: var(--green);
-      color: var(--bg-0);
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--border);
+      color: var(--green);
       text-align: center;
-      padding: 8px 16px;
+      padding: 7px 16px;
       font-family: var(--font-mono);
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      position: relative;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
-    .top-banner::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      animation: shine 3s infinite;
+    .top-banner span.dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--green);
+      animation: pulse 1.6s infinite;
     }
 
     /* ============================================================
        HERO
     ============================================================ */
     .hero {
-      padding: 64px var(--space) 56px;
+      padding: 60px var(--space) 56px;
       position: relative;
       overflow: hidden;
     }
@@ -323,11 +356,11 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -200px;
-      right: -200px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(0, 230, 118, 0.18) 0%, transparent 60%);
+      top: -150px;
+      right: -150px;
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(0, 230, 118, 0.16) 0%, transparent 65%);
       pointer-events: none;
       z-index: -1;
     }
@@ -337,13 +370,13 @@
       gap: 48px;
       align-items: center;
     }
-    @media (min-width: 900px) {
+    @media (min-width: 960px) {
       .hero-grid {
-        grid-template-columns: 1.4fr 1fr;
-        gap: 64px;
+        grid-template-columns: 1.35fr 1fr;
+        gap: 60px;
       }
       .hero {
-        padding: 96px var(--space) 80px;
+        padding: 84px var(--space) 80px;
       }
     }
 
@@ -351,11 +384,11 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       font-family: var(--font-mono);
       font-size: 12px;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--green);
     }
@@ -367,6 +400,7 @@
       border-radius: 50%;
       box-shadow: 0 0 12px var(--green);
       animation: pulse 1.6s infinite;
+      flex-shrink: 0;
     }
 
     @keyframes pulse {
@@ -376,9 +410,9 @@
 
     .hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(40px, 8vw, 72px);
-      line-height: 0.98;
-      letter-spacing: -0.02em;
+      font-size: clamp(38px, 6.5vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -0.025em;
       font-weight: 700;
       margin-bottom: 20px;
       text-wrap: balance;
@@ -393,30 +427,26 @@
       content: '_';
       color: var(--green);
       animation: blink 1s steps(2) infinite;
-      margin-left: 4px;
+      margin-left: 2px;
       font-weight: 400;
     }
 
     @keyframes blink { 50% { opacity: 0; } }
 
-    @keyframes shine {
-      0%   { transform: translateX(-130%); opacity: 0; }
-      20%  { opacity: 1; }
-      80%  { opacity: 1; }
-      100% { transform: translateX(130%); opacity: 0; }
-    }
-
     .hero .tldr {
       font-family: var(--font-mono);
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1.65;
       color: var(--text-1);
       background: var(--bg-1);
-      border-left: 2px solid var(--green);
+      border-left: 3px solid var(--green);
       padding: 14px 18px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       border-radius: 0 var(--r-sm) var(--r-sm) 0;
       max-width: 640px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
     .hero .tldr strong {
       color: var(--text-0);
@@ -435,8 +465,8 @@
       font-size: 17px;
       line-height: 1.65;
       color: var(--text-1);
-      margin-bottom: 32px;
-      max-width: 560px;
+      margin-bottom: 30px;
+      max-width: 600px;
     }
     .hero .lede strong {
       color: var(--text-0);
@@ -448,6 +478,13 @@
       flex-direction: column;
       gap: 12px;
       margin-bottom: 20px;
+    }
+    @media (min-width: 580px) {
+      .hero-cta {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+      }
     }
 
     /* ============================================================
@@ -463,7 +500,7 @@
       font-family: var(--font-mono);
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       padding: 18px 28px;
       border-radius: var(--r-md);
@@ -490,29 +527,24 @@
     .btn-primary:hover::before {
       transform: translateX(100%);
     }
-    .btn-primary:active {
-      transform: translateY(0);
-    }
-    .btn-primary svg {
-      width: 18px;
-      height: 18px;
-    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary svg { width: 18px; height: 18px; flex-shrink: 0; }
 
     .btn-secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: transparent;
-      color: var(--text-1);
+      background: var(--bg-1);
+      color: var(--text-0);
       font-family: var(--font-mono);
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      padding: 14px 22px;
+      padding: 16px 24px;
       border-radius: var(--r-md);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-strong);
       cursor: pointer;
       text-decoration: none;
       transition: all 0.15s;
@@ -520,10 +552,11 @@
     .btn-secondary:hover {
       border-color: var(--green);
       color: var(--green);
+      background: rgba(0, 230, 118, 0.04);
     }
 
     .btn-large {
-      padding: 22px 32px;
+      padding: 20px 32px;
       font-size: 15px;
     }
     .btn-block { width: 100%; }
@@ -535,7 +568,7 @@
       letter-spacing: 0.06em;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
     }
     .cta-note span {
@@ -566,7 +599,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 0%, transparent 50%, rgba(0, 230, 118, 0.04) 100%);
+      background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(0, 230, 118, 0.04) 100%);
       pointer-events: none;
     }
 
@@ -578,10 +611,7 @@
       border-bottom: 1px solid var(--border);
       background: var(--bg-2);
     }
-    .terminal-dots {
-      display: flex;
-      gap: 6px;
-    }
+    .terminal-dots { display: flex; gap: 6px; }
     .terminal-dots span {
       width: 10px;
       height: 10px;
@@ -605,8 +635,8 @@
       padding: 18px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      min-height: 280px;
+      gap: 12px;
+      min-height: 290px;
     }
 
     .term-line {
@@ -650,10 +680,10 @@
     }
 
     /* ============================================================
-       MARQUEE PROVA SOCIAL (CONTROLE PRECISO DE VELOCIDADE NO MOBILE)
+       MARQUEE
     ============================================================ */
     .marquee-section {
-      padding: 28px 0;
+      padding: 24px 0;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       background: var(--bg-1);
@@ -662,7 +692,6 @@
       mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
       -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
     }
-
     .marquee-label {
       text-align: center;
       font-family: var(--font-mono);
@@ -670,763 +699,959 @@
       color: var(--text-2);
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       padding: 0 var(--space);
     }
     .marquee-label::before {
       content: '// ';
       color: var(--green);
     }
-
     .marquee-track {
       display: flex;
-      gap: 32px;
-      animation: marquee 22s linear infinite !important;
+      gap: 36px;
+      animation: marquee 24s linear infinite;
       width: max-content;
       will-change: transform;
     }
-
-    .marquee-track:hover,
-    .marquee-track:active {
-      animation-play-state: paused;
-    }
-
+    .marquee-track:hover { animation-play-state: paused; }
     .marquee-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       font-family: var(--font-mono);
       font-size: 13px;
       font-weight: 600;
       color: var(--text-1);
       white-space: nowrap;
       letter-spacing: 0.04em;
-      user-select: none;
     }
     .marquee-item svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       color: var(--green);
       flex-shrink: 0;
     }
-
     @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    @media (min-width: 768px) {
-      .marquee-section {
-        padding: 32px 0;
-        mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-        -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-      }
-
-      .marquee-track {
-        gap: 48px;
-        animation-duration: 35s !important;
-      }
-
-      .marquee-item {
-        gap: 12px;
-        font-size: 13.5px;
-      }
-
-      .marquee-item svg {
-        width: 22px;
-        height: 22px;
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     /* ============================================================
-       SECTIONS
+       SECTIONS COMMON
     ============================================================ */
     .section {
-      padding: 64px var(--space);
+      padding: 72px var(--space);
       border-bottom: 1px solid var(--border);
       position: relative;
     }
     @media (min-width: 768px) {
-      .section {
-        padding: 96px var(--space);
-      }
+      .section { padding: 96px var(--space); }
     }
 
     .section-head {
-      max-width: 720px;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
+      max-width: 740px;
     }
     .section-head.center {
-      margin: 0 auto 40px;
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .section h2 {
+    .section-head h2 {
       font-family: var(--font-display);
-      font-size: clamp(32px, 5.5vw, 48px);
-      line-height: 1.0;
+      font-size: clamp(28px, 5vw, 46px);
+      line-height: 1.1;
       letter-spacing: -0.02em;
       font-weight: 700;
-      margin: 16px 0 16px;
+      margin-bottom: 16px;
       text-wrap: balance;
     }
-    .section h2 .accent { color: var(--green); }
 
-    .section p.lede {
-      font-size: 16px;
-      color: var(--text-1);
+    .accent { color: var(--green); }
+    .accent-cyan { color: var(--cyan); }
+
+    .section-head .lede {
+      font-size: 16.5px;
       line-height: 1.65;
-      max-width: 640px;
-    }
-    .section p.lede strong {
-      color: var(--text-0);
-      font-weight: 700;
+      color: var(--text-1);
     }
 
     /* ============================================================
-       DOR CARDS
+       EMPATHY BOX (Você sabe onde dói)
     ============================================================ */
-    .pain-grid {
+    .empathy-card {
+      background: linear-gradient(135deg, rgba(0, 230, 118, 0.06) 0%, rgba(5, 8, 7, 0.8) 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--r-xl);
+      padding: clamp(28px, 5vw, 48px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
       display: grid;
-      gap: 14px;
-      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 32px;
     }
-    @media (min-width: 600px) {
-      .pain-grid {
-        grid-template-columns: 1fr 1fr;
+    @media (min-width: 860px) {
+      .empathy-card {
+        grid-template-columns: 1.4fr 1fr;
+        gap: 48px;
       }
     }
+    .empathy-card h2 {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.15;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .empathy-card p {
+      font-size: 16px;
+      color: var(--text-1);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .empathy-quote-box {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-1);
+      position: relative;
+    }
+    .empathy-quote-box::before {
+      content: '// PRINCÍPIO CENTRAL';
+      display: block;
+      font-size: 10px;
+      color: var(--green);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .empathy-quote-box strong {
+      color: var(--text-0);
+      font-size: 14px;
+      display: block;
+      margin-top: 6px;
+    }
 
-    .pain-card {
+    /* ============================================================
+       10 DORES CARDS
+    ============================================================ */
+    .pain-grid-10 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 600px) {
+      .pain-grid-10 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1000px) {
+      .pain-grid-10 { grid-template-columns: repeat(5, 1fr); }
+    }
+
+    .pain-card-v11 {
       background: var(--bg-1);
       border: 1px solid var(--border);
       border-radius: var(--r-md);
-      padding: 22px 20px;
+      padding: 20px 18px;
       display: flex;
-      gap: 16px;
-      transition: all 0.2s;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: all 0.2s ease;
       position: relative;
       overflow: hidden;
     }
-    .pain-card::before {
+    .pain-card-v11:hover {
+      border-color: var(--green);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 230, 118, 0.08);
+    }
+    .pain-card-v11::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 3px;
       height: 100%;
-      background: var(--red);
-      opacity: 0.5;
+      background: var(--border-strong);
+      transition: background 0.2s;
     }
-    .pain-card:hover {
-      border-color: var(--red);
-      transform: translateY(-2px);
-      background: var(--bg-2);
+    .pain-card-v11:hover::before {
+      background: var(--green);
     }
-
-    .pain-icon {
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 77, 77, 0.1);
-      border: 1px solid rgba(255, 77, 77, 0.3);
+    .pain-card-icon {
+      width: 32px;
+      height: 32px;
       border-radius: var(--r-sm);
+      background: rgba(255, 77, 77, 0.1);
+      color: var(--red);
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
-      color: var(--red);
     }
-    .pain-icon svg { width: 20px; height: 20px; }
-
-    .pain-content strong {
-      display: block;
-      color: var(--text-0);
-      font-size: 15px;
+    .pain-card-icon svg { width: 16px; height: 16px; }
+    .pain-card-v11 strong {
+      font-size: 14px;
       font-weight: 700;
-      margin-bottom: 4px;
-      line-height: 1.35;
+      color: var(--text-0);
+      line-height: 1.4;
     }
-    .pain-content span {
-      font-size: 13px;
-      color: var(--text-2);
+    .pain-card-target {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--green);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .pain-card-target:hover {
+      color: var(--green-bright);
+      text-decoration: underline;
+    }
+
+    /* ============================================================
+       SOLUÇÕES QUE PODEMOS CONSTRUIR (4 Pilares)
+    ============================================================ */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .pillar-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .pillar-card:hover {
+      border-color: var(--green);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+      transform: translateY(-3px);
+    }
+    .pillar-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .pillar-card h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-0);
+    }
+    .pillar-desc {
+      font-size: 14.5px;
+      color: var(--text-1);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .pillar-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .pillar-list li {
+      font-size: 14px;
+      color: var(--text-1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pillar-list li::before {
+      content: '✓';
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+    .pillar-footer-quote {
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--green-bright);
       line-height: 1.5;
     }
 
     /* ============================================================
-       TIMELINE SOLUÇÃO
+       LINHA START (7 Produtos de Entrada)
     ============================================================ */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-      max-width: 760px;
+    .start-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 19px;
-      top: 30px;
-      bottom: 30px;
-      width: 1px;
-      background: linear-gradient(180deg, var(--green), transparent);
+    @media (min-width: 600px) {
+      .start-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 990px) {
+      .start-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
-    .t-step {
+    .start-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 24px 22px;
       display: flex;
-      gap: 20px;
-      padding: 18px 0;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      transition: all 0.2s ease;
       position: relative;
     }
-    .t-num {
-      width: 40px;
-      height: 40px;
+    .start-card:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-2);
+      transform: translateY(-2px);
+    }
+    .start-card.highlight {
+      border-color: var(--border-accent);
+      background: linear-gradient(180deg, rgba(0, 230, 118, 0.05) 0%, var(--bg-1) 100%);
+    }
+    .start-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    .start-card h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-0);
+      margin-top: 4px;
+    }
+    .start-card p {
+      font-size: 14px;
+      color: var(--text-1);
+      line-height: 1.55;
+    }
+    .start-card-action {
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .start-card-action a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .start-card-action a:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================================
+       JORNADA DE EVOLUÇÃO
+    ============================================================ */
+    .journey-stepper {
+      background: var(--bg-1);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-xl);
+      padding: clamp(24px, 4vw, 40px);
+      margin-bottom: 40px;
+    }
+    .stepper-track {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+    }
+    @media (min-width: 900px) {
+      .stepper-track {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .stepper-track::before {
+        content: '';
+        position: absolute;
+        top: 24px;
+        left: 20px;
+        right: 20px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--red) 0%, var(--green) 30%, var(--cyan) 70%, var(--green-bright) 100%);
+        z-index: 0;
+      }
+    }
+
+    .step-node {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .step-badge {
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
-      background: var(--bg-0);
-      border: 1px solid var(--green);
+      background: var(--bg-2);
+      border: 2px solid var(--border-strong);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-mono);
       font-size: 13px;
-      font-weight: 700;
-      color: var(--green);
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 0 16px rgba(0, 230, 118, 0.25);
-    }
-
-    .t-content {
-      flex: 1;
-      padding-top: 4px;
-    }
-    .t-content strong {
-      display: block;
-      font-size: 16px;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--text-0);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
     }
-    .t-content span {
-      font-size: 14px;
+    .step-node.active .step-badge {
+      border-color: var(--green);
+      color: var(--green);
+      box-shadow: var(--shadow-glow);
+    }
+    .step-node strong {
+      font-family: var(--font-display);
+      font-size: 16px;
+      color: var(--text-0);
+    }
+    .step-node p {
+      font-size: 12.5px;
       color: var(--text-1);
-      line-height: 1.55;
+      line-height: 1.45;
     }
 
     /* ============================================================
-       TABELA COMPARATIVO
+       PILARES VISUAIS (FLOW / CONTROL / SCALE / CARE)
+    ============================================================ */
+    .flow-showcase {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    @media (min-width: 860px) {
+      .flow-showcase { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .flow-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .flow-card h4 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-0);
+    }
+    .flow-pipeline {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+    .flow-step-item {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-1);
+    }
+    .flow-step-item .flow-icon {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .control-scale-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 860px) {
+      .control-scale-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .box-deep {
+      background: var(--bg-1);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-xl);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .box-deep h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--text-0);
+      margin-bottom: 8px;
+    }
+    .box-deep p {
+      font-size: 14.5px;
+      color: var(--text-1);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       TABELA COMPARATIVA
     ============================================================ */
     .compare-table-wrap {
       overflow-x: auto;
-      border-radius: var(--r-lg);
-      border: 1px solid var(--border-strong);
       background: var(--bg-1);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-lg);
     }
     .compare-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 14px;
-      min-width: 560px;
+      text-align: left;
     }
-    .compare-table thead {
-      background: var(--bg-2);
+    .compare-table th, .compare-table td {
+      padding: 16px 20px;
       border-bottom: 1px solid var(--border);
     }
     .compare-table th {
+      background: var(--bg-2);
       font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-2);
-      padding: 14px 18px;
-      text-align: left;
     }
     .compare-table th.col-yes {
       color: var(--green);
-      text-align: left;
+      background: rgba(0, 230, 118, 0.04);
     }
-    .compare-table td {
-      padding: 14px 18px;
-      border-top: 1px solid var(--border);
-      color: var(--text-1);
-      vertical-align: middle;
-    }
-    .compare-table tr:hover td {
-      background: var(--bg-2);
-    }
+    .compare-table tr:last-child td { border-bottom: none; }
     .compare-table td.aspect {
       font-weight: 700;
       color: var(--text-0);
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-    .compare-table td.yes {
-      color: var(--green-bright);
-      font-weight: 600;
-      font-family: var(--font-mono);
-      font-size: 13px;
+      font-family: var(--font-body);
     }
     .compare-table td.no {
       color: var(--text-2);
-      font-family: var(--font-mono);
-      font-size: 13px;
     }
-    .compare-table .check { color: var(--green); margin-right: 6px; }
+    .compare-table td.yes {
+      color: var(--text-0);
+      background: rgba(0, 230, 118, 0.02);
+    }
     .compare-table .cross { color: var(--red); margin-right: 6px; }
+    .compare-table .check { color: var(--green); font-weight: 700; margin-right: 6px; }
 
-    /* Mobile: tabela vira cards empilhados (sem scroll lateral) */
-    @media (max-width: 700px) {
-      .compare-table-wrap {
-        overflow-x: visible;
-        border: none;
-        border-radius: 0;
-        background: transparent;
-      }
-      .compare-table {
-        display: block;
-        min-width: 0;
-      }
-      .compare-table thead { display: none; }
-      .compare-table tbody {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .compare-table tr {
-        display: block;
-        background: var(--bg-1);
-        border: 1px solid var(--border-strong);
-        border-radius: var(--r-md);
-        overflow: hidden;
-      }
-      .compare-table tr:hover td { background: transparent; }
-      .compare-table td {
-        display: block;
-        width: 100%;
-        padding: 11px 16px;
-        border-top: none;
-      }
-      .compare-table td + td { border-top: 1px dashed var(--border); }
-      .compare-table td.no::before,
-      .compare-table td.yes::before {
-        display: block;
-        font-family: var(--font-mono);
-        font-size: 9px;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--text-2);
-        margin-bottom: 3px;
-      }
-      .compare-table td.no::before { content: 'Genérico'; }
-      .compare-table td.yes::before { content: 'Sob medida'; color: var(--green); }
+    /* ============================================================
+       QUIZ / DIAGNÓSTICO INTERATIVO (8 Passos)
+    ============================================================ */
+    .quiz-container {
+      background: var(--bg-1);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-xl);
+      padding: clamp(24px, 5vw, 48px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      max-width: 840px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .quiz-progress-bar {
+      height: 4px;
+      background: var(--border-strong);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .quiz-progress-fill {
+      height: 100%;
+      background: var(--green);
+      width: 12.5%;
+      transition: width 0.3s ease;
+      box-shadow: 0 0 10px var(--green);
+    }
+    .quiz-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .quiz-step-count {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .quiz-question-title {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: var(--text-0);
+    }
+    .quiz-options-grid {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .quiz-option-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.15s ease;
+      color: var(--text-1);
+      font-size: 15px;
+      font-weight: 500;
+      user-select: none;
+    }
+    .quiz-option-card:hover {
+      border-color: var(--border-accent);
+      color: var(--text-0);
+      background: var(--bg-3);
+    }
+    .quiz-option-card.selected {
+      border-color: var(--green);
+      background: rgba(0, 230, 118, 0.08);
+      color: var(--text-0);
+      font-weight: 700;
+    }
+    .quiz-option-card .check-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid var(--border-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: transparent;
+      transition: all 0.15s;
+    }
+    .quiz-option-card.selected .check-circle {
+      background: var(--green);
+      border-color: var(--green);
+      color: var(--bg-0);
+      font-weight: 800;
+    }
+
+    .quiz-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .quiz-result-box {
+      background: var(--bg-2);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--r-lg);
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .quiz-result-badge {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .quiz-result-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-0);
+      margin-bottom: 12px;
+    }
+    .quiz-result-desc {
+      font-size: 15px;
+      color: var(--text-1);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 24px;
     }
 
     /* ============================================================
-       RESULTADOS
+       RESULTADOS & CENÁRIOS
     ============================================================ */
     .results-grid {
       display: grid;
-      gap: 12px;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
     }
     @media (min-width: 768px) {
-      .results-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
+      .results-grid { grid-template-columns: repeat(4, 1fr); }
     }
-
     .result-card {
       background: var(--bg-1);
       border: 1px solid var(--border);
       border-radius: var(--r-md);
-      padding: 24px 18px;
-      text-align: left;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.2s;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
-    .result-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-glow);
-    }
-    .result-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--green), transparent);
-    }
-
     .result-num {
-      font-family: var(--font-mono);
-      font-size: 36px;
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 48px);
       font-weight: 700;
       color: var(--green);
       line-height: 1;
-      margin-bottom: 10px;
-      letter-spacing: -0.02em;
     }
     .result-label {
-      font-size: 12px;
+      font-size: 13.5px;
       color: var(--text-1);
       line-height: 1.45;
-      font-weight: 500;
     }
     .result-tag {
       font-family: var(--font-mono);
-      font-size: 9px;
+      font-size: 10px;
       color: var(--text-2);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-top: 10px;
-      display: block;
+      margin-top: 4px;
     }
 
-    /* ============================================================
-       DEPOIMENTOS
-    ============================================================ */
     .depo-grid {
       display: grid;
-      gap: 16px;
       grid-template-columns: 1fr;
+      gap: 20px;
     }
-    @media (min-width: 600px) {
-      .depo-grid { grid-template-columns: 1fr 1fr; }
+    @media (min-width: 768px) {
+      .depo-grid { grid-template-columns: repeat(3, 1fr); }
     }
-    @media (min-width: 1024px) {
-      .depo-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-
     .depo-card {
       background: var(--bg-1);
       border: 1px solid var(--border);
       border-radius: var(--r-md);
-      padding: 20px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      transition: all 0.2s;
-      position: relative;
+      justify-content: space-between;
+      gap: 16px;
     }
-    .depo-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-    }
-
     .depo-quote {
-      color: var(--text-0);
       font-size: 14px;
-      line-height: 1.55;
-      font-weight: 500;
-      position: relative;
-      padding-left: 14px;
-      border-left: 2px solid var(--green);
-      flex: 1;
+      line-height: 1.6;
+      color: var(--text-1);
     }
-    .depo-quote::before {
-      content: '“';
-      position: absolute;
-      top: -8px;
-      left: 8px;
-      font-family: var(--font-display);
-      font-size: 40px;
-      color: var(--green);
-      opacity: 0.3;
-      line-height: 1;
-    }
-
-    .depo-meta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .depo-quote strong { color: var(--text-0); }
+    .depo-author {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-2);
       border-top: 1px solid var(--border);
       padding-top: 12px;
     }
-    .depo-icon {
-      width: 32px;
-      height: 32px;
-      background: var(--bg-2);
-      border-radius: var(--r-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--green);
-      flex-shrink: 0;
-    }
-    .depo-icon svg { width: 16px; height: 16px; }
-
-    .depo-info {
-      flex: 1;
-      min-width: 0;
-    }
-    .depo-name {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text-0);
-      display: block;
-      line-height: 1.2;
-    }
-    .depo-segment {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      color: var(--text-2);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .depo-illust {
-      font-size: 9px;
-      color: var(--text-2);
-      font-family: var(--font-mono);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-align: right;
-      margin-top: 4px;
-      opacity: 0.6;
-    }
 
     /* ============================================================
-       ABOUT
+       ABOUT (Kiko Soares)
     ============================================================ */
     .about-card {
       background: var(--bg-1);
       border: 1px solid var(--border-strong);
-      border-radius: var(--r-lg);
-      padding: 32px;
+      border-radius: var(--r-xl);
+      padding: clamp(28px, 5vw, 48px);
       display: grid;
-      gap: 28px;
-      grid-template-columns: 1fr;
+      gap: 36px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 860px) {
       .about-card {
-        grid-template-columns: 1fr 2fr;
-        padding: 40px;
+        grid-template-columns: 280px 1fr;
+        gap: 56px;
       }
     }
-
     .about-left {
       display: flex;
       flex-direction: column;
-      gap: 18px;
-      align-items: flex-start;
-    }
-
-    .avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green) 0%, var(--green-dim) 100%);
-      display: flex;
       align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--bg-0);
-      border: 1px solid var(--green);
-      box-shadow: var(--shadow-glow);
-      position: relative;
+      text-align: center;
+      gap: 16px;
+    }
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 2px solid var(--green);
       overflow: hidden;
+      box-shadow: var(--shadow-glow);
+      flex-shrink: 0;
     }
     .avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 15%;
-      display: block;
-      position: relative;
-      z-index: 0;
+      object-position: center 10%;
     }
-    .avatar::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%);
-      animation: shine 4s infinite;
-      z-index: 1;
-      pointer-events: none;
-    }
-
     .about-name strong {
-      display: block;
       font-family: var(--font-display);
       font-size: 20px;
-      font-weight: 700;
       color: var(--text-0);
-      margin-bottom: 4px;
+      display: block;
     }
     .about-name span {
       font-family: var(--font-mono);
-      font-size: 11px;
+      font-size: 12px;
       color: var(--green);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 600;
     }
-
     .about-stats {
       display: flex;
-      gap: 18px;
-      padding-top: 18px;
-      border-top: 1px solid var(--border);
-      width: 100%;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .about-stat {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 8px 12px;
     }
     .about-stat strong {
       display: block;
-      font-family: var(--font-mono);
-      font-size: 20px;
+      font-family: var(--font-display);
+      font-size: 16px;
       color: var(--green);
-      font-weight: 700;
-      line-height: 1;
     }
     .about-stat span {
       font-size: 11px;
       color: var(--text-2);
       font-family: var(--font-mono);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
     }
-
-    .about-bio p {
-      color: var(--text-1);
-      font-size: 15px;
+    .about-bio {
+      font-size: 15.5px;
       line-height: 1.7;
-      margin-bottom: 14px;
+      color: var(--text-1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
-    .about-bio p strong {
-      color: var(--text-0);
-      font-weight: 700;
-    }
-    .about-bio p:last-child { margin-bottom: 0; }
-
+    .about-bio strong { color: var(--text-0); }
     .stack-pills {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 20px;
+      gap: 8px;
+      margin-top: 8px;
     }
     .pill {
       font-family: var(--font-mono);
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 4px;
       background: var(--bg-2);
       border: 1px solid var(--border);
       color: var(--text-1);
-      padding: 4px 10px;
-      border-radius: var(--r-sm);
-      text-transform: uppercase;
     }
     .pill.accent {
       border-color: var(--border-accent);
-      color: var(--green);
-      background: rgba(0, 230, 118, 0.04);
-    }
-
-    /* Mobile: pílulas preenchem as linhas por igual (layout organizado) */
-    @media (max-width: 600px) {
-      .stack-pills { gap: 8px; }
-      .stack-pills .pill {
-        flex: 1 1 auto;
-        text-align: center;
-        white-space: nowrap;
-        padding: 6px 12px;
-        font-size: 10.5px;
-      }
+      color: var(--green-bright);
+      background: rgba(0, 230, 118, 0.05);
     }
 
     /* ============================================================
        FAQ
     ============================================================ */
     .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
+      max-width: 840px;
+      margin: 0 auto;
     }
-
     .faq-item {
       background: var(--bg-1);
       border: 1px solid var(--border);
       border-radius: var(--r-md);
       overflow: hidden;
-      transition: all 0.2s;
+      transition: border-color 0.15s;
     }
-    .faq-item[open] {
-      border-color: var(--border-accent);
-      background: var(--bg-2);
-    }
-
+    .faq-item[open] { border-color: var(--green); }
     .faq-q {
+      padding: 18px 22px;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 18px 20px;
-      cursor: pointer;
-      list-style: none;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
       color: var(--text-0);
-      user-select: none;
+      list-style: none;
     }
     .faq-q::-webkit-details-marker { display: none; }
-    .faq-q::marker { display: none; content: ''; }
-
     .faq-icon {
-      width: 22px;
-      height: 22px;
-      border: 1px solid var(--border-strong);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--green);
-      flex-shrink: 0;
-      transition: transform 0.2s;
       font-family: var(--font-mono);
-      font-size: 14px;
-      font-weight: 700;
+      font-size: 20px;
+      color: var(--green);
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
     }
     .faq-item[open] .faq-icon {
       transform: rotate(45deg);
     }
-
     .faq-a {
-      padding: 0 20px 18px;
-      color: var(--text-1);
-      font-size: 14.5px;
+      padding: 0 22px 20px;
+      font-size: 15px;
       line-height: 1.65;
+      color: var(--text-1);
+      border-top: 1px solid transparent;
     }
-    .faq-a strong {
-      color: var(--text-0);
-      font-weight: 700;
+    .faq-item[open] .faq-a {
+      border-top-color: var(--border);
+      padding-top: 14px;
     }
 
     /* ============================================================
        CTA FINAL
     ============================================================ */
     .cta-final {
-      padding: 80px var(--space);
+      padding: 96px var(--space);
       text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: var(--bg-1);
-      border-top: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
       border-bottom: 1px solid var(--border);
+      position: relative;
     }
     .cta-final::before {
       content: '';
@@ -1435,37 +1660,29 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(0, 230, 118, 0.12) 0%, transparent 60%);
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(0, 230, 118, 0.1) 0%, transparent 70%);
       pointer-events: none;
     }
-
     .cta-final-inner {
-      position: relative;
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
-
     .cta-final h2 {
       font-family: var(--font-display);
-      font-size: clamp(36px, 6vw, 56px);
-      line-height: 1.0;
+      font-size: clamp(32px, 5.5vw, 52px);
+      line-height: 1.1;
+      font-weight: 700;
       letter-spacing: -0.02em;
-      font-weight: 700;
-      margin-bottom: 18px;
-      text-wrap: balance;
+      margin-bottom: 20px;
     }
-    .cta-final h2 .accent { color: var(--green); }
-
     .cta-final p {
-      font-size: 16px;
-      color: var(--text-1);
+      font-size: 18px;
       line-height: 1.65;
-      margin-bottom: 32px;
-    }
-    .cta-final p strong {
-      color: var(--text-0);
-      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 36px;
     }
 
     /* ============================================================
@@ -1473,434 +1690,296 @@
     ============================================================ */
     .site-footer {
       background: var(--bg-0);
-      padding: 40px var(--space) calc(40px + env(safe-area-inset-bottom));
+      padding: 56px var(--space) 110px;
       border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-2);
     }
-
+    @media (min-width: 768px) {
+      .site-footer { padding: 56px var(--space) 40px; }
+    }
     .footer-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      align-items: center;
-      text-align: center;
+      display: grid;
+      gap: 36px;
     }
     @media (min-width: 768px) {
       .footer-inner {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
+        grid-template-columns: 1.5fr 1fr 1fr;
       }
     }
-
     .footer-brand p {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-2);
-      letter-spacing: 0.05em;
-      line-height: 1.7;
+      margin-top: 12px;
+      line-height: 1.6;
+      color: var(--text-1);
     }
-    .footer-brand p strong { color: var(--green); }
-
     .footer-meta {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-2);
-      letter-spacing: 0.05em;
+      line-height: 1.5;
     }
-    .footer-meta a:hover { color: var(--green); }
-
+    .footer-meta a:hover, .footer-legal a:hover { color: var(--green); }
     .footer-legal {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-2);
-      letter-spacing: 0.05em;
-    }
-    .footer-legal a { color: var(--text-1); text-decoration: none; }
-    .footer-legal a:hover { color: var(--green); }
-    @media (min-width: 768px) {
-      .footer-legal { text-align: right; }
     }
 
     /* ============================================================
-       MODERN MOBILE NAVIGATION & ERGONOMICS
-       Bottom tab bar ergonômica — substitui o sticky CTA antigo
+       MODERN BOTTOM NAV (MOBILE)
     ============================================================ */
     .bottom-nav {
-      display: flex;
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      z-index: 120;
-      background: rgba(10, 15, 11, 0.92);
-      backdrop-filter: blur(20px) saturate(190%);
-      -webkit-backdrop-filter: blur(20px) saturate(190%);
-      border-top: 1px solid var(--border-strong);
-      padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+      background: rgba(10, 15, 11, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      display: flex;
       justify-content: space-around;
       align-items: center;
-      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.6);
+      padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+      z-index: 99;
     }
-
+    @media (min-width: 768px) {
+      .bottom-nav { display: none; }
+    }
     .bottom-nav-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 3px;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 10px;
       color: var(--text-2);
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      padding: 6px 10px;
-      border-radius: var(--r-sm);
-      transition: all 0.2s ease;
-      min-width: 58px;
+      transition: color 0.15s;
     }
-
-    .bottom-nav-item svg {
-      width: 20px;
-      height: 20px;
-      stroke: currentColor;
-      stroke-width: 1.8;
-      fill: none;
-      flex-shrink: 0;
-      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    .bottom-nav-item.active,
-    .bottom-nav-item:hover {
-      color: var(--green);
-    }
-
-    .bottom-nav-item.active svg {
-      transform: translateY(-2px) scale(1.1);
-      stroke: var(--green);
-    }
-
-    /* Destaque WhatsApp na barra inferior */
+    .bottom-nav-item svg { width: 18px; height: 18px; }
+    .bottom-nav-item.active { color: var(--green); font-weight: 700; }
     .bottom-nav-item.highlight-wa {
-      background: rgba(0, 230, 118, 0.12);
-      border: 1px solid var(--border-accent);
       color: var(--green);
-      border-radius: var(--r-md);
-      padding: 5px 12px;
-    }
-    .bottom-nav-item.highlight-wa svg {
-      fill: currentColor;
-      stroke: none;
-    }
-
-    /* Compensação para o rodapé não ficar escondido atrás da barra */
-    @media (max-width: 767px) {
-      body {
-        padding-bottom: calc(64px + env(safe-area-inset-bottom));
-      }
-    }
-
-    @media (min-width: 768px) {
-      .bottom-nav {
-        display: none !important;
-      }
+      font-weight: 800;
     }
 
     /* ============================================================
-       O QUE CONSTRUO
-    ============================================================ */
-    .oqc-grid {
-      display: grid;
-      gap: 14px;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 600px) {
-      .oqc-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (min-width: 1024px) {
-      .oqc-grid { grid-template-columns: repeat(5, 1fr); }
-    }
-
-    .oqc-card {
-      background: var(--bg-1);
-      border: 1px solid var(--border);
-      border-radius: var(--r-md);
-      padding: 24px 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: all 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-    .oqc-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--green), transparent);
-      opacity: 0.5;
-    }
-    .oqc-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-glow);
-    }
-
-    .oqc-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(0, 230, 118, 0.08);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--r-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--green);
-      flex-shrink: 0;
-    }
-    .oqc-icon svg { width: 22px; height: 22px; }
-
-    .oqc-name {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-0);
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-    }
-    .oqc-name span {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 600;
-      color: var(--green);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .oqc-desc {
-      font-size: 13.5px;
-      color: var(--text-1);
-      line-height: 1.55;
-      flex: 1;
-    }
-
-    .oqc-foot {
-      margin-top: 32px;
-      padding: 20px 24px;
-      background: var(--bg-1);
-      border: 1px solid var(--border-accent);
-      border-left: 3px solid var(--green);
-      border-radius: 0 var(--r-md) var(--r-md) 0;
-      font-family: var(--font-mono);
-      font-size: 13.5px;
-      line-height: 1.6;
-      color: var(--text-1);
-      text-align: center;
-      max-width: 880px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .oqc-foot strong { color: var(--text-0); font-weight: 700; }
-    .oqc-foot .accent { color: var(--green); font-weight: 700; }
-
-    /* ============================================================
-       SCROLL ANIMATIONS
+       ANIMATIONS
     ============================================================ */
     .fade-up {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(20px);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .fade-up.in {
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* Regra corrigida: NÃO sobrescreve a esteira de segmentos com 0.01ms */
-    @media (prefers-reduced-motion: reduce) {
-      .fade-up { 
-        opacity: 1 !important; 
-        transform: none !important; 
-        transition: none !important;
-      }
-      .marquee-track {
-        animation-duration: 70s !important;
-      }
-      .top-banner::after,
-      .avatar::after { animation: none !important; }
-      html { scroll-behavior: auto; }
-    }
   </style>
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://turbinandoexperts.com/#organization",
-        "name": "Turbinando Experts",
-        "url": "https://turbinandoexperts.com/",
-        "logo": "https://turbinandoexperts.com/og-image.svg",
-        "description": "Estrutura digital e automação sob medida para pequenas empresas — Landing Pages, Agentes de IA, Dashboards e CRM. Construídos a partir da sua operação e escaláveis sob demanda.",
-        "founder": { "@id": "https://turbinandoexperts.com/#kiko" },
-        "areaServed": "BR"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://turbinandoexperts.com/#organization",
+      "name": "Turbinando Experts",
+      "alternateName": [
+        "Turbinando Expert"
+      ],
+      "url": "https://turbinandoexperts.com/",
+      "logo": "https://turbinandoexperts.com/og-image.svg",
+      "description": "Estrutura digital, automações e IA para negócios sob medida: Sites, Landing Pages, WebApps, Agentes de IA no WhatsApp, CRM e Dashboards. Soluções que começam pela dor de hoje e evoluem com a empresa.",
+      "founder": {
+        "@id": "https://turbinandoexperts.com/#kiko"
       },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://turbinandoexperts.com/#localbusiness",
-        "name": "Turbinando Experts",
-        "image": "https://turbinandoexperts.com/og-image.svg",
-        "url": "https://turbinandoexperts.com/",
-        "telephone": "+5551920000513",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Porto Alegre",
-          "addressRegion": "RS",
-          "addressCountry": "BR"
+      "areaServed": "BR"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://turbinandoexperts.com/#localbusiness",
+      "name": "Turbinando Experts",
+      "alternateName": [
+        "Turbinando Expert"
+      ],
+      "description": "Automações e IA para negócios em Porto Alegre/RS com atendimento remoto para todo o Brasil. Criação de Sites, Landing Pages, Agentes de IA no WhatsApp, CRM e Dashboards sob medida.",
+      "image": "https://turbinandoexperts.com/og-image.svg",
+      "url": "https://turbinandoexperts.com/",
+      "telephone": "+5551920000513",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Porto Alegre",
+        "addressRegion": "RS",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Porto Alegre"
         },
-        "areaServed": "BR",
-        "parentOrganization": { "@id": "https://turbinandoexperts.com/#organization" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://turbinandoexperts.com/#kiko",
-        "name": "Kiko Soares",
-        "jobTitle": "Especialista em Estrutura Digital e Sistemas Sob Medida com IA",
-        "worksFor": { "@id": "https://turbinandoexperts.com/#organization" },
-        "url": "https://turbinandoexperts.com/",
-        "knowsAbout": [
-          "Landing Pages de Alta Conversão",
-          "WebApps",
-          "Agentes de IA",
-          "WhatsApp API",
-          "Sistemas Sob Medida",
-          "Dashboards",
-          "CRM",
-          "Automação de Processos",
-          "Vibe Coding",
-          "n8n"
-        ]
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Estrutura Digital e Sistemas Sob Medida para Pequenas Empresas",
-        "provider": { "@id": "https://turbinandoexperts.com/#organization" },
-        "areaServed": "BR",
-        "description": "Construção de alicerces digitais (Landing Pages, Sites, WebApps) e sistemas de automação com IA (Agentes no WhatsApp, Dashboards, CRM). Comece com o módulo necessário e escale conforme o resultado.",
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "priceCurrency": "BRL",
-          "url": "https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "O que é um sistema sob medida com IA?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "É um software ou estrutura construída especificamente para a sua operação. Pode ser uma Landing Page/Site de alta conversão, um agente de IA no WhatsApp, um dashboard, um CRM ou automações internas. A diferença pro template: o sistema se adapta ao seu negócio, não o contrário."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Em quanto tempo fica pronto?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O primeiro módulo (como uma Landing Page ou Agente de IA) geralmente fica pronto em 7 dias ou menos. Projetos mais amplos (combinação de site + agente + dashboard) podem levar de 10 a 14 dias. Tudo combinado e aprovado na proposta antes de começar."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto custa?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O valor depende do escopo e da complexidade. Após a call de imersão gratuita, você recebe uma proposta personalizada, sem surpresas. O investimento se paga com o primeiro lead capturado ou venda fechada no automático."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Funciona para o meu segmento?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. Já construí soluções para imobiliárias, clínicas (estética, médica, odontologia), salões de beleza, pet shops, academias e hotelaria. O sistema é desenhado a partir da sua operação — então serve pro seu segmento mesmo que não esteja nessa lista."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Preciso entender de tecnologia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Não. Você só descreve o problema e o que espera. Eu construo, entrego funcionando e mostro como usar. Painel simples pra acompanhar resultados, suporte contínuo incluso."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Posso começar pequeno?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim — e é o que recomendo. Você pode começar pelo Módulo 0 (uma Landing Page de alta conversão) ou Módulo 1 (Agente no WhatsApp) e ir adicionando os próximos conforme o resultado aparece. Sem compromisso de pegar tudo de uma vez."
-            }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Início",
-            "item": "https://turbinandoexperts.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Estrutura e Sistemas Sob Medida",
-            "item": "https://turbinandoexperts.com/#solucao"
-          }
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "url": "https://turbinandoexperts.com/",
-        "name": "Turbinando Experts",
-        "inLanguage": "pt-BR",
-        "publisher": { "@id": "https://turbinandoexperts.com/#organization" }
+        {
+          "@type": "State",
+          "name": "Rio Grande do Sul"
+        },
+        "BR"
+      ],
+      "parentOrganization": {
+        "@id": "https://turbinandoexperts.com/#organization"
       }
-    ]
-  }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://turbinandoexperts.com/#kiko",
+      "name": "Kiko Soares",
+      "jobTitle": "Especialista em Estrutura Digital e Sistemas Sob Medida com IA",
+      "worksFor": {
+        "@id": "https://turbinandoexperts.com/#organization"
+      },
+      "url": "https://turbinandoexperts.com/",
+      "knowsAbout": [
+        "Landing Pages de Alta Conversão",
+        "Criação de Sites Profissionais",
+        "WebApps Sob Medida",
+        "Agentes de IA para WhatsApp",
+        "WhatsApp API Oficial",
+        "Automação de Processos com n8n",
+        "Dashboards & Indicadores",
+        "CRM Personalizado",
+        "Sistemas Sob Medida",
+        "Vibe Coding"
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Estrutura Digital, Automações e IA para Negócios",
+      "provider": {
+        "@id": "https://turbinandoexperts.com/#organization"
+      },
+      "areaServed": "BR",
+      "description": "Soluções digitais sob medida: Linha START (Sites, Landing Pages, Google Negócios, WebApps), FLOW (Automação de WhatsApp e processos com IA), CONTROL (CRM e Dashboards), SCALE (Sistemas sob medida) e continuidade com CARE/GROWTH.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "url": "https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vocês atendem somente Porto Alegre/RS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Porto Alegre/RS é nossa sede e âncora local de relevância, mas prestamos serviços 100% digitais com atendimento e acompanhamento remoto para empresas de todo o Rio Grande do Sul e do Brasil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês fazem sites e Landing Pages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Desenvolvemos desde sites profissionais de alta autoridade até Landing Pages de conversão rápida e WebApps específicos. Seu site pode ser o primeiro módulo da sua operação digital, pronto para conectar automações e CRM no futuro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso começar apenas com um módulo (Linha START)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Com certeza, e é exatamente como recomendamos. A linha START é desenhada para resolver a dor imediata do seu negócio (como um site novo, uma landing page ou o primeiro fluxo de atendimento) sem precisar contratar o catálogo inteiro de uma vez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funcionam as automações de WhatsApp e Agentes de IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Criamos agentes inteligentes treinados com as regras e produtos da sua empresa para atender, tirar dúvidas, qualificar leads e agendar consultas 24h por dia no WhatsApp, integrando os dados diretamente ao seu CRM ou planilha."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês constroem sistemas sob medida e WebApps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Quando planilhas bagunçam sua rotina ou ferramentas prontas limitam a empresa, construímos pequenos WebApps ou sistemas internos sob medida para gerenciar ordens de serviço, clientes, contratos, estoque ou checklists operacionais."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês fazem CRM e Dashboards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Na camada CONTROL, organizamos seu funil com CRM personalizado e desenhamos dashboards intuitivos para você acompanhar vendas, atendimento e métricas em uma tela clara, transformando dados em decisões assertivas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso evoluir o projeto depois?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Toda a nossa arquitetura segue a jornada START → FLOW → CONTROL → SCALE. Você resolve a dor de hoje e adiciona novos módulos de automação, gestão ou escala somente quando fizer sentido para o crescimento da sua empresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona a continuidade e manutenção (CARE/GROWTH)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não prendemos você em plataformas engessadas com mensalidades forçadas. Oferecemos planos opcionais de continuidade (CARE para manutenção, estabilidade e suporte técnico; GROWTH para evolução, novos agentes e novos dashboards sob demanda)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://turbinandoexperts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Soluções Digitais & Automações",
+          "item": "https://turbinandoexperts.com/#solucoes"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://turbinandoexperts.com/",
+      "name": "Turbinando Experts",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://turbinandoexperts.com/#organization"
+      }
+    }
+  ]
+}
   </script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
 
-  <div class="top-banner" role="status" aria-live="polite">
-    ⚡ VAGAS LIMITADAS · Análise gratuita do seu negócio
+  <!-- TOP BANNER -->
+  <div class="top-banner">
+    <span class="dot"></span>
+    <span>Atendimento em Porto Alegre/RS · Soluções digitais e remotas para todo o Brasil</span>
   </div>
 
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="#" class="logo" aria-label="Turbinando Experts início">
+      <a href="#hero" class="logo" aria-label="Turbinando Experts início">
         <span class="logo-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
         </span>
@@ -1908,42 +1987,45 @@
       </a>
 
       <nav class="nav" aria-label="Navegação principal">
-        <a href="#dor">Problema</a>
-        <a href="#solucao">Solução</a>
-        <a href="#oqc">Módulos</a>
-        <a href="#resultados">Resultados</a>
-        <a href="#sobre">Sobre</a>
+        <a href="#empathy">Por onde começar</a>
+        <a href="#dores">Dores</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#start">Linha START</a>
+        <a href="#jornada">Jornada</a>
+        <a href="#diagnostico">Diagnóstico</a>
         <a href="#faq">FAQ</a>
       </nav>
 
-      <a href="https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio" class="btn-header-wa" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp agora">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp
-      </a>
+      <div class="header-actions">
+        <a href="https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio" class="btn-header-wa" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>Falar Agora</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- BARRA DE NAVEGAÇÃO INFERIOR ERGONÔMICA (MOBILE BOTTOM BAR) -->
+  <!-- BOTTOM NAV (MOBILE) -->
   <nav class="bottom-nav" aria-label="Navegação móvel rápida">
-    <a href="#hero" class="bottom-nav-item active" aria-label="Ir ao início">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1V9.5z"/></svg>
+    <a href="#hero" class="bottom-nav-item active" aria-label="Ir ao topo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
       <span>Início</span>
     </a>
-    <a href="#solucao" class="bottom-nav-item" aria-label="Ver solução">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      <span>Solução</span>
+    <a href="#dores" class="bottom-nav-item" aria-label="Dores">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      <span>Dores</span>
     </a>
-    <a href="#oqc" class="bottom-nav-item" aria-label="Ver módulos">
-      <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
-      <span>Módulos</span>
+    <a href="#solucoes" class="bottom-nav-item" aria-label="Soluções">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      <span>Soluções</span>
     </a>
-    <a href="#faq" class="bottom-nav-item" aria-label="Dúvidas frequentes">
-      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>
-      <span>FAQ</span>
+    <a href="#diagnostico" class="bottom-nav-item" aria-label="Diagnóstico">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      <span>Quiz</span>
     </a>
-    <a href="https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio" class="bottom-nav-item highlight-wa" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span>Falar</span>
+    <a href="https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio" class="bottom-nav-item highlight-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span>WhatsApp</span>
     </a>
   </nav>
 
@@ -1954,7 +2036,7 @@
         <div>
           <div class="hero-eyebrow">
             <span class="pulse" aria-hidden="true"></span>
-            Estrutura Digital · Automação · IA
+            ESTRUTURA DIGITAL · AUTOMAÇÕES E IA PARA NEGÓCIOS · PORTO ALEGRE/RS
           </div>
 
           <h1 id="hero-h1">
@@ -1963,33 +2045,33 @@
 
           <div class="tldr" role="note" aria-label="Resumo">
             <span class="tldr-label">// TL;DR</span>
-            Construo o <strong>alicerce digital da sua empresa</strong>: de uma Landing Page/Site de alta conversão a um Agente de IA no WhatsApp. <strong>Comece pelo que sua operação precisa hoje</strong> e escale módulo por módulo.
+            Soluções digitais sob medida com <strong>âncora em Porto Alegre/RS e atendimento remoto para todo o Brasil</strong>. Comece pelo alicerce que sua empresa precisa hoje (Site, Landing Page, WebApp ou WhatsApp com IA) e evolua módulo por módulo.
           </div>
 
           <p class="lede">
-            Sem site ou perdendo vendas por atendimento lento? Entrego a <strong>estrutura certa pra capturar e converter clientes</strong> — seja uma página focada em conversão, um WebApp sob medida ou automação no WhatsApp.
+            <strong>Automações e IA para negócios</strong>, além de Sites, Landing Pages, WebApps, CRM e dashboards sob medida. Comece pela dor de hoje e evolua conforme sua empresa cresce.
           </p>
 
           <div class="hero-cta">
-            <a href="https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio" class="btn-primary btn-large" aria-label="Quero minha análise gratuita no WhatsApp">
+            <a href="https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio" class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Quero minha análise gratuita no WhatsApp">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Quero minha análise gratuita
             </a>
-            <a href="#oqc" class="btn-secondary">
-              Ver módulos disponíveis
+            <a href="#solucoes" class="btn-secondary">
+              Ver soluções
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
 
           <div class="cta-note">
-            <span>Call rápida de 30 min</span>
+            <span>Call de imersão 30 min</span>
             <span>100% gratuita</span>
-            <span>Sem enrolação</span>
+            <span>Sem pacotes engessados</span>
           </div>
         </div>
 
-        <!-- Visual Terminal Card -->
-        <aside class="terminal fade-up" aria-label="Demonstração visual da esteira de módulos">
+        <!-- Terminal Card Interativo -->
+        <aside class="terminal fade-up" aria-label="Demonstração visual da esteira de soluções">
           <div class="terminal-header">
             <div class="terminal-dots" aria-hidden="true">
               <span></span><span></span><span></span>
@@ -2000,39 +2082,35 @@
           <div class="terminal-body">
             <div class="term-line">
               <span class="term-prompt">$</span>
-              <span class="term-cmd">diagnóstico <span class="term-tag">site antigo / sem captura</span></span>
+              <span class="term-cmd">diagnóstico <span class="term-tag">dor imediata</span></span>
             </div>
             <div class="term-line">
               <span class="term-prompt">&gt;</span>
-              <span class="term-cmd">módulo.recomendado <span class="hl">#00 LP de Alta Conversão</span></span>
+              <span class="term-cmd">identificado: <span class="hl">leads perdidos por demora no WhatsApp</span></span>
             </div>
             <div class="term-line">
               <span class="term-prompt">$</span>
-              <span class="term-cmd">ia <span class="term-tag">esteira sugerida</span></span>
+              <span class="term-cmd">solução.start <span class="term-tag">etapa 1</span></span>
             </div>
             <div class="term-line">
               <span class="term-prompt">&gt;</span>
-              <span class="term-out"><span class="hl">[00]</span> LP/Site com captura <span style="color:var(--text-2);">(alicerce)</span></span>
+              <span class="term-out"><span class="hl">[START Landing]</span> Página focada em conversão</span>
             </div>
             <div class="term-line">
               <span class="term-prompt">&gt;</span>
-              <span class="term-out"><span class="hl">[01]</span> Agente WhatsApp 24h <span style="color:var(--text-2);">(conversão)</span></span>
-            </div>
-            <div class="term-line">
-              <span class="term-prompt">&gt;</span>
-              <span class="term-out"><span class="hl">[02]</span> Dashboard + CRM <span style="color:var(--text-2);">(gestão)</span></span>
+              <span class="term-out"><span class="hl">[FLOW Agente IA]</span> Atendimento 24h &amp; triagem imediata</span>
             </div>
             <div class="term-line">
               <span class="term-prompt">$</span>
-              <span class="term-cmd">cliente: "vou começar pela Landing Page"</span>
+              <span class="term-cmd">evolução.futura <span class="term-tag">quando fizer sentido</span></span>
             </div>
             <div class="term-line">
               <span class="term-prompt">&gt;</span>
-              <span class="term-cmd">ia <span class="term-tag">⚡ entrega rápida</span></span>
+              <span class="term-out"><span class="hl">[CONTROL]</span> CRM sob medida + Dashboards</span>
             </div>
             <div class="term-line">
               <span class="term-prompt">&gt;</span>
-              <span class="term-out">Feito. <span class="hl">Página no ar</span>, pronta pra receber o Agente.<span class="term-cursor"></span></span>
+              <span class="term-out">Status: <span class="hl">Solução pronta para operar.</span><span class="term-cursor"></span></span>
             </div>
           </div>
         </aside>
@@ -2041,253 +2119,523 @@
 
     <!-- MARQUEE -->
     <section class="marquee-section" aria-label="Segmentos atendidos">
-      <div class="marquee-label">segmentos atendidos</div>
+      <div class="marquee-label">Segmentos e negócios atendidos</div>
       <div class="marquee-track" aria-hidden="true">
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>Imobiliária</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>Clínica Estética</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>Clínica Médica</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1.2 0-2.1.6-3 .6S7.2 3 6 3C4.3 3 3 4.6 3 6.5c0 2 .8 3 1.3 5.3.5 2.3.9 5.3 1.9 7.7.3.8 1.5.8 1.8 0 .5-1.4.8-3.5 1.3-5.1a1.7 1.7 0 0 1 3.4 0c.5 1.6.8 3.7 1.3 5.1.3.8 1.5.8 1.8 0 1-2.4 1.4-5.4 1.9-7.7.5-2.3 1.3-3.3 1.3-5.3C21 4.6 19.7 3 18 3c-1.2 0-2.1.6-3 .6S13.2 3 12 3z"/></svg>Odontologia</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>Imobiliárias</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>Clínicas Estéticas</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>Clínicas Médicas</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c-1.2 0-2.1.6-3 .6S7.2 3 6 3C4.3 3 3 4.6 3 6.5c0 2 .8 3 1.3 5.3.5 2.3.9 5.3 1.9 7.7.3.8 1.5.8 1.8 0 .5-1.4.8-3.5 1.3-5.1a1.7 1.7 0 0 1 3.4 0c.5 1.6.8 3.7 1.3 5.1.3.8 1.5.8 1.8 0 1-2.4 1.4-5.4 1.9-7.7.5-2.3 1.3-3.3 1.3-5.3C21 4.6 19.7 3 18 3c-1.2 0-2.1.6-3 .6S13.2 3 12 3z"/></svg>Odontologia</div>
         <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l1 16M18 4l-1 16M3 8h18M3 16h18"/></svg>Salões &amp; Beleza</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="4" r="2"/><path d="M8 22l2-7-3-3 1-5 4 2 3-1 4 1 1 4-3 1 2 5"/></svg>Petshop</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M12 6v5"/><path d="M9 11l3 3 3-3"/><path d="M9 14v4l3 2 3-2v-4line x14 y18 x28 y28line x116 y18 x220 y28line x16 y16 x26 y210line x118 y16 x218 y210line x18 y18 x216 y28"/></svg>Academia</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg>Hotelaria</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>Imobiliária</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>Clínica Estética</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>Clínica Médica</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1.2 0-2.1.6-3 .6S7.2 3 6 3C4.3 3 3 4.6 3 6.5c0 2 .8 3 1.3 5.3.5 2.3.9 5.3 1.9 7.7.3.8 1.5.8 1.8 0 .5-1.4.8-3.5 1.3-5.1a1.7 1.7 0 0 1 3.4 0c.5 1.6.8 3.7 1.3 5.1.3.8 1.5.8 1.8 0 1-2.4 1.4-5.4 1.9-7.7.5-2.3 1.3-3.3 1.3-5.3C21 4.6 19.7 3 18 3c-1.2 0-2.1.6-3 .6S13.2 3 12 3z"/></svg>Odontologia</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l1 16M18 4l-1 16M3 8h18M3 16h18"/></svg>Salões &amp; Beleza</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="4" r="2"/><path d="M8 22l2-7-3-3 1-5 4 2 3-1 4 1 1 4-3 1 2 5"/></svg>Petshop</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M12 6v5"/><path d="M9 11l3 3 3-3"/><path d="M9 14v4l3 2 3-2v-4line x14 y18 x28 y28line x116 y18 x220 y28line x16 y16 x26 y210line x118 y16 x218 y210line x18 y18 x216 y28"/></svg>Academia</div>
-        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg>Hotelaria</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Advocacia &amp; Consultorias</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="4" r="2"/><path d="M8 22l2-7-3-3 1-5 4 2 3-1 4 1 1 4-3 1 2 5"/></svg>Pet Shops &amp; Vet</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Academias &amp; Studios</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg>Hotelaria &amp; Pousadas</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>Serviços B2B</div>
       </div>
     </section>
 
-    <!-- DOR -->
-    <section class="section" id="dor" aria-labelledby="dor-h2">
+    <!-- EMPATHY SECTION (Você sabe onde dói) -->
+    <section class="section" id="empathy" aria-labelledby="empathy-h2">
+      <div class="container">
+        <div class="empathy-card fade-up">
+          <div>
+            <span class="mono">ponto de partida</span>
+            <h2 id="empathy-h2">Você sabe onde dói.<br><span class="accent">Nós encontramos o que precisa ser construído.</span></h2>
+            <p>
+              Seu problema pode ser um site que não representa sua empresa, uma presença fraca no Google, tarefas repetitivas, leads sem acompanhamento, planilhas difíceis de controlar ou a falta de um sistema próprio.
+            </p>
+            <p style="font-weight: 700; color: var(--text-0);">
+              Começamos pela dor. A tecnologia vem depois.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="#diagnostico" class="btn-primary">
+                Encontrar minha solução
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="empathy-quote-box">
+            <strong>"O cliente compra uma solução para a dor de hoje, mas a Turbinando Experts constrói uma relação capaz de resolver os problemas de amanhã."</strong>
+            <p style="margin-top: 14px; font-size: 12px; color: var(--text-2);">
+              A menor solução que entrega resultado imediato, abrindo espaço para automações, gestão e escala contínua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE DORES (10 DORES REAIS) -->
+    <section class="section" id="dores" aria-labelledby="dores-h2">
       <div class="container">
         <div class="section-head">
-          <span class="mono">diagnóstico</span>
-          <h2 id="dor-h2">O dia a dia<br>está te <span class="accent">sugando.</span></h2>
+          <span class="mono">gargalos reais</span>
+          <h2 id="dores-h2">Qual destas travas está travando<br>o seu <span class="accent">crescimento?</span></h2>
           <p class="lede">
-            Pequenos negócios travam porque <strong>ferramentas prontas ou a falta de estrutura não cabem na sua operação.</strong>
+            Identifique sua situação atual. Cada dor tem um ponto de entrada desenhado sob medida para resolvê-la.
           </p>
         </div>
 
-        <div class="pain-grid">
-          <article class="pain-card fade-up">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <div class="pain-grid-10">
+          <!-- 1 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
             </div>
-            <div class="pain-content">
-              <strong>Sem presença ou com site fraco/lento</strong>
-              <span>Você investe em anúncios ou divulgação, mas o cliente chega num site ruim e vai embora.</span>
-            </div>
+            <strong>Meu site não gera contatos</strong>
+            <a href="#start" class="pain-card-target">→ START Site / Landing</a>
           </article>
 
-          <article class="pain-card fade-up">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0118 0M3 12a9 9 0 0018 0M12 3v18"/></svg>
+          <!-- 2 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
             </div>
-            <div class="pain-content">
-              <strong>Ferramentas soltas que não conversam</strong>
-              <span>WhatsApp, planilha, CRM genérico, ERP — vários sistemas, nenhum integrado de verdade.</span>
-            </div>
+            <strong>Preciso de uma Landing Page rápida</strong>
+            <a href="#start" class="pain-card-target">→ START Landing</a>
           </article>
 
-          <article class="pain-card fade-up">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 14l4-4 4 4 5-5"/></svg>
+          <!-- 3 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
             </div>
-            <div class="pain-content">
-              <strong>Atendimento travado, vendas paradas</strong>
-              <span>Cliente manda msg às 22h, você responde 9h depois. Ele já comprou do concorrente.</span>
-            </div>
+            <strong>Meu negócio não aparece no Google</strong>
+            <a href="#start" class="pain-card-target">→ START Google GMN</a>
           </article>
 
-          <article class="pain-card fade-up">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <!-- 4 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
-            <div class="pain-content">
-              <strong>Quer crescer, mas não sabe onde está vazando</strong>
-              <span>Sem visibilidade e sem dados: cada decisão da empresa vira um chute.</span>
+            <strong>Recebo mensagens demais no WhatsApp</strong>
+            <a href="#solucoes" class="pain-card-target">→ FLOW WhatsApp IA</a>
+          </article>
+
+          <!-- 5 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
+            <strong>Perco leads por demora no atendimento</strong>
+            <a href="#solucoes" class="pain-card-target">→ FLOW SDR 24h</a>
+          </article>
+
+          <!-- 6 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <strong>Minha equipe se perde em várias planilhas</strong>
+            <a href="#solucoes" class="pain-card-target">→ CONTROL CRM</a>
+          </article>
+
+          <!-- 7 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <strong>Não consigo acompanhar meus números</strong>
+            <a href="#solucoes" class="pain-card-target">→ CONTROL Dashboards</a>
+          </article>
+
+          <!-- 8 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            </div>
+            <strong>Tenho tarefas repetitivas todos os dias</strong>
+            <a href="#solucoes" class="pain-card-target">→ FLOW Automações</a>
+          </article>
+
+          <!-- 9 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <strong>Preciso de um sistema específico pro meu fluxo</strong>
+            <a href="#solucoes" class="pain-card-target">→ SCALE WebApps</a>
+          </article>
+
+          <!-- 10 -->
+          <article class="pain-card-v11 fade-up">
+            <div class="pain-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <strong>Ferramentas prontas travam minha operação</strong>
+            <a href="#solucoes" class="pain-card-target">→ SCALE Sob Medida</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SOLUÇÃO / PROCESSO -->
-    <section class="section" id="solucao" aria-labelledby="solucao-h2">
+    <!-- SEÇÃO: SOLUÇÕES QUE PODEMOS CONSTRUIR (4 Pilares) -->
+    <section class="section" id="solucoes" aria-labelledby="solucoes-h2">
       <div class="container">
         <div class="section-head">
-          <span class="mono">como funciona</span>
-          <h2 id="solucao-h2">Um sistema sob medida.<br><span class="accent">Construído do zero.</span></h2>
+          <span class="mono">arquitetura modular</span>
+          <h2 id="solucoes-h2">Soluções que podemos construir.<br><span class="accent">Módulos que resolvem.</span></h2>
           <p class="lede">
-            Cada negócio é diferente. Por isso cada solução que construo começa com uma <strong>call de imersão</strong> e termina em um módulo funcional — em 7 dias ou menos, dependendo do escopo.
+            <strong>Produtos organizam. Os módulos são personalizados para cada negócio.</strong> Você não precisa contratar o catálogo inteiro: começamos apenas pelo que sua operação precisa hoje.
           </p>
         </div>
 
-        <div class="timeline">
-          <div class="t-step fade-up">
-            <div class="t-num">01</div>
-            <div class="t-content">
-              <strong>Call de imersão gratuita</strong>
-              <span>30 a 45 minutos para eu mergulhar na sua operação e entender qual o melhor ponto de partida.</span>
+        <div class="pillars-grid">
+          <!-- PILAR 1 -->
+          <article class="pillar-card fade-up">
+            <div>
+              <div class="pillar-tag">// 01. PORTA DE ENTRADA</div>
+              <h3>Presença Digital</h3>
+              <p class="pillar-desc">
+                Estrutura rápida e profissional para seu negócio ser encontrado, passar credibilidade e transformar visitantes em oportunidades reais.
+              </p>
+              <ul class="pillar-list">
+                <li><strong>Criação de Sites Profissionais</strong> (institucionais ou locais)</li>
+                <li><strong>Landing Pages de Alta Conversão</strong> (rápidas, focadas em venda)</li>
+                <li><strong>Google Business Profile (GMN)</strong> e presença local</li>
+                <li><strong>WebApps iniciais</strong> para captação e cadastro direto</li>
+              </ul>
             </div>
-          </div>
+            <div class="pillar-footer-quote">
+              "Seu site pode ser o primeiro módulo da operação digital — não precisa ser o último."
+            </div>
+          </article>
 
-          <div class="t-step fade-up">
-            <div class="t-num">02</div>
-            <div class="t-content">
-              <strong>Arquitetura sob medida</strong>
-              <span>Desenho da estrutura: quais módulos (site, agente, dashboard, CRM), como se integram, escopo claro.</span>
+          <!-- PILAR 2 -->
+          <article class="pillar-card fade-up">
+            <div>
+              <div class="pillar-tag">// 02. EFICIÊNCIA OPERACIONAL</div>
+              <h3>Automação e IA</h3>
+              <p class="pillar-desc">
+                Elimine o trabalho manual e garanta que nenhum lead fique sem resposta imediata, dia ou noite.
+              </p>
+              <ul class="pillar-list">
+                <li><strong>Agentes de IA no WhatsApp</strong> (atendimento, triagem e qualificação 24h)</li>
+                <li><strong>Automação de Processos Comerciais</strong> (notificações e follow-ups)</li>
+                <li><strong>Integrações entre Ferramentas</strong> com n8n e APIs oficiais</li>
+                <li><strong>Agendamento e SDR automático</strong> integrado à sua agenda</li>
+              </ul>
             </div>
-          </div>
+            <div class="pillar-footer-quote">
+              "Automatize o que não deveria depender de trabalho manual."
+            </div>
+          </article>
 
-          <div class="t-step fade-up">
-            <div class="t-num">03</div>
-            <div class="t-content">
-              <strong>Entrega em 7 dias ou menos</strong>
-              <span>Primeiro módulo funcionando, conectado ao seu ambiente, com teste real. Você usa antes de escalar.</span>
+          <!-- PILAR 3 -->
+          <article class="pillar-card fade-up">
+            <div>
+              <div class="pillar-tag">// 03. INTELIGÊNCIA & CONTROLE</div>
+              <h3>Gestão e Dados</h3>
+              <p class="pillar-desc">
+                Chega de planilhas desatualizadas ou decisões no escuro. Tenha clareza total de ponta a ponta.
+              </p>
+              <ul class="pillar-list">
+                <li><strong>CRM Personalizado</strong> moldado no seu funil de vendas</li>
+                <li><strong>Dashboards em Tempo Real</strong> (vendas, leads, conversão)</li>
+                <li><strong>Painéis e Indicadores (KPIs)</strong> com Power BI ou Web</li>
+                <li><strong>Visibilidade Completa</strong> do lead ao fechamento</li>
+              </ul>
             </div>
-          </div>
+            <div class="pillar-footer-quote">
+              "Organize a operação: dados → informação → decisão assertiva."
+            </div>
+          </article>
 
-          <div class="t-step fade-up">
-            <div class="t-num">04</div>
-            <div class="t-content">
-              <strong>Escala contínua</strong>
-              <span>Conforme o resultado aparece, novos módulos entram: Agente no WhatsApp, CRM, dashboards. No seu ritmo.</span>
+          <!-- PILAR 4 -->
+          <article class="pillar-card fade-up">
+            <div>
+              <div class="pillar-tag">// 04. EXPANSÃO SOB MEDIDA</div>
+              <h3>Sistemas e WebApps</h3>
+              <p class="pillar-desc">
+                Quando ferramentas genéricas do mercado não atendem suas particularidades, construímos a solução sob medida.
+              </p>
+              <ul class="pillar-list">
+                <li><strong>WebApps e Sistemas Internos</strong> desenhados do zero</li>
+                <li><strong>Painéis Operacionais e Administrativos</strong> seguros</li>
+                <li><strong>APIs e Conexões Proprietárias</strong> sem mensalidades por usuário</li>
+                <li><strong>Módulos de Gestão</strong> para ordens de serviço, contratos ou estoque</li>
+              </ul>
             </div>
-          </div>
+            <div class="pillar-footer-quote">
+              "Quando a ferramenta pronta limita o negócio, construímos a solução para ele."
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- O QUE CONSTRUO (MÓDULOS) -->
-    <section class="section" id="oqc" aria-labelledby="oqc-h2">
+    <!-- SEÇÃO: LINHA START -->
+    <section class="section" id="start" aria-labelledby="start-h2">
       <div class="container">
         <div class="section-head">
-          <span class="mono">esteira de módulos</span>
-          <h2 id="oqc-h2">Módulos sob medida.<br><span class="accent">Você monta o seu.</span></h2>
+          <span class="mono">ponto de entrada</span>
+          <h2 id="start-h2">Comece pelo que sua empresa precisa agora.<br><span class="accent">Conheça a Linha START.</span></h2>
           <p class="lede">
-            Cada módulo resolve uma dor específica. <strong>Você pode começar pelo Módulo 00 ou 01</strong> — conforme a necessidade atual da sua empresa.
+            <strong>START não é um pacote barato:</strong> é a menor solução capaz de resolver uma dor real e abrir espaço para a próxima evolução. <strong>Você não precisa contratar tudo de uma vez.</strong>
           </p>
         </div>
 
-        <div class="oqc-grid">
-          <article class="oqc-card fade-up">
-            <div class="oqc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <div class="start-grid">
+          <!-- START Site -->
+          <article class="start-card fade-up">
+            <div>
+              <span class="start-badge">START Site</span>
+              <h3>Site Profissional</h3>
+              <p>Presença digital sólida, rápida e personalizada. Apresente seus serviços com autoridade e facilite o contato com clientes.</p>
             </div>
-            <div class="oqc-name">
-              <span>Módulo 00 · Alicerce</span>
-              Landing Page / WebApp
+            <div class="start-card-action">
+              <span class="badge">Presença</span>
+              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Site" target="_blank" rel="noopener noreferrer">Solicitar →</a>
             </div>
-            <p class="oqc-desc">Página de vendas ultra-rápida ou WebApp desenhado para resolver uma dor pontual. <strong>Seu cartão de visitas focado em conversão.</strong></p>
           </article>
 
-          <article class="oqc-card fade-up">
-            <div class="oqc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M9.5 13.5c.833.667 2.167.667 3 0"/></svg>
+          <!-- START Landing -->
+          <article class="start-card highlight fade-up">
+            <div>
+              <span class="start-badge">START Landing</span>
+              <h3>Landing Page de Conversão</h3>
+              <p>Página de vendas ultra-rápida, persuasiva e desenhada para transformar tráfego em leads qualificados no WhatsApp.</p>
             </div>
-            <div class="oqc-name">
-              <span>Módulo 01 · Atendimento</span>
-              Agente de IA WhatsApp
+            <div class="start-card-action">
+              <span class="badge">Vendas</span>
+              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Landing" target="_blank" rel="noopener noreferrer">Solicitar →</a>
             </div>
-            <p class="oqc-desc">Atende, qualifica e vende 24h no WhatsApp. Conecta direto no seu site ou roda de forma independente.</p>
           </article>
 
-          <article class="oqc-card fade-up">
-            <div class="oqc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></svg>
+          <!-- START Google -->
+          <article class="start-card fade-up">
+            <div>
+              <span class="start-badge">START Google</span>
+              <h3>Presença Local / GMN</h3>
+              <p>Otimização de Google Business Profile em Porto Alegre e região para ser encontrado por quem procura seus serviços agora.</p>
             </div>
-            <div class="oqc-name">
-              <span>Módulo 02 · Gestão</span>
-              Dashboard Sob Medida
+            <div class="start-card-action">
+              <span class="badge">Local SEO</span>
+              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Google" target="_blank" rel="noopener noreferrer">Solicitar →</a>
             </div>
-            <p class="oqc-desc">Painéis sob medida: financeiro, vendas, marketing, KPI. <strong>Você vê o que importa em uma tela</strong>, sem montar planilha.</p>
           </article>
 
-          <article class="oqc-card fade-up">
-            <div class="oqc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          <!-- START App -->
+          <article class="start-card fade-up">
+            <div>
+              <span class="start-badge">START App</span>
+              <h3>App Direto na Dor</h3>
+              <p>Uma planilha complicada ou controle repetitivo transformado em um WebApp simples: clientes, contratos, agendas ou checklists.</p>
             </div>
-            <div class="oqc-name">
-              <span>Módulo 03 · Pipeline</span>
-              CRM Personalizado
+            <div class="start-card-action">
+              <span class="badge">WebApp</span>
+              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20App" target="_blank" rel="noopener noreferrer">Solicitar →</a>
             </div>
-            <p class="oqc-desc">Gestão de leads, clientes e funil do <strong>jeito que o seu negócio funciona</strong> — não do jeito que o template quer.</p>
           </article>
 
-          <article class="oqc-card fade-up">
-            <div class="oqc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          <!-- START Flow -->
+          <article class="start-card highlight fade-up">
+            <div>
+              <span class="start-badge">START Flow</span>
+              <h3>Primeira Automação</h3>
+              <p>Automatize seu gargalo mais urgente: triagem no WhatsApp, captura de formulário ou disparo automático de propostas.</p>
             </div>
-            <div class="oqc-name">
-              <span>Módulo 04 · Escala</span>
-              Automações
+            <div class="start-card-action">
+              <span class="badge">Automação</span>
+              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Flow" target="_blank" rel="noopener noreferrer">Solicitar →</a>
             </div>
-            <p class="oqc-desc">Conecta o que está solto: relatórios, follow-up, integrações entre ferramentas. <strong>Para de fazer no braço.</strong></p>
           </article>
-        </div>
 
-        <div class="oqc-foot fade-up">
-          💡 <strong>Regra de ouro:</strong> comece com 1 módulo, valide o resultado, depois escale pros próximos. <span class="accent">Sem compromisso de pegar tudo de uma vez.</span>
+          <!-- START Data -->
+          <article class="start-card fade-up">
+            <div>
+              <span class="start-badge">START Data</span>
+              <h3>Dashboard Inicial</h3>
+              <p>Um painel único e visual para acompanhar suas vendas, leads ou métricas operacionais sem precisar abrir planilhas confusas.</p>
+            </div>
+            <div class="start-card-action">
+              <span class="badge">Gestão</span>
+              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Data" target="_blank" rel="noopener noreferrer">Solicitar →</a>
+            </div>
+          </article>
+
+          <!-- START Diagnóstico -->
+          <article class="start-card fade-up">
+            <div>
+              <span class="start-badge">START Diagnóstico</span>
+              <h3>Imersão &amp; Mapeamento</h3>
+              <p>Call de 30 minutos para mapear seus gargalos operacionais e definir exatamente qual o primeiro módulo a construir.</p>
+            </div>
+            <div class="start-card-action">
+              <span class="badge">100% Grátis</span>
+              <a href="#diagnostico">Iniciar Quiz →</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- TABELA COMPARATIVA -->
+    <!-- SEÇÃO: JORNADA DE EVOLUÇÃO -->
+    <section class="section" id="jornada" aria-labelledby="jornada-h2">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">visão de longo prazo</span>
+          <h2 id="jornada-h2">Comece pequeno.<br><span class="accent">Evolua quando fizer sentido.</span></h2>
+          <p class="lede">
+            <strong>Regra comercial:</strong> Venda a próxima solução lógica, não o catálogo inteiro. Sua empresa cresce por etapas seguras e sustentáveis.
+          </p>
+        </div>
+
+        <div class="journey-stepper fade-up">
+          <div class="stepper-track">
+            <!-- 1 -->
+            <div class="step-node active">
+              <div class="step-badge">01</div>
+              <strong>DOR</strong>
+              <p>Identificamos o que trava seu atendimento, vendas ou rotina.</p>
+            </div>
+            <!-- 2 -->
+            <div class="step-node active">
+              <div class="step-badge">02</div>
+              <strong>START</strong>
+              <p>Construímos a menor solução com resultado imediato.</p>
+            </div>
+            <!-- 3 -->
+            <div class="step-node active">
+              <div class="step-badge">03</div>
+              <strong>RESULTADO</strong>
+              <p>Você testa, valida e colhe os primeiros frutos na operação.</p>
+            </div>
+            <!-- 4 -->
+            <div class="step-node">
+              <div class="step-badge">04</div>
+              <strong>FLOW</strong>
+              <p>Conectamos automações e IA no WhatsApp e processos.</p>
+            </div>
+            <!-- 5 -->
+            <div class="step-node">
+              <div class="step-badge">05</div>
+              <strong>CONTROL</strong>
+              <p>Organizamos funil com CRM e dashboards analíticos.</p>
+            </div>
+            <!-- 6 -->
+            <div class="step-node">
+              <div class="step-badge">06</div>
+              <strong>SCALE</strong>
+              <p>Desenvolvemos sistemas e WebApps proprietários sob medida.</p>
+            </div>
+            <!-- 7 -->
+            <div class="step-node">
+              <div class="step-badge">07</div>
+              <strong>CARE / GROWTH</strong>
+              <p>Manutenção técnica contínua e novos módulos sob demanda.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilares em Ação: FLOW + CONTROL + SCALE + CARE -->
+        <div class="flow-showcase fade-up">
+          <div class="flow-card">
+            <h4>FLOW · Fluxo Comercial</h4>
+            <div class="flow-pipeline">
+              <div class="flow-step-item"><span class="flow-icon">01</span> Lead entra pelo Site ou WhatsApp</div>
+              <div class="flow-step-item"><span class="flow-icon">02</span> Agente de IA atende &amp; qualifica 24h</div>
+              <div class="flow-step-item"><span class="flow-icon">03</span> Agendamento ou registro no CRM</div>
+            </div>
+          </div>
+          <div class="flow-card">
+            <h4>FLOW · Automação Interna</h4>
+            <div class="flow-pipeline">
+              <div class="flow-step-item"><span class="flow-icon">01</span> Formulário / Ordem de Serviço</div>
+              <div class="flow-step-item"><span class="flow-icon">02</span> n8n processa dados &amp; conecta sistemas</div>
+              <div class="flow-step-item"><span class="flow-icon">03</span> Notificação da equipe &amp; follow-up</div>
+            </div>
+          </div>
+          <div class="flow-card">
+            <h4>FLOW · Descoberta Local</h4>
+            <div class="flow-pipeline">
+              <div class="flow-step-item"><span class="flow-icon">01</span> Busca local no Google (Porto Alegre)</div>
+              <div class="flow-step-item"><span class="flow-icon">02</span> Clique direto pro WhatsApp / Site</div>
+              <div class="flow-step-item"><span class="flow-icon">03</span> Triagem imediata sem fila de espera</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-scale-grid fade-up">
+          <div class="box-deep">
+            <div>
+              <span class="mono">camada control</span>
+              <h3>CRM + Dashboards em Tempo Real</h3>
+              <p>
+                Chega de planilhas desorganizadas ou CRM engessado com campos que você não usa. Desenvolvemos o funil exatamente com as etapas do seu negócio: <strong>dados → informação → decisão clara.</strong>
+              </p>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 13px; color: var(--green);">
+              // Visibilidade completa do primeiro contato até o fechamento.
+            </div>
+          </div>
+
+          <div class="box-deep">
+            <div>
+              <span class="mono">camadas scale &amp; care</span>
+              <h3>Sua empresa muda. Sua tecnologia acompanha.</h3>
+              <p>
+                Quando sistemas prontos limitam suas regras de negócio, a camada <strong>SCALE</strong> constrói o software para a sua operação. E com o <strong>CARE + GROWTH</strong>, mantemos tudo estável, monitorado e evoluindo com novos módulos.
+              </p>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 13px; color: var(--green);">
+              // Sem amarras, sem dependência forçada de plataformas de terceiros.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: COMPARATIVO -->
     <section class="section" id="comparativo" aria-labelledby="comp-h2">
       <div class="container">
         <div class="section-head">
-          <span class="mono">comparativo</span>
+          <span class="mono">diferenciação</span>
           <h2 id="comp-h2">Genérico vs. <span class="accent">sob medida</span></h2>
           <p class="lede">
-            A diferença entre <strong>adaptar sua operação ao software</strong> ou construir o software para a sua operação.
+            Aqui, a solução começa pela sua operação — não por um template. A diferença entre <strong>adaptar sua empresa ao software</strong> ou construir a estrutura para o seu fluxo real.
           </p>
         </div>
 
         <div class="compare-table-wrap fade-up">
-          <table class="compare-table" aria-label="Tabela comparativa de genérico versus sob medida">
+          <table class="compare-table" aria-label="Tabela comparativa entre sistemas genéricos e sob medida">
             <thead>
               <tr>
                 <th scope="col">Aspecto</th>
-                <th scope="col">Genérico (template)</th>
-                <th scope="col" class="col-yes">Sob medida (construído pra você)</th>
+                <th scope="col">Template / Plataforma Engessada</th>
+                <th scope="col" class="col-yes">Sob Medida (Turbinando Experts)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="aspect">Adaptação</td>
-                <td class="no"><span class="cross">✕</span> Você se adapta ao sistema</td>
-                <td class="yes"><span class="check">✓</span> Sistema se adapta a você</td>
+                <td class="no"><span class="cross">✕</span> Você é forçado a adaptar seu processo ao sistema</td>
+                <td class="yes"><span class="check">✓</span> O sistema é desenhado exatamente para o seu fluxo</td>
               </tr>
               <tr>
                 <td class="aspect">Funcionalidades</td>
-                <td class="no"><span class="cross">✕</span> 100+ que você nunca usa</td>
-                <td class="yes"><span class="check">✓</span> Só o que sua operação precisa</td>
+                <td class="no"><span class="cross">✕</span> Dezenas de abas inúteis que só complicam</td>
+                <td class="yes"><span class="check">✓</span> Somente o que sua equipe realmente precisa</td>
               </tr>
               <tr>
                 <td class="aspect">Integrações</td>
-                <td class="no"><span class="cross">✕</span> Plugins limitados, cobra extra</td>
-                <td class="yes"><span class="check">✓</span> Conecta no que você já usa</td>
+                <td class="no"><span class="cross">✕</span> Travadas, pagas à parte ou inexistentes</td>
+                <td class="yes"><span class="check">✓</span> Conexão direta com WhatsApp, CRM, planilhas e APIs</td>
               </tr>
               <tr>
-                <td class="aspect">Escalabilidade</td>
-                <td class="no"><span class="cross">✕</span> Trava no plano ou no recurso</td>
-                <td class="yes"><span class="check">✓</span> Evolui com módulos novos</td>
+                <td class="aspect">Evolução &amp; Escala</td>
+                <td class="no"><span class="cross">✕</span> Bloqueado por planos caros e limitações da ferramenta</td>
+                <td class="yes"><span class="check">✓</span> Evolução modular: START → FLOW → CONTROL → SCALE</td>
               </tr>
               <tr>
-                <td class="aspect">Propriedade</td>
-                <td class="no"><span class="cross">✕</span> Assinatura que pode subir 200%</td>
-                <td class="yes"><span class="check">✓</span> Sistema seu, regras claras</td>
+                <td class="aspect">Independência</td>
+                <td class="no"><span class="cross">✕</span> Preso a mensalidades crescentes por usuário</td>
+                <td class="yes"><span class="check">✓</span> Sua solução, sua arquitetura, sem plataforma engessada</td>
               </tr>
               <tr>
-                <td class="aspect">Diferencial competitivo</td>
-                <td class="no"><span class="cross">✕</span> Igual ao seu concorrente</td>
-                <td class="yes"><span class="check">✓</span> Só você tem, só pra você serve</td>
+                <td class="aspect">Diferencial</td>
+                <td class="no"><span class="cross">✕</span> Visual e fluxo idênticos aos concorrentes</td>
+                <td class="yes"><span class="check">✓</span> Ativo digital exclusivo construído sob medida</td>
               </tr>
             </tbody>
           </table>
@@ -2295,195 +2643,130 @@
       </div>
     </section>
 
-    <!-- RESULTADOS & PROVA SOCIAL -->
+    <!-- SEÇÃO: DIAGNÓSTICO INTERATIVO (8 PASSOS) -->
+    <section class="section" id="diagnostico" aria-labelledby="diag-h2">
+      <div class="container">
+        <div class="section-head center">
+          <span class="mono">diagnóstico guiado</span>
+          <h2 id="diag-h2">Descubra o melhor ponto de partida<br>para a sua <span class="accent">empresa</span></h2>
+          <p class="lede" style="margin: 0 auto;">
+            Responda 7 perguntas rápidas e veja qual módulo da arquitetura (START, FLOW, CONTROL ou SCALE) resolve seu gargalo com máxima agilidade.
+          </p>
+        </div>
+
+        <div class="quiz-container fade-up">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quiz-progress"></div>
+          </div>
+
+          <div class="quiz-header">
+            <span class="quiz-step-count" id="quiz-step-indicator">Passo 1 de 8</span>
+            <span class="badge" id="quiz-category-badge">Segmento</span>
+          </div>
+
+          <!-- Pergunta / Conteúdo do Passo -->
+          <div id="quiz-content-area">
+            <h3 class="quiz-question-title" id="quiz-question-text">Qual é o segmento principal do seu negócio?</h3>
+            <div class="quiz-options-grid" id="quiz-options">
+              <!-- Renderizado via JS -->
+            </div>
+          </div>
+
+          <!-- Navegação -->
+          <div class="quiz-nav">
+            <button type="button" class="btn-secondary" id="btn-quiz-prev" style="visibility: hidden;">
+              ← Voltar
+            </button>
+            <button type="button" class="btn-primary" id="btn-quiz-next">
+              Avançar →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: RESULTADOS & PROVA SOCIAL -->
     <section class="section" id="resultados" aria-labelledby="res-h2">
       <div class="container">
         <div class="section-head">
           <span class="mono">impacto real</span>
-          <h2 id="res-h2">O que o sistema <span class="accent">entrega na prática.</span></h2>
+          <h2 id="res-h2">O que entregamos <span class="accent">na prática.</span></h2>
           <p class="lede">
-            Negócios com estruturas e sistemas sob medida bem desenhados relatam mudanças rápidas e mensuráveis.
+            Negócios com arquitetura sob medida relatam mudanças rápidas, mensuráveis e sem atritos operacionais.
           </p>
         </div>
 
-        <div class="results-grid" style="margin-bottom: 48px;">
+        <div class="results-grid">
           <div class="result-card fade-up">
             <div class="result-num">&lt; 7d</div>
-            <div class="result-label">Tempo médio do diagnóstico ao 1º módulo no ar</div>
-            <span class="result-tag">velocidade</span>
+            <div class="result-label">Tempo médio do diagnóstico ao 1º módulo funcionando</div>
+            <span class="result-tag">velocidade de entrega</span>
           </div>
           <div class="result-card fade-up">
             <div class="result-num">24/7</div>
-            <div class="result-label">Atendimento sem pausa no WhatsApp e no site</div>
-            <span class="result-tag">disponibilidade</span>
-          </div>
-          <div class="result-card fade-up">
-            <div class="result-num">0%</div>
-            <div class="result-label">De mensalidade presa em plataforma engessada</div>
-            <span class="result-tag">independência</span>
+            <div class="result-label">Atendimento imediato sem pausa no WhatsApp e no site</div>
+            <span class="result-tag">disponibilidade contínua</span>
           </div>
           <div class="result-card fade-up">
             <div class="result-num">100%</div>
             <div class="result-label">Sob medida para o fluxo real da sua empresa</div>
-            <span class="result-tag">personalização</span>
+            <span class="result-tag">arquitetura própria</span>
+          </div>
+          <div class="result-card fade-up">
+            <div class="result-num">0%</div>
+            <div class="result-label">De dependência em plataformas travadas ou genéricas</div>
+            <span class="result-tag">autonomia técnica</span>
           </div>
         </div>
 
         <div class="section-head" style="margin-bottom: 24px;">
-          <span class="mono">cenários</span>
-          <h2>O que muda na prática</h2>
+          <span class="mono">cenários de aplicação</span>
+          <h2>Exemplos de como a esteira opera</h2>
           <p class="lede">
-            Situações reais de segmentos atendidos com estruturas e sistemas sob medida. <strong>Nomes e cenários ilustrativos</strong> para preservar a privacidade dos clientes.
+            Situações práticas de empresas atendidas. <em>Nomes e marcas preservados por confidencialidade.</em>
           </p>
         </div>
 
         <div class="depo-grid">
           <article class="depo-card fade-up">
             <div class="depo-quote">
-              <strong>LP de Vendas + Agente:</strong> site rápido que leva direto pro WhatsApp. Eu só falo com cliente qualificado e pronto pra fechar.
+              <strong>START Landing + Agente WhatsApp:</strong> "Antes perdíamos leads que chamavam à noite e no fim de semana. Hoje o agente qualifica, tira dúvidas e entrega o contato pronto pro nosso time fechar."
             </div>
-            <div class="depo-meta">
-              <div class="depo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
-              </div>
-              <div class="depo-info">
-                <span class="depo-name">Corretor de Imóveis</span>
-                <span class="depo-segment">Imobiliária</span>
-              </div>
-            </div>
-            <div class="depo-illust">// Cenário ilustrativo</div>
+            <div class="depo-author">// Imobiliária &amp; Locação</div>
           </article>
 
           <article class="depo-card fade-up">
             <div class="depo-quote">
-              <strong>Dashboard de agenda</strong> + agente de confirmação 24h. Minha agenda preenche sozinha, mesmo de madrugada.
+              <strong>FLOW + Triagem com IA:</strong> "Nossa recepção gastava metade do dia respondendo perguntas repetitivas de horários e valores. Agora o fluxo automatizou a triagem e o agendamento de consultas."
             </div>
-            <div class="depo-meta">
-              <div class="depo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
-              </div>
-              <div class="depo-info">
-                <span class="depo-name">Dra. Fernanda</span>
-                <span class="depo-segment">Clínica Estética</span>
-              </div>
-            </div>
-            <div class="depo-illust">// Cenário ilustrativo</div>
+            <div class="depo-author">// Clínica Médica / Estética</div>
           </article>
 
           <article class="depo-card fade-up">
             <div class="depo-quote">
-              <strong>Painel financeiro</strong> + sistema de agenda + agente que responde convênios. 70% menos ligação repetida.
+              <strong>CONTROL CRM + Dashboard:</strong> "Usávamos 3 planilhas diferentes e nada batia. Hoje temos uma visão clara em uma tela só: de onde os clientes chegam, quem converteu e o faturamento do mês."
             </div>
-            <div class="depo-meta">
-              <div class="depo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
-              </div>
-              <div class="depo-info">
-                <span class="depo-name">Dr. Marcelo</span>
-                <span class="depo-segment">Clínica Médica</span>
-              </div>
-            </div>
-            <div class="depo-illust">// Cenário ilustrativo</div>
-          </article>
-
-          <article class="depo-card fade-up">
-            <div class="depo-quote">
-              Lembretes automáticos. Sumiram as no-shows da semana.
-            </div>
-            <div class="depo-meta">
-              <div class="depo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 6 8 10 12 14c-4-4-4-8 0-12zM12 14c4 4 8 0 12"/></svg>
-              </div>
-              <div class="depo-info">
-                <span class="depo-name">Dra. Camila</span>
-                <span class="depo-segment">Odontologia</span>
-              </div>
-            </div>
-            <div class="depo-illust">// Cenário ilustrativo</div>
-          </article>
-
-          <article class="depo-card fade-up">
-            <div class="depo-quote">
-              Agenda lota às 22h quando clientes marcam pelo site depois do expediente.
-            </div>
-            <div class="depo-meta">
-              <div class="depo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4l1 16M18 4l-1 16M3 8h18M3 16h18"/></svg>
-              </div>
-              <div class="depo-info">
-                <span class="depo-name">Juliana</span>
-                <span class="depo-segment">Salão &amp; Beleza</span>
-              </div>
-            </div>
-            <div class="depo-illust">// Cenário ilustrativo</div>
-          </article>
-
-          <article class="depo-card fade-up">
-            <div class="depo-quote">
-              Tosa, banho, vacina — clientes tiram dúvida na hora que lembram.
-            </div>
-            <div class="depo-meta">
-              <div class="depo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="4" r="2"/><path d="M8 22l2-7-3-3 1-5 4 2 3-1 4 1 1 4-3 1 2 5"/></svg>
-              </div>
-              <div class="depo-info">
-                <span class="depo-name">Rodrigo</span>
-                <span class="depo-segment">Pet Shop</span>
-              </div>
-            </div>
-            <div class="depo-illust">// Cenário ilustrativo</div>
-          </article>
-
-          <article class="depo-card fade-up">
-            <div class="depo-quote">
-              Matrículas novas chegam já qualificadas, com plano escolhido na Landing Page.
-            </div>
-            <div class="depo-meta">
-              <div class="depo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4" r="2"/><path d="M12 6v5"/><path d="M9 11l3 3 3-3"/><path d="M9 14v4l3 2 3-2v-4line x14 y18 x28 y28line x116 y18 x220 y28line x16 y16 x26 y210line x118 y16 x218 y210line x18 y18 x216 y28"/></svg>
-              </div>
-              <div class="depo-info">
-                <span class="depo-name">Felipe</span>
-                <span class="depo-segment">Academia</span>
-              </div>
-            </div>
-            <div class="depo-illust">// Cenário ilustrativo</div>
-          </article>
-
-          <article class="depo-card fade-up">
-            <div class="depo-quote">
-              <strong>Sistema de reservas</strong> integrado + agente WhatsApp. Confirmação em segundos, sem espera.
-            </div>
-            <div class="depo-meta">
-              <div class="depo-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg>
-              </div>
-              <div class="depo-info">
-                <span class="depo-name">Pousada Recanto</span>
-                <span class="depo-segment">Hotelaria</span>
-              </div>
-            </div>
-            <div class="depo-illust">// Cenário ilustrativo</div>
+            <div class="depo-author">// Serviços Empresariais B2B</div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT / QUEM CONSTRÓI -->
+    <!-- SEÇÃO: SOBRE (KIKO SOARES) -->
     <section class="section" id="sobre" aria-labelledby="sobre-h2">
       <div class="container">
         <div class="section-head">
           <span class="mono">quem constrói</span>
           <h2 id="sobre-h2">Estrutura digital e automação que geram resultado.<br><span class="accent">Sem template, sem burocracia.</span></h2>
           <p class="lede">
-            Não é agência tradicional, não é revenda de software. É um especialista que senta com você e <strong>constrói a solução sob medida</strong> que sua empresa precisa.
+            Não é agência tradicional, não é revenda de software de terceiros. É um especialista que senta com você, mapeia a dor e <strong>constrói a solução sob medida</strong> que seu negócio precisa.
           </p>
         </div>
 
         <div class="about-card fade-up">
           <div class="about-left">
             <div class="avatar">
-              <img src="perfil.png" alt="Kiko Soares, fundador da Turbinando Experts" loading="lazy" width="96" height="96">
+              <img src="perfil.png" alt="Kiko Soares, fundador da Turbinando Experts" loading="lazy" width="160" height="160">
             </div>
             <div class="about-name">
               <strong>Kiko Soares</strong>
@@ -2495,32 +2778,35 @@
                 <span>deploy</span>
               </div>
               <div class="about-stat">
-                <strong>5+</strong>
-                <span>módulos</span>
+                <strong>START</strong>
+                <span>a SCALE</span>
               </div>
               <div class="about-stat">
-                <strong>8+</strong>
-                <span>segmentos</span>
+                <strong>100%</strong>
+                <span>sob medida</span>
               </div>
             </div>
           </div>
 
           <div class="about-bio">
             <p>
-              O mercado está cheio de agências lentas e templates genéricos. Eu trabalho diferente: <strong>escuto sua operação, desenho a estrutura do tamanho da sua dor</strong>, e entrego funcionando. Com a agilidade do <strong>Vibe Coding</strong>, construo módulos sob medida — Landing Pages, agentes de IA, dashboards, CRM — que se encaixam no seu jeito de operar.
+              O mercado está cheio de agências lentas e softwares prontos que engessam sua operação. Eu trabalho de forma diferente: <strong>aqui, a solução começa pela sua operação — não por um template.</strong>
             </p>
             <p>
-              Você pode <strong>começar com 1 módulo só</strong> (seja uma página de vendas nova ou um agente de IA pra primeira linha) e, conforme o resultado aparece, escalar pros próximos. Sem compromisso de pegar tudo de uma vez, sem dev, sem complicação.
+              Com a agilidade do <strong>Vibe Coding</strong> e foco em arquiteturas eficientes, construo módulos que resolvem o problema real: Sites, Landing Pages de alta conversão, Agentes de IA no WhatsApp, automações com n8n, CRM personalizado e Dashboards intuitivos.
+            </p>
+            <p>
+              Você pode <strong>começar com o módulo que resolve sua dor mais urgente hoje</strong> e evoluir quando fizer sentido. Com base em <strong>Porto Alegre/RS</strong>, atendo empresas locais e projetos remotos em todo o Brasil.
             </p>
 
             <div class="stack-pills">
-              <span class="pill accent">Landing Pages</span>
-              <span class="pill accent">WebApps</span>
+              <span class="pill accent">Sites &amp; LPs</span>
               <span class="pill accent">Agentes de IA</span>
               <span class="pill accent">WhatsApp API</span>
+              <span class="pill">Automação n8n</span>
               <span class="pill">Dashboards</span>
               <span class="pill">CRM Custom</span>
-              <span class="pill">n8n Automação</span>
+              <span class="pill">WebApps</span>
               <span class="pill">Vibe Coding</span>
             </div>
           </div>
@@ -2528,98 +2814,124 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- SEÇÃO: FAQ -->
     <section class="section" id="faq" aria-labelledby="faq-h2">
       <div class="container">
         <div class="section-head center">
           <span class="mono">dúvidas frequentes</span>
           <h2 id="faq-h2">Tirando suas <span class="accent">dúvidas</span></h2>
           <p class="lede" style="margin: 0 auto;">
-            As 6 perguntas mais comuns de quem está avaliando construir uma estrutura digital com IA.
+            Respostas diretas sobre como desenvolvemos e entregamos as soluções sob medida.
           </p>
         </div>
 
         <div class="faq-list">
           <details class="faq-item fade-up">
             <summary class="faq-q">
-              <span>O que é um sistema sob medida com IA?</span>
+              <span>Vocês atendem somente Porto Alegre/RS?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-a">
-              É um <strong>software ou estrutura construída especificamente para a sua operação</strong>. Pode ser uma Landing Page/Site de alta conversão, um agente de IA no WhatsApp, um dashboard, um CRM ou automações internas. A diferença pro template: <strong>o sistema se adapta ao seu negócio</strong>, não o contrário.
+              <strong>Não.</strong> Porto Alegre/RS é nossa sede e referência local, mas prestamos serviços 100% digitais com atendimento, reuniões e acompanhamento remoto para empresas de todo o Rio Grande do Sul e de qualquer estado do Brasil.
             </div>
           </details>
 
           <details class="faq-item fade-up">
             <summary class="faq-q">
-              <span>Em quanto tempo fica pronto?</span>
+              <span>Vocês fazem sites e Landing Pages?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-a">
-              O <strong>primeiro módulo (como uma Landing Page ou Agente no WhatsApp) geralmente fica pronto em 7 dias ou menos</strong>. Projetos mais amplos (combinação de site + agente + dashboard) podem levar de 10 a 14 dias. Tudo combinado e aprovado na proposta antes de começar.
+              <strong>Sim.</strong> Desenvolvemos desde sites profissionais de alta autoridade até Landing Pages de conversão rápida e WebApps específicos. Seu site pode ser o primeiro módulo da sua operação digital, pronto para conectar automações e CRM no futuro.
             </div>
           </details>
 
           <details class="faq-item fade-up">
             <summary class="faq-q">
-              <span>Quanto custa?</span>
+              <span>Posso começar apenas com um módulo (Linha START)?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-a">
-              O valor depende do escopo e da complexidade. Após a call de imersão gratuita, você recebe uma <strong>proposta personalizada, sem surpresas</strong>. O investimento se paga com o primeiro lead capturado ou venda fechada no automático.
+              <strong>Sim — e é o que sempre recomendamos.</strong> A Linha START é pensada exatamente para resolver a dor imediata do seu negócio (como uma Landing Page nova ou o primeiro fluxo de WhatsApp) sem obrigar você a contratar um pacote complexo de uma só vez.
             </div>
           </details>
 
           <details class="faq-item fade-up">
             <summary class="faq-q">
-              <span>Funciona para o meu segmento?</span>
+              <span>Como funcionam as automações de WhatsApp e Agentes de IA?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-a">
-              Sim. Já construí soluções para <strong>imobiliárias, clínicas (estética, médica, odontologia), salões de beleza, pet shops, academias e hotelaria</strong>. O sistema é desenhado a partir da sua operação — então serve pro seu segmento mesmo que não esteja nessa lista.
+              Criamos agentes inteligentes treinados com as informações e catálogo da sua empresa. Eles respondem dúvidas, realizam triagem e qualificação de leads, agendam horários e registram as conversas diretamente no seu CRM ou planilha, operando 24h por dia.
             </div>
           </details>
 
           <details class="faq-item fade-up">
             <summary class="faq-q">
-              <span>Preciso entender de tecnologia?</span>
+              <span>Vocês constroem sistemas sob medida e WebApps?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-a">
-              <strong>Não.</strong> Você só descreve o problema e o que espera. Eu construo, entrego funcionando e mostro como usar. Painel simples pra acompanhar resultados, suporte contínuo incluso.
+              <strong>Sim.</strong> Quando planilhas se tornam confusas ou softwares genéricos limitam sua operação, criamos WebApps sob medida: controles de ordens de serviço, clientes, agendamentos, estoque ou painéis internos específicos.
             </div>
           </details>
 
           <details class="faq-item fade-up">
             <summary class="faq-q">
-              <span>Posso começar pequeno?</span>
+              <span>Vocês fazem CRM e Dashboards?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-a">
-              <strong>Sim — e é o que recomendo.</strong> Você pode começar pelo <strong>Módulo 00 (uma Landing Page/Site de alta conversão)</strong> ou pelo Módulo 01 (Agente de IA) e ir adicionando os próximos conforme o resultado aparece. <strong>Sem compromisso de pegar tudo de uma vez.</strong>
+              <strong>Sim.</strong> Na camada CONTROL, organizamos seu funil com CRM personalizado e desenhamos dashboards intuitivos para você acompanhar vendas, atendimento e métricas em uma tela clara, transformando dados em decisões assertivas.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-q">
+              <span>Posso evoluir o projeto depois?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-a">
+              <strong>Com certeza.</strong> Toda a nossa arquitetura comercial é fundamentada na evolução contínua: START → FLOW → CONTROL → SCALE. Você resolve a dor de hoje e adiciona novas automações e recursos quando o negócio pedir.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-q">
+              <span>Como funciona a manutenção e continuidade (CARE/GROWTH)?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-a">
+              Não cobramos mensalidades forçadas que prendem o cliente. Oferecemos planos opcionais de continuidade (CARE para suporte, estabilidade e monitoramento; GROWTH para novos módulos, relatórios e evolução sob demanda).
             </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
+    <!-- SEÇÃO: CTA FINAL -->
     <section class="cta-final" aria-labelledby="cta-final-h2">
       <div class="container cta-final-inner">
-        <span class="mono" style="margin-bottom: 20px;">próximo passo</span>
+        <span class="mono" style="margin-bottom: 24px;">próximo passo</span>
         <h2 id="cta-final-h2">
-          Pronto pra estruturar o seu negócio?
+          Uma solução para a dor de hoje.<br><span class="accent">Uma arquitetura preparada para o amanhã.</span>
         </h2>
         <p>
-          Agende uma <strong>call de imersão gratuita de 30 minutos.</strong> Vamos mapear sua operação e desenhar o primeiro módulo da sua estrutura digital.
+          Comece pelo que sua empresa precisa agora. Evolua quando fizer sentido.<br>
+          Agende uma <strong>call de imersão gratuita de 30 minutos</strong> diretamente com o especialista.
         </p>
 
-        <a href="https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio" class="btn-primary btn-large" aria-label="Falar com Kiko Soares no WhatsApp">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Agendar Imersão Gratuita
-        </a>
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wa.me/5551920000513?text=Quero%20agendar%20minha%20imers%C3%A3o%20gratuita" class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Agendar Imersão Gratuita no WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar Imersão Gratuita
+          </a>
+          <a href="#diagnostico" class="btn-secondary">
+            Fazer Diagnóstico Primeiro
+          </a>
+        </div>
 
-        <div class="cta-note" style="justify-content: center; margin-top: 20px;">
+        <div class="cta-note" style="justify-content: center; margin-top: 24px;">
           <span>Sem compromisso</span>
           <span>Diagnóstico real da operação</span>
           <span>Direto com o especialista</span>
@@ -2632,31 +2944,37 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#" class="logo" style="margin-bottom: 8px;" aria-label="Turbinando Experts início">
+        <a href="#hero" class="logo" style="margin-bottom: 8px;" aria-label="Turbinando Experts início">
           <span class="logo-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
           </span>
           <span class="logo-text">Turbinando <span>Experts</span></span>
         </a>
-        <p>Estrutura digital e automação sob medida.<br><strong>Sua operação rodando no automático.</strong></p>
+        <p>
+          Estrutura digital, automações e IA sob medida.<br>
+          <strong>Uma solução para a dor de hoje. Uma arquitetura preparada para o amanhã.</strong>
+        </p>
       </div>
 
       <div class="footer-meta">
-        <div>Porto Alegre/RS · Brasil</div>
+        <div><strong>Atuação &amp; Sede:</strong> Porto Alegre/RS · Brasil</div>
+        <div><strong>Atendimento:</strong> Remoto para todo o Brasil</div>
         <div>WhatsApp: <a href="https://wa.me/5551920000513" target="_blank" rel="noopener noreferrer">+55 (51) 92000-0513</a></div>
-        <div style="opacity: 0.6; margin-top: 8px;">// Última atualização: ago/2026</div>
+        <div style="opacity: 0.6; margin-top: 6px;">// Versão 1.1 · set/2026</div>
+        <div style="opacity: 0.5; margin-top: 6px; font-size: 11.5px;">Também nos encontre como: Turbinando Expert · automações e IA POA RS</div>
       </div>
 
       <div class="footer-legal">
         <div><a href="termos-de-uso.html">Termos de Uso</a></div>
         <div><a href="politica-de-privacidade.html">Política de Privacidade</a></div>
-        <div style="opacity: 0.6; margin-top: 8px;">© 2026 Turbinando Experts</div>
+        <div style="opacity: 0.6; margin-top: 8px;">© 2026 Turbinando Experts. Todos os direitos reservados.</div>
       </div>
     </div>
   </footer>
 
-  <!-- JS: Scroll Animations + Bottom Nav Scroll-Spy -->
+  <!-- JAVASCRIPT: Scroll Animations + Quiz Engine + Bottom Nav Spy -->
   <script>
+    // 1. Scroll Animations (IntersectionObserver)
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -2664,15 +2982,12 @@
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -30px 0px'
     });
-
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // Scroll-spy: destaca o item ativo da barra inferior durante a rolagem.
-    // Itera apenas pelos alvos dos links da nav — seções sem item na barra
-    // (#dor, #comparativo, #resultados, #sobre) mantêm o último marco ativo.
+    // 2. Scroll-Spy para Bottom Nav
     const navItems = Array.from(document.querySelectorAll('.bottom-nav-item:not(.highlight-wa)'));
     const spyTargets = navItems
       .map(item => document.querySelector(item.getAttribute('href')))
@@ -2688,11 +3003,214 @@
         item.classList.toggle('active', !!current && item.getAttribute('href') === '#' + current.id);
       });
     }
-
     if (navItems.length && spyTargets.length) {
       window.addEventListener('scroll', updateBottomNav, { passive: true });
       updateBottomNav();
     }
+
+    // 3. QUIZ ENGINE (8 Passos completos com cálculo dinâmico de recomendação)
+    const quizSteps = [
+      {
+        badge: "Segmento",
+        question: "Qual é o segmento principal da sua empresa?",
+        options: [
+          "Imobiliária ou Corretagem",
+          "Clínica Médica, Estética ou Odontológica",
+          "Prestação de Serviços / Consultoria / Advocacia",
+          "Comércio, Loja ou Varejo",
+          "Outro Segmento"
+        ]
+      },
+      {
+        badge: "Dor Principal",
+        question: "Qual é o principal gargalo enfrentado hoje?",
+        options: [
+          "Não tenho site ou meu site atual não gera contatos",
+          "Demora para responder clientes no WhatsApp e perda de leads",
+          "Equipe perdida em várias planilhas e processos manuais",
+          "Falta de visibilidade nos números de vendas e indicadores",
+          "Ferramentas prontas que não se encaixam no meu negócio"
+        ]
+      },
+      {
+        badge: "Operação Atual",
+        question: "Como você lida com esse problema atualmente?",
+        options: [
+          "Tudo no braço ou na memória",
+          "Atendimento manual no WhatsApp pessoal/business",
+          "Planilhas do Excel ou Google Sheets",
+          "Sistema pronto que trava e não resolve direito",
+          "Ainda não tenho uma solução implantada"
+        ]
+      },
+      {
+        badge: "Volume",
+        question: "Qual é o volume mensal aproximado de leads ou contatos?",
+        options: [
+          "Até 50 contatos por mês",
+          "De 50 a 200 contatos por mês",
+          "De 200 a 1.000 contatos por mês",
+          "Mais de 1.000 contatos por mês"
+        ]
+      },
+      {
+        badge: "Ferramentas",
+        question: "Quais ferramentas sua equipe mais utiliza no dia a dia?",
+        options: [
+          "Apenas WhatsApp e e-mail",
+          "Planilhas (Excel / Google Sheets)",
+          "CRM de mercado (RD Station, HubSpot, Pipe, etc.)",
+          "ERP ou sistema de gestão próprio"
+        ]
+      },
+      {
+        badge: "Objetivo",
+        question: "Qual resultado principal você quer alcançar primeiro?",
+        options: [
+          "Atrair mais clientes e ter presença profissional online",
+          "Atendimento automático e qualificação 24h no WhatsApp",
+          "Centralizar e organizar o funil com CRM sob medida",
+          "Dashboards para acompanhar métricas em uma tela",
+          "Criar um WebApp ou sistema interno específico"
+        ]
+      },
+      {
+        badge: "Urgência",
+        question: "Qual é a urgência para colocar essa solução para rodar?",
+        options: [
+          "Imediata (preciso resolver nos próximos 7 a 15 dias)",
+          "Curto prazo (próximos 30 dias)",
+          "Médio prazo (estou planejando o próximo trimestre)",
+          "Apenas pesquisando alternativas viáveis"
+        ]
+      }
+    ];
+
+    let currentStep = 0;
+    const userAnswers = [];
+
+    const elStepCount = document.getElementById('quiz-step-indicator');
+    const elCategoryBadge = document.getElementById('quiz-category-badge');
+    const elQuestionText = document.getElementById('quiz-question-text');
+    const elOptions = document.getElementById('quiz-options');
+    const elProgress = document.getElementById('quiz-progress');
+    const elBtnPrev = document.getElementById('btn-quiz-prev');
+    const elBtnNext = document.getElementById('btn-quiz-next');
+    const elContentArea = document.getElementById('quiz-content-area');
+
+    function renderStep() {
+      if (currentStep < quizSteps.length) {
+        const step = quizSteps[currentStep];
+        elStepCount.textContent = `Passo ${currentStep + 1} de 8`;
+        elCategoryBadge.textContent = step.badge;
+        elQuestionText.textContent = step.question;
+        elProgress.style.width = `${((currentStep + 1) / 8) * 100}%`;
+        elBtnPrev.style.visibility = currentStep === 0 ? 'hidden' : 'visible';
+        elBtnNext.textContent = 'Avançar →';
+
+        elOptions.innerHTML = '';
+        step.options.forEach((opt, idx) => {
+          const card = document.createElement('div');
+          card.className = 'quiz-option-card' + (userAnswers[currentStep] === opt ? ' selected' : '');
+          card.innerHTML = `
+            <span>${opt}</span>
+            <div class="check-circle">✓</div>
+          `;
+          card.addEventListener('click', () => {
+            userAnswers[currentStep] = opt;
+            renderStep();
+          });
+          elOptions.appendChild(card);
+        });
+      } else {
+        renderResult();
+      }
+    }
+
+    function calculateRecommendation() {
+      const pain = userAnswers[1] || '';
+      const goal = userAnswers[5] || '';
+
+      if (pain.includes("site") || goal.includes("presença profissional")) {
+        return {
+          module: "START Site ou START Landing",
+          tag: "Linha START · Presença & Conversão",
+          desc: "Sua principal oportunidade imediata é construir um alicerce de alta conversão (Landing Page rápida ou Site profissional) para transformar visitantes em oportunidades qualificadas sem desperdício de tráfego."
+        };
+      } else if (pain.includes("WhatsApp") || pain.includes("leads por demora") || goal.includes("Atendimento automático")) {
+        return {
+          module: "FLOW · Agente de IA & Atendimento 24h",
+          tag: "Linha FLOW · Automação Comercial",
+          desc: "O maior gargalo é a velocidade de atendimento. Um Agente de IA inteligente no WhatsApp vai qualificar, triar e responder dúvidas 24h por dia, entregando apenas clientes quentes para sua equipe."
+        };
+      } else if (pain.includes("planilhas") || pain.includes("números") || goal.includes("CRM") || goal.includes("Dashboards")) {
+        return {
+          module: "CONTROL · CRM & Dashboards Sob Medida",
+          tag: "Linha CONTROL · Inteligência Operacional",
+          desc: "Sua operação precisa de clareza e centralização. Um CRM personalizado alinhado ao seu fluxo e um dashboard visual em tempo real vão transformar planilhas confusas em decisões assertivas."
+        };
+      } else {
+        return {
+          module: "SCALE · Sistema ou WebApp Sob Medida",
+          tag: "Linha SCALE · Arquitetura Proprietária",
+          desc: "Suas regras operacionais são únicas e plataformas genéricas limitam o negócio. A solução ideal é um WebApp sob medida desenvolvido exatamente para o seu fluxo."
+        };
+      }
+    }
+
+    function renderResult() {
+      const rec = calculateRecommendation();
+      elStepCount.textContent = "Passo 8 de 8 · Conclusão";
+      elCategoryBadge.textContent = "Recomendação";
+      elProgress.style.width = "100%";
+      elBtnPrev.style.visibility = 'visible';
+      elBtnNext.style.display = 'none';
+
+      const waMsg = encodeURIComponent(
+        `Olá Kiko! Fiz o diagnóstico no site da Turbinando Experts.\n\n` +
+        `*Segmento:* ${userAnswers[0] || 'N/A'}\n` +
+        `*Gargalo:* ${userAnswers[1] || 'N/A'}\n` +
+        `*Operação Atual:* ${userAnswers[2] || 'N/A'}\n` +
+        `*Volume:* ${userAnswers[3] || 'N/A'}\n` +
+        `*Ferramentas:* ${userAnswers[4] || 'N/A'}\n` +
+        `*Objetivo:* ${userAnswers[5] || 'N/A'}\n` +
+        `*Urgência:* ${userAnswers[6] || 'N/A'}\n\n` +
+        `*Recomendação do Quiz:* ${rec.module}\n\n` +
+        `Gostaria de agendar a análise gratuita de 30 min para falar sobre esse ponto de partida!`
+      );
+
+      elContentArea.innerHTML = `
+        <div class="quiz-result-box">
+          <div class="quiz-result-badge">// ${rec.tag}</div>
+          <h3 class="quiz-result-title">${rec.module}</h3>
+          <p class="quiz-result-desc">${rec.desc}</p>
+          <a href="https://wa.me/5551920000513?text=${waMsg}" class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" style="display: inline-flex;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Enviar Diagnóstico pelo WhatsApp
+          </a>
+        </div>
+      `;
+    }
+
+    elBtnPrev.addEventListener('click', () => {
+      if (currentStep > 0) {
+        currentStep--;
+        elBtnNext.style.display = 'inline-flex';
+        renderStep();
+      }
+    });
+
+    elBtnNext.addEventListener('click', () => {
+      if (!userAnswers[currentStep]) {
+        alert("Por favor, selecione uma opção para continuar.");
+        return;
+      }
+      currentStep++;
+      renderStep();
+    });
+
+    // Inicia quiz
+    renderStep();
   </script>
 </body>
 </html>
