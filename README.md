@@ -1,10 +1,11 @@
 # ⚡ Turbinando Experts — Landing Page
 
-> **Sistemas sob medida com IA para pequenas empresas.**
-> Dashboards, CRM, automações e agentes de IA — comece com 1 módulo, escale depois.
+> **Estrutura digital, automações e IA para negócios sob medida.**  
+> Sites, Landing Pages, WebApps, WhatsApp com IA, CRM e Dashboards — comece com a Linha START e evolua módulo por módulo.
 
 [![Deploy](https://img.shields.io/badge/Cloudflare%20Pages-Live-F38020?logo=cloudflarepages&logoColor=white)](https://turbinandoexperts.com/)
 [![HTML](https://img.shields.io/badge/HTML5-Single%20Page-E34F26?logo=html5&logoColor=white)](#)
+[![Theme](https://img.shields.io/badge/Theme-Light%20%28Default%29%20%7C%20Dark-008744)](#-design--estética)
 [![License](https://img.shields.io/badge/License-Proprietary-333)](#licença)
 
 🔗 **Live:** [turbinandoexperts.com](https://turbinandoexperts.com/)
@@ -13,160 +14,121 @@
 
 ## 📋 Sobre o Projeto
 
-Landing page de alta conversão para a marca **Turbinando Experts** (Kiko Soares — Porto Alegre/RS).
+Landing page de alta conversão para a marca **Turbinando Experts** (Kiko Soares — Porto Alegre/RS e atendimento remoto para todo o Brasil).
 
-O objetivo é captar leads qualificados via **WhatsApp** para uma call gratuita de 30 minutos, onde se apresenta a proposta de construção de sistemas sob medida com IA para o negócio do cliente.
+O objetivo é captar leads qualificados via **WhatsApp** para uma call de imersão gratuita de 30 minutos com o especialista, mapeando gargalos operacionais e apresentando a arquitetura modular sob medida ideal para a fase atual da empresa.
 
-### Proposta de valor
+### Arquitetura Modular (START → FLOW → CONTROL → SCALE)
 
-| Módulo           | O que faz                                           |
-| ---------------- | --------------------------------------------------- |
-| 🤖 **Agente IA** | Atendimento inteligente no WhatsApp 24/7            |
-| 📊 **Dashboard** | Painel visual com métricas do negócio em tempo real |
-| 📇 **CRM**       | Gestão de leads e clientes integrada                |
-| ⚙️ **Automação** | Fluxos que eliminam tarefas repetitivas             |
+| Camada | Módulos Principais | Objetivo & Entrega |
+| :--- | :--- | :--- |
+| 🚀 **START** | Site Profissional, Landing Page, Google GMN, WebApp Inicial | Resolver a dor imediata sem necessidade de pacotes engessados |
+| ⚡ **FLOW** | Agente de IA no WhatsApp 24/7, Automação n8n, Triagem | Eliminar tarefas repetitivas e acelerar respostas a leads |
+| 📊 **CONTROL** | CRM Personalizado, Dashboards em Tempo Real (KPIs) | Centralizar dados e oferecer visibilidade total das vendas |
+| 🏢 **SCALE** | WebApps e Sistemas Internos Customizados | Substituir planilhas ou softwares genéricos que limitam a operação |
+| 🛡️ **CARE / GROWTH** | Suporte contínuo, estabilidade técnica e novos módulos | Evolução sustentável do ativo digital sem mensalidades forçadas |
 
 ---
 
 ## 🎨 Design & Estética
 
-- **Tema:** "Terminal Operacional" — cyberpunk-tech, verde neon sobre fundo escuro
-- **Cor principal:** `#00E676` (verde neon) sobre `#050807`
+- **Tema Padrão:** **Light Theme** (paleta editorial aquecida no estilo Claude AI: base `#FAF8F5`, cards brancos e tipografia de alto contraste em preto obsidian `#111814`).
+- **Tema Alternativo:** **Dark Mode** (estilo terminal tech com verde neon `#00E676` sobre `#050807`), alternável com persistência via `localStorage`.
+- **Toggle de Tema:** Botão minimalista compacto no header exibindo somente os ícones (lua / sol) e script anti-flash no `<head>`.
+- **Cores Preponderantes:** Verde Esmeralda (`#008744`), Preto Obsidian (`#111814`) e Branco puro (`#FFFFFF`).
 - **Tipografia:**
-  - Display: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
-  - Body: [Manrope](https://fonts.google.com/specimen/Manrope)
-  - Mono/accents: [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
-- **Animações:** scroll-reveal via IntersectionObserver, marquee infinito, shine effects, glassmorphism no header
+  - Display / Títulos: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+  - Textos & Leitura: [Manrope](https://fonts.google.com/specimen/Manrope)
+  - Código & Detalhes técnicos: [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
+- **Componentes Interativos:** Quiz de diagnóstico guiado em 8 passos, Bottom Nav mobile com scroll-spy, carrossel contínuo (marquee) e terminal de esteira.
 
 ---
 
-## 🏗️ Estrutura da LP
+## 🏗️ Estrutura da Landing Page
 
-Top banner (shine animation)
-Header sticky (glassmorphism + nav + CTA WhatsApp)
-Hero — H1 + terminal mockup de briefing
-Marquee — 8 segmentos atendidos (loop infinito)
-Dor — 4 pain cards
-Solução — Timeline 4 passos
-O que construo — 4 cards de módulos
-Comparativo — "Genérico vs. Sob medida"
-Resultados — 4 cards de métricas
-Depoimentos — 8 cards (casos ilustrativos)
-Sobre — Kiko Soares (avatar, stats, stack)
-FAQ — 6 perguntas
-CTA Final
-Footer + Sticky CTA mobile
+1. **Top banner:** Âncora geográfica (Porto Alegre/RS + atendimento nacional)
+2. **Header sticky:** Logo, navegação rápida, alternador de tema (apenas ícone) e CTA WhatsApp
+3. **Hero Section:** Proposta central, TL;DR executivo e Terminal Mockup interativo da esteira
+4. **Marquee:** 10 segmentos de mercado atendidos (loop contínuo)
+5. **Empathy Box:** Princípio fundamental ("Você sabe onde dói. Nós encontramos o que precisa ser construído")
+6. **Dores Reais:** Grade com 10 gargalos frequentes de pequenas e médias empresas
+7. **Soluções Modulares:** 4 pilares (Presença Digital, Automação & IA, Gestão & Dados, Sistemas & WebApps)
+8. **Linha START:** 7 pontos de entrada práticos para contratação inicial rápida
+9. **Jornada de Evolução:** Linha do tempo START → FLOW → CONTROL → SCALE + CARE/GROWTH
+10. **Tabela Comparativa:** Ferramentas genéricas engessadas vs. Solução sob medida
+11. **Diagnóstico Interativo:** Quiz inteligente de 8 passos gerando briefing automático para o WhatsApp
+12. **Resultados & Prova Social:** Métricas de agilidade e cenários práticos por setor
+13. **Sobre:** Bio de Kiko Soares, posicionamento Vibe Coding e stack de especialidades
+14. **FAQ:** 8 dúvidas essenciais respondidas com transparência
+15. **CTA Final:** Bloco de fechamento de alto contraste convidando para a call de 30 min
+16. **Footer + Bottom Nav Mobile:** Links legais, metadados locais e navegação com scroll-spy
 
 ---
 
 ## 📁 Estrutura de Arquivos
 
-├── index.html # LP completa v3.0 (~77KB, self-contained)
-├── index.html.v2.html # Backup da v2.0 (referência)
-├── favicon.svg # Ícone ⚡
-├── apple-touch-icon.svg # PWA icon 180×180
-├── og-image.svg # Open Graph 1200×630
-├── manifest.json # PWA manifest
-├── robots.txt # SEO + AI crawlers permitidos
-├── sitemap.xml # 3 URLs indexadas
-├── _headers # Cloudflare Pages (CSP, HSTS, cache)
-├── ESTADO.md # Estado do projeto / changelog
-├── .gitignore # Exclusões padrão
-└── README.md # Este arquivo
+```text
+├── index.html                  # LP completa responsiva e modular (Self-contained)
+├── termos-de-uso.html          # Termos de uso conforme legislação brasileira
+├── politica-de-privacidade.html# Política de privacidade alinhada à LGPD
+├── favicon.svg                 # Favicon vetorial
+├── apple-touch-icon.svg        # Ícone para dispositivos Apple / PWA
+├── og-image.svg                # Imagem Open Graph para compartilhamento social
+├── manifest.json               # Configuração Web App Manifest (PWA)
+├── robots.txt                  # Diretivas de indexação para buscadores e AI crawlers
+├── sitemap.xml                 # Mapa do site indexado
+├── _headers                    # Regras de segurança (CSP, HSTS) e cache no Cloudflare Pages
+└── README.md                   # Documentação do projeto
+```
 
 ---
 
 ## 🚀 Como Rodar Localmente
 
-O projeto é um arquivo HTML estático — **zero dependências, zero build step**.
+O projeto é construído em HTML5, CSS3 e JavaScript puros — **sem dependências externas de build**:
 
 ```bash
-# Opção 1 — Abrir direto
+# Opção 1 — Abrir direto no navegador
 start index.html          # Windows
 open index.html           # macOS
 
-# Opção 2 — Servidor local (recomendado pra testar PWA/headers)
+# Opção 2 — Executar via servidor local
 npx serve .
 # ou
 python -m http.server 8000
 ```
 
 ---
-## ☁️ Deploy
 
-O projeto está configurado para **Cloudflare Pages**:
+## ☁️ Deploy (Cloudflare Pages)
 
-1. Conecte o repositório GitHub no painel [Cloudflare Pages](https://dash.cloudflare.com/)
-2. **Build command:** _(vazio)_
-3. **Output directory:** `/`
-4. O arquivo `_headers` já define CSP, HSTS e cache automaticamente
+O deploy contínuo está configurado via **Cloudflare Pages**:
 
----
-
-## 📊 SEO & GEO
-
-| Item                       | Status                                                                           |
-| -------------------------- | -------------------------------------------------------------------------------- |
-| Meta description           | ✅ 138 chars                                                                      |
-| Open Graph + Twitter Cards | ✅                                                                                |
-| Canonical + hreflang pt-BR | ✅                                                                                |
-| JSON-LD (7 schemas)        | ✅ Organization, LocalBusiness, Person, Service, FAQPage, BreadcrumbList, WebSite |
-| Sitemap XML                | ✅ 3 URLs                                                                         |
-| robots.txt + AI crawlers   | ✅ GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot                    |
-| GEO otimizado              | ✅ TL;DR, definições, headings em pergunta, FAQ curta, dados citáveis             |
+1. Conecte o repositório GitHub no painel do Cloudflare Pages.
+2. **Build command:** *(vazio)*
+3. **Build output directory:** `/`
+4. As regras de cache, compressão e headers de segurança são aplicadas pelo arquivo `_headers`.
 
 ---
 
-## ♿ Acessibilidade & Mobile
+## 📊 SEO, GEO & Acessibilidade
 
-- `viewport-fit=cover` com `safe-area-inset` no sticky CTA
-- Skip-link, `focus-visible` verde 2px, 21+ `aria-labels`
-- `prefers-reduced-motion` desativa todas as animações
-- `prefers-color-scheme: dark` (padrão)
-- Sticky CTA mobile aparece após o hero via `requestAnimationFrame`
-
----
-
-## 🛠️ Tech Stack
-
-| Camada  | Tecnologia                                             |
-| ------- | ------------------------------------------------------ |
-| Markup  | HTML5 semântico (single-file, self-contained)          |
-| Estilo  | CSS3 vanilla (custom properties, clamp, grid, flexbox) |
-| JS      | Vanilla JS (IntersectionObserver, rAF, sem frameworks) |
-| Fonts   | Google Fonts (Space Grotesk, Manrope, JetBrains Mono)  |
-| Hosting | Cloudflare Pages                                       |
-| PWA     | manifest.json + SVG icons                              |
-
----
-
-## 📝 Changelog
-
-### v3.1 — 04/jun/2026
-
-- Ícones Academia/FitPro atualizados (halterofilista com barra)
-
-### v3.0 — 04/jun/2026
-
-- **Pivot de posicionamento:** "agente de IA no WhatsApp em 7 dias" → "sistemas sob medida com IA"
-- Nova seção "O que construo" (4 cards modulares)
-- Hero com terminal mockup de briefing
-- 4 depoimentos reframed para sistemas
-- FAQ atualizada
-- JSON-LD atualizado (7 schemas)
+- **SEO & Schema.org:** Implementação de 7 esquemas JSON-LD (`Organization`, `LocalBusiness`, `Person`, `Service`, `FAQPage`, `BreadcrumbList`, `WebSite`).
+- **GEO (Generative Engine Optimization):** Meta tags geográficas de Porto Alegre/RS, blocos TL;DR para inteligências artificiais e respostas estruturadas para busca generativa.
+- **Acessibilidade (WCAG):** Contraste calibrado em ambos os temas, navegação por teclado (`:focus-visible`), skip-link e atributos semânticos `aria-label`.
+- **Tema Claro por Padrão:** Carregamento inicial em tema claro sem flashes visuais (FOUC), com opção de alternar para modo escuro salva no navegador.
 
 ---
 
 ## 👤 Autor
 
-**Kiko Soares** — Especialista em Sistemas Sob Medida com IA
-
-- 📍 Porto Alegre/RS
-- 💬 [WhatsApp](https://wa.me/5551920000513?text=Quero+a+an%C3%A1lise+gratuita+do+meu+neg%C3%B3cio)
+**Kiko Soares** — Estrutura Digital e Sistemas Sob Medida com IA
+- 📍 Porto Alegre/RS · Brasil (Atendimento remoto nacional)
+- 💬 [WhatsApp Oficial](https://wa.me/5551920000513?text=Quero%20a%20an%C3%A1lise%20gratuita%20do%20meu%20neg%C3%B3cio)
 - 🐙 [GitHub](https://github.com/KikoSoares-DataDriven)
 
 ---
 
 ## 📄 Licença
 
-Este projeto é **proprietário**. Todos os direitos reservados © 2026 Kiko Soares.
+Projeto proprietário. Todos os direitos reservados © 2026 Turbinando Experts.
