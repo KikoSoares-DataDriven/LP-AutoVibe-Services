@@ -1,0 +1,3236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF8F5" id="meta-theme-color">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('te_theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    })();
+  </script>
+  <!-- GEO Meta Tags (Porto Alegre, RS, Brasil) -->
+  <meta name="geo.region" content="BR-RS">
+  <meta name="geo.placename" content="Porto Alegre">
+  <meta name="geo.position" content="-30.0346;-51.2177">
+  <meta name="ICBM" content="-30.0346, -51.2177">
+
+  <title>Portfólio Data-Driven & Dashboards Power BI · Kiko Soares · Turbinando Experts</title>
+  <meta name="description" content="Portfólio de Dashboards Executivos e Análise de Dados: Power BI, integração com bancos SQL, CRM e Agentes de IA no WhatsApp para decisões em 5 segundos. Por Kiko Soares.">
+  <meta name="keywords" content="dashboards power bi, data driven negocios, analise de dados porto alegre, dashboards executivos, kiko soares portfolio, turbinando experts, business intelligence sob medida, agentes ia whatsapp dados, kpis vendas financeiro producao">
+  <meta name="author" content="Kiko Soares">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="article:modified_time" content="2026-10-12">
+
+  <link rel="canonical" href="https://turbinandoexperts.com/portfolio-data-driven.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://turbinandoexperts.com/portfolio-data-driven.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.svg">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://turbinandoexperts.com/portfolio-data-driven.html">
+  <meta property="og:site_name" content="Turbinando Experts">
+  <meta property="og:title" content="Portfólio Data-Driven & Dashboards Power BI · Kiko Soares">
+  <meta property="og:description" content="Transforme dados dispersos em decisões que geram lucro em 5 segundos. Dashboards sob medida e Agentes de IA no WhatsApp.">
+  <meta property="og:image" content="https://turbinandoexperts.com/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfólio de Dashboards e IA Data-Driven — Kiko Soares">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfólio Data-Driven & Dashboards Power BI · Kiko Soares">
+  <meta name="twitter:description" content="Dashboards sob medida no Power BI com alertas de IA no WhatsApp. Decisões estratégicas rápidas e precisas.">
+  <meta name="twitter:image" content="https://turbinandoexperts.com/og-image.svg">
+
+  <!-- Fonts & DNS Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://wa.me">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Claude AI Light Palette (Warm Paper / Linen Base) */
+      --bg-0: #FAF8F5;          /* Claude signature warm cream canvas */
+      --bg-1: #FFFFFF;          /* Pure crisp white for cards and elevated panels */
+      --bg-2: #F4EFEA;          /* Warm parchment for subtle sections and headers */
+      --bg-3: #ECE5DC;          /* Subtle hover and active fills */
+      --bg-header: rgba(250, 248, 245, 0.94);
+      --bg-bottom-nav: rgba(250, 248, 245, 0.96);
+
+      /* Borders & Dividers */
+      --border: #E8E3DA;
+      --border-strong: #D6CFBF;
+      --border-accent: rgba(0, 135, 68, 0.22);
+
+      /* Preponderant Colors: Verde, Preto e Branco */
+      --green: #008744;         /* Rich emerald green - WCAG AAA contrast */
+      --green-bright: #00A854;  /* Vibrant emerald */
+      --green-neon: #00E676;    /* Vibrant neon for dark artifact / code panels */
+      --green-dim: #056636;
+      --green-soft: rgba(0, 135, 68, 0.08);
+      --green-soft-border: rgba(0, 135, 68, 0.22);
+
+      /* Preto (Obsidian / Ink Black) */
+      --ink: #111814;
+      --ink-secondary: #2C3530;
+      --dark-panel: #0E1410;
+      --dark-panel-header: #141C17;
+      --dark-panel-border: #222D26;
+
+      /* Branco (Crisp White) */
+      --white: #FFFFFF;
+
+      /* Accents */
+      --cyan: #0284C7;
+      --cyan-bright: #00E5FF;
+      --amber: #D97706;
+      --red: #DC2626;
+
+      /* Text hierarchy */
+      --text-0: #111814;
+      --text-1: #3D4741;
+      --text-2: #6E7A73;
+      --text-inverse: #FFFFFF;
+
+      /* Fonts */
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Manrope', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+      /* Border Radii */
+      --r-sm: 8px;
+      --r-md: 12px;
+      --r-lg: 16px;
+      --r-xl: 24px;
+      --r-pill: 9999px;
+      --space: clamp(16px, 4vw, 32px);
+
+      /* Shadows */
+      --shadow-sm: 0 1px 3px rgba(20, 24, 22, 0.04);
+      --shadow-md: 0 4px 16px -2px rgba(20, 24, 22, 0.06), 0 1px 3px rgba(20, 24, 22, 0.03);
+      --shadow-lg: 0 12px 32px -4px rgba(20, 24, 22, 0.08), 0 2px 6px -1px rgba(20, 24, 22, 0.04);
+      --shadow-glow: 0 4px 20px rgba(0, 135, 68, 0.16);
+      --shadow-glow-strong: 0 8px 32px rgba(0, 135, 68, 0.28);
+      --shadow-terminal: 0 24px 60px rgba(17, 24, 20, 0.2);
+
+      /* Gradients */
+      --empathy-gradient: linear-gradient(135deg, rgba(0, 135, 68, 0.04) 0%, #FFFFFF 100%);
+      --hero-glow: radial-gradient(circle at 75% 25%, rgba(0, 135, 68, 0.08) 0%, transparent 60%);
+      --cta-final-bg: #111814;
+      --cta-final-text: #FFFFFF;
+      --cta-final-text-muted: #B8C8BC;
+      --cta-final-glow: radial-gradient(ellipse, rgba(0, 230, 118, 0.14) 0%, transparent 70%);
+    }
+
+    /* Dark Mode (Claude Obsidian / Neon Style) */
+    [data-theme="dark"] {
+      --bg-0: #050807;
+      --bg-1: #0A0F0B;
+      --bg-2: #111814;
+      --bg-3: #18221C;
+      --bg-header: rgba(5, 8, 7, 0.9);
+      --bg-bottom-nav: rgba(10, 15, 11, 0.94);
+      --border: #1A2520;
+      --border-strong: #243329;
+      --border-accent: rgba(0, 230, 118, 0.2);
+      --green: #00E676;
+      --green-bright: #39FF88;
+      --green-neon: #00E676;
+      --green-dim: #00B85F;
+      --green-soft: rgba(0, 230, 118, 0.08);
+      --green-soft-border: rgba(0, 230, 118, 0.2);
+      --cyan: #00E5FF;
+      --amber: #FFB020;
+      --red: #FF4D4D;
+      --text-0: #F4FFF4;
+      --text-1: #B8C8BC;
+      --text-2: #6A7A70;
+      --text-inverse: #050807;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.6);
+      --shadow-glow: 0 0 24px rgba(0, 230, 118, 0.18);
+      --shadow-glow-strong: 0 0 40px rgba(0, 230, 118, 0.32);
+      --shadow-terminal: 0 24px 64px rgba(0, 0, 0, 0.5);
+      --empathy-gradient: linear-gradient(135deg, rgba(0, 230, 118, 0.06) 0%, rgba(5, 8, 7, 0.8) 100%);
+      --hero-glow: radial-gradient(circle, rgba(0, 230, 118, 0.16) 0%, transparent 65%);
+      --cta-final-bg: linear-gradient(180deg, #050807 0%, #0A0F0B 100%);
+      --cta-final-text: #F4FFF4;
+      --cta-final-text-muted: #B8C8BC;
+      --cta-final-glow: radial-gradient(ellipse, rgba(0, 230, 118, 0.1) 0%, transparent 70%);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-0);
+      color: var(--text-1);
+      line-height: 1.6;
+      font-size: 16px;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Ambient texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: 
+        radial-gradient(#D5CFC5 0.75px, transparent 0.75px),
+        linear-gradient(rgba(0, 135, 68, 0.012) 1px, transparent 1px);
+      background-size: 24px 24px, 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+      transition: opacity 0.25s ease;
+    }
+    [data-theme="dark"] body::before {
+      background-image: 
+        linear-gradient(rgba(0, 230, 118, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 230, 118, 0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: 1;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 80%);
+    }
+
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: inherit;
+    }
+
+    ::selection {
+      background: var(--green);
+      color: #FFFFFF;
+    }
+    [data-theme="dark"] ::selection {
+      background: var(--green);
+      color: var(--bg-0);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--ink);
+      color: #FFFFFF;
+      padding: 12px 20px;
+      font-weight: 800;
+      border-radius: var(--r-sm);
+      z-index: 999;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      transition: top 0.2s;
+      border: 1px solid var(--green);
+    }
+    .skip-link:focus { top: 16px; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space);
+    }
+
+    .mono {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border: 1px solid var(--border-accent);
+      border-radius: var(--r-sm);
+      background: var(--green-soft);
+      margin-bottom: 16px;
+    }
+    .mono::before {
+      content: '// ';
+      color: var(--green);
+      font-size: 10px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: var(--green-soft);
+      border: 1px solid var(--border-accent);
+      color: var(--green);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       HEADER & NAV
+    ============================================================ */
+    .top-banner {
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--border);
+      color: var(--green);
+      text-align: center;
+      padding: 8px 16px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .top-banner span.dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--green);
+      animation: pulse 1.6s infinite;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-header);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-0);
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--ink);
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-neon);
+      border: 1px solid var(--border-accent);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+    .logo-icon svg { width: 18px; height: 18px; }
+    .logo:hover .logo-icon {
+      background: var(--green);
+      color: #FFFFFF;
+      box-shadow: var(--shadow-glow);
+    }
+    [data-theme="dark"] .logo-icon {
+      background: var(--green);
+      color: var(--bg-0);
+      box-shadow: var(--shadow-glow);
+    }
+    .logo-text span { color: var(--green); }
+
+    .header-badge {
+      display: none;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-2);
+      border-left: 1px solid var(--border);
+      padding-left: 12px;
+      margin-left: 4px;
+    }
+    @media (min-width: 1240px) {
+      .header-badge { display: inline-block; }
+    }
+
+    .nav { display: none; }
+    @media (min-width: 860px) {
+      .nav {
+        display: flex;
+        gap: clamp(8px, 1.3vw, 18px);
+        align-items: center;
+        flex-shrink: 1;
+      }
+      .nav a {
+        transition: color 0.15s, background-color 0.15s;
+        font-family: var(--font-mono);
+        font-size: clamp(11px, 0.88vw, 12px);
+        letter-spacing: 0.03em;
+        color: var(--text-1);
+        white-space: nowrap;
+        padding: 5px 6px;
+        border-radius: var(--r-sm);
+      }
+      .nav a:hover {
+        color: var(--green);
+        background: var(--green-soft);
+      }
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      color: var(--text-1);
+      border-radius: var(--r-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .theme-toggle:hover {
+      border-color: var(--border-strong);
+      color: var(--text-0);
+      background: var(--bg-3);
+    }
+    .theme-toggle svg { width: 17px; height: 17px; flex-shrink: 0; }
+    .theme-toggle .icon-moon { display: block; }
+    .theme-toggle .icon-sun { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+    .btn-header-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border-accent);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .btn-header-wa:hover {
+      background: var(--green);
+      color: #FFFFFF;
+      border-color: var(--green);
+      box-shadow: var(--shadow-glow);
+    }
+    .btn-header-wa svg { width: 14px; height: 14px; }
+    .wa-label-notebook { display: inline; }
+    .wa-label-desktop { display: none; }
+    @media (min-width: 1140px) {
+      .wa-label-notebook { display: none; }
+      .wa-label-desktop { display: inline; }
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      padding: 60px var(--space) 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 650px;
+      height: 650px;
+      background: var(--hero-glow);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (min-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1.3fr 1.05fr;
+        gap: 60px;
+      }
+      .hero { padding: 84px var(--space) 80px; }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .hero-eyebrow .pulse {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--green);
+      animation: pulse 1.6s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.6); }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text-0);
+      text-wrap: balance;
+    }
+    .hero h1 .accent {
+      color: var(--green);
+      display: inline-block;
+      position: relative;
+    }
+    .hero h1 .accent::after {
+      content: '_';
+      color: var(--green);
+      animation: blink 1s steps(2) infinite;
+      margin-left: 2px;
+      font-weight: 400;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .hero .tldr {
+      font-family: var(--font-mono);
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--text-1);
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green);
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      max-width: 640px;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero .tldr strong { color: var(--text-0); font-weight: 700; }
+    .hero .tldr-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .hero .lede {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text-1);
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+    .hero .lede strong { color: var(--text-0); font-weight: 700; }
+
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 580px) {
+      .hero-cta {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #111814;
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 18px 28px;
+      border-radius: var(--r-md);
+      border: 1px solid #111814;
+      cursor: pointer;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+      box-shadow: 0 4px 14px rgba(17, 24, 20, 0.15);
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    .btn-primary:hover {
+      background: var(--green);
+      border-color: var(--green);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+    .btn-primary:hover::before { transform: translateX(100%); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: var(--green-neon);
+      transition: color 0.2s ease;
+    }
+    .btn-primary:hover svg { color: #FFFFFF; }
+
+    [data-theme="dark"] .btn-primary {
+      background: var(--green);
+      color: var(--bg-0);
+      border-color: var(--green);
+      box-shadow: var(--shadow-glow);
+    }
+    [data-theme="dark"] .btn-primary svg { color: var(--bg-0); }
+    [data-theme="dark"] .btn-primary:hover {
+      background: var(--green-bright);
+      border-color: var(--green-bright);
+      color: var(--bg-0);
+      box-shadow: var(--shadow-glow-strong);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--bg-1);
+      color: var(--text-0);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 16px 24px;
+      border-radius: var(--r-md);
+      border: 1px solid var(--border-strong);
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.15s ease;
+    }
+    .btn-secondary:hover {
+      border-color: var(--green);
+      color: var(--green);
+      background: var(--green-soft);
+      transform: translateY(-1px);
+    }
+
+    .btn-large { padding: 20px 32px; font-size: 15px; }
+    .btn-sm { padding: 10px 16px; font-size: 12px; }
+
+    .cta-note {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-2);
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .cta-note span { display: inline-flex; align-items: center; gap: 4px; }
+    .cta-note span::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+    /* Hero Terminal Card */
+    .terminal {
+      background: var(--dark-panel);
+      border: 1px solid var(--dark-panel-border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      box-shadow: var(--shadow-terminal);
+      position: relative;
+    }
+    .terminal::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(0, 230, 118, 0.04) 100%);
+      pointer-events: none;
+    }
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--dark-panel-border);
+      background: var(--dark-panel-header);
+    }
+    .terminal-dots { display: flex; gap: 6px; }
+    .terminal-dots span { width: 10px; height: 10px; border-radius: 50%; }
+    .terminal-dots span:nth-child(1) { background: #FF5F57; }
+    .terminal-dots span:nth-child(2) { background: #FFBD2E; }
+    .terminal-dots span:nth-child(3) { background: #28CA42; }
+
+    .terminal-title {
+      flex: 1;
+      text-align: center;
+      color: #7A8880;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .terminal-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 290px;
+    }
+    .term-line {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      line-height: 1.55;
+    }
+    .term-prompt { color: var(--green-neon); flex-shrink: 0; font-weight: 700; }
+    .term-cmd { color: #FFFFFF; font-weight: 600; }
+    .term-out { color: #B8C8BC; padding-left: 18px; }
+    .term-tag {
+      color: var(--green-neon);
+      background: rgba(0, 230, 118, 0.1);
+      border: 1px solid rgba(0, 230, 118, 0.25);
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .term-out .hl { color: #39FF88; font-weight: 600; }
+    .term-cursor {
+      display: inline-block;
+      width: 7px;
+      height: 14px;
+      background: var(--green-neon);
+      animation: blink 1s steps(2) infinite;
+      margin-left: 2px;
+      vertical-align: middle;
+    }
+
+    /* Quick KPI Row */
+    .hero-kpis {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+    @media (min-width: 640px) {
+      .hero-kpis { grid-template-columns: repeat(4, 1fr); }
+    }
+    .hero-kpi-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 14px 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-kpi-num {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-0);
+      line-height: 1.2;
+    }
+    .hero-kpi-num span { color: var(--green); }
+    .hero-kpi-label {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: var(--text-2);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Marquee */
+    .marquee-section {
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-2);
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    }
+    .marquee-label {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-2);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      padding: 0 var(--space);
+    }
+    .marquee-label::before { content: '// '; color: var(--green); }
+    .marquee-track {
+      display: flex;
+      gap: 36px;
+      animation: marquee 26s linear infinite;
+      width: max-content;
+      will-change: transform;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-1);
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+    .marquee-item svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       SECTIONS COMMON
+    ============================================================ */
+    .section {
+      padding: 72px var(--space);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    @media (min-width: 768px) {
+      .section { padding: 96px var(--space); }
+    }
+    .section-head {
+      margin-bottom: 48px;
+      max-width: 760px;
+    }
+    .section-head.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 46px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text-0);
+      text-wrap: balance;
+    }
+    .accent { color: var(--green); }
+    .accent-cyan { color: var(--cyan); }
+    .section-head .lede {
+      font-size: 16.5px;
+      line-height: 1.65;
+      color: var(--text-1);
+    }
+
+    /* Empathy / Warning Box */
+    .warning-box {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--amber);
+      border-radius: var(--r-lg);
+      padding: clamp(24px, 4vw, 36px);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 48px;
+    }
+    .warning-box-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .warning-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(217, 119, 6, 0.1);
+      color: var(--amber);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+    .warning-box h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-0);
+    }
+    .warning-box p {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: var(--text-1);
+    }
+
+    /* ============================================================
+       SHOWCASE / PORTFOLIO FILTER & GALLERY
+    ============================================================ */
+    .filter-bar-wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 8px 16px;
+      border-radius: var(--r-sm);
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      color: var(--text-1);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .filter-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--text-0);
+      background: var(--bg-2);
+    }
+    .filter-btn.active {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-color: var(--ink);
+      box-shadow: var(--shadow-sm);
+    }
+    [data-theme="dark"] .filter-btn.active {
+      background: var(--green);
+      color: var(--bg-0);
+      border-color: var(--green);
+      box-shadow: var(--shadow-glow);
+    }
+    .filter-btn .count {
+      font-size: 10px;
+      opacity: 0.7;
+    }
+
+    /* Gallery Grid */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+    @media (min-width: 900px) {
+      .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+      }
+    }
+
+    .dash-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+    .dash-card:hover {
+      border-color: var(--green);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Card Top Bar */
+    .dash-card-header {
+      padding: 12px 18px;
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-2);
+      letter-spacing: 0.05em;
+    }
+    .dash-card-header .live-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--green);
+      font-weight: 700;
+    }
+    .dash-card-header .live-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 1.6s infinite;
+    }
+
+    /* Image Container */
+    .dash-card-media {
+      position: relative;
+      background: #0A0F0B;
+      overflow: hidden;
+      aspect-ratio: 16 / 9.8;
+      cursor: pointer;
+    }
+    .dash-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease, filter 0.3s ease;
+    }
+    .dash-card:hover .dash-card-media img {
+      transform: scale(1.03);
+    }
+    .dash-card-media .media-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(17, 24, 20, 0.45);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .dash-card:hover .dash-card-media .media-overlay {
+      opacity: 1;
+    }
+    .media-zoom-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: #111814;
+      padding: 10px 18px;
+      border-radius: var(--r-sm);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      transform: translateY(8px);
+      transition: transform 0.2s ease;
+    }
+    .dash-card:hover .dash-card-media .media-zoom-btn {
+      transform: translateY(0);
+    }
+
+    /* Body */
+    .dash-card-body {
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .dash-card-category {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .dash-category-badge {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--green-soft);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border-accent);
+    }
+    .dash-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-0);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .dash-business-question {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--text-1);
+      margin-bottom: 16px;
+    }
+    .dash-business-question strong {
+      color: var(--text-0);
+    }
+
+    /* KPI Pills in Card */
+    .dash-kpis-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .dash-kpi-chip {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-1);
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* Tech integration footer */
+    .dash-card-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .dash-tech-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-2);
+      letter-spacing: 0.04em;
+    }
+    .dash-actions-row {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+    }
+    @media (min-width: 480px) {
+      .dash-actions-row { width: auto; }
+    }
+
+    /* Sub-tabs for Vendas Carousel */
+    .vendas-tabs {
+      display: flex;
+      gap: 6px;
+      padding: 8px 18px;
+      background: var(--bg-0);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+    .vendas-tab-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      color: var(--text-2);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .vendas-tab-btn.active {
+      background: var(--green-soft);
+      border-color: var(--green);
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    /* ============================================================
+       AI + DASHBOARDS (O Diferencial de Autonomia)
+    ============================================================ */
+    .ai-integration-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (min-width: 860px) {
+      .ai-integration-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .ai-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+    .ai-card:hover {
+      border-color: var(--green);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .ai-card-num {
+      width: 34px;
+      height: 34px;
+      background: var(--green-soft);
+      border: 1px solid var(--border-accent);
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--r-sm);
+    }
+    .ai-card h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-0);
+      line-height: 1.3;
+    }
+    .ai-card p {
+      font-size: 14.5px;
+      color: var(--text-1);
+      line-height: 1.6;
+    }
+    .ai-card-quote {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--green);
+      background: var(--bg-2);
+      padding: 10px 14px;
+      border-radius: var(--r-sm);
+      border-left: 2px solid var(--green);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       BEFORE & AFTER COMPARISON TABLE
+    ============================================================ */
+    .compare-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      background: var(--bg-1);
+      box-shadow: var(--shadow-sm);
+      margin-top: 36px;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      text-align: left;
+    }
+    .compare-table th {
+      padding: 16px 20px;
+      background: var(--bg-2);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-0);
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table th.col-yes {
+      color: var(--green);
+      background: var(--green-soft);
+    }
+    .compare-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-1);
+      vertical-align: middle;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td.aspect {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--text-0);
+      width: 22%;
+    }
+    .compare-table td.no {
+      color: var(--text-2);
+      background: rgba(220, 38, 38, 0.02);
+    }
+    .compare-table td.no .cross {
+      color: var(--red);
+      font-weight: 700;
+      margin-right: 6px;
+    }
+    .compare-table td.yes {
+      color: var(--text-0);
+      background: rgba(0, 135, 68, 0.03);
+      font-weight: 600;
+    }
+    .compare-table td.yes .check {
+      color: var(--green);
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    /* ============================================================
+       ESTEIRA / METODOLOGIA (4 PASSOS)
+    ============================================================ */
+    .steps-flow-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 40px;
+    }
+    @media (min-width: 680px) {
+      .steps-flow-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .steps-flow-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step-box {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .step-box-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--green-soft);
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      width: fit-content;
+      border: 1px solid var(--border-accent);
+    }
+    .step-box h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-0);
+      line-height: 1.3;
+    }
+    .step-box p {
+      font-size: 13.5px;
+      color: var(--text-1);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       SIMULADOR RÁPIDO DE DASHBOARDS (Quiz Interativo)
+    ============================================================ */
+    .sim-wrap {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: clamp(24px, 4vw, 44px);
+      box-shadow: var(--shadow-md);
+      max-width: 980px;
+      margin: 40px auto 0;
+    }
+    .sim-title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3.5vw, 30px);
+      font-weight: 700;
+      color: var(--text-0);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .sim-desc {
+      text-align: center;
+      font-size: 15px;
+      color: var(--text-1);
+      margin-bottom: 32px;
+    }
+    .sim-options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    @media (min-width: 768px) {
+      .sim-options-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+    }
+    .sim-opt-card {
+      background: var(--bg-0);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 18px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      transition: all 0.15s ease;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-0);
+      line-height: 1.45;
+    }
+    .sim-opt-card > span:first-child {
+      flex: 1;
+      min-width: 0;
+    }
+    .sim-opt-card .badge {
+      flex-shrink: 0;
+      white-space: nowrap;
+      padding: 4px 10px;
+      font-size: 11px;
+    }
+    .sim-opt-card:hover {
+      border-color: var(--green);
+      background: var(--bg-2);
+      transform: translateY(-1px);
+    }
+    .sim-opt-card.selected {
+      background: var(--green-soft);
+      border-color: var(--green);
+      color: var(--text-0);
+      box-shadow: 0 0 0 1.5px var(--green);
+    }
+    .sim-result-box {
+      background: var(--bg-2);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      margin-top: 24px;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .sim-result-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .sim-result-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-0);
+      margin-bottom: 10px;
+    }
+    .sim-result-desc {
+      font-size: 15px;
+      color: var(--text-1);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       SOBRE KIKO SOARES (Autoridade)
+    ============================================================ */
+    .about-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: clamp(28px, 5vw, 48px);
+      display: grid;
+      gap: 36px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+    @media (min-width: 860px) {
+      .about-card {
+        grid-template-columns: 240px 1fr;
+        gap: 48px;
+      }
+    }
+    .about-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--border);
+      box-shadow: var(--shadow-md);
+      background: var(--bg-2);
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .about-name strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--text-0);
+    }
+    .about-name span {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--green);
+      letter-spacing: 0.05em;
+    }
+    .about-bio p {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--text-1);
+      margin-bottom: 16px;
+    }
+    .about-bio p strong { color: var(--text-0); }
+    .stack-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .pill {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--r-pill);
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      color: var(--text-1);
+    }
+    .pill.accent {
+      background: var(--green-soft);
+      border-color: var(--border-accent);
+      color: var(--green);
+    }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      transition: border-color 0.15s ease;
+    }
+    .faq-item:hover { border-color: var(--border-strong); }
+    .faq-item[open] { border-color: var(--green); }
+    .faq-q {
+      padding: 18px 22px;
+      font-family: var(--font-display);
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-0);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      user-select: none;
+      list-style: none;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-icon {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      color: var(--green);
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      padding: 0 22px 20px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text-1);
+      border-top: 1px solid transparent;
+    }
+    .faq-a strong { color: var(--text-0); }
+
+    /* ============================================================
+       CTA FINAL
+    ============================================================ */
+    .cta-final {
+      background: var(--cta-final-bg);
+      color: var(--cta-final-text);
+      padding: 80px var(--space);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--cta-final-glow);
+      pointer-events: none;
+    }
+    .cta-final-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .cta-final h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5.5vw, 52px);
+      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .cta-final h2 .accent {
+      color: var(--green-neon);
+    }
+    .cta-final p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--cta-final-text-muted);
+      margin-bottom: 36px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--bg-0);
+      border-top: 1px solid var(--border);
+      padding: 48px var(--space) 110px;
+      font-size: 13px;
+      color: var(--text-2);
+    }
+    @media (min-width: 860px) {
+      .site-footer { padding-bottom: 48px; }
+    }
+    .footer-inner {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .footer-inner { grid-template-columns: 1.4fr 1fr 1fr; }
+    }
+    .footer-brand p {
+      font-size: 13px;
+      color: var(--text-1);
+      line-height: 1.6;
+      margin-top: 8px;
+    }
+    .footer-meta {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .footer-legal {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      line-height: 2;
+    }
+    .footer-legal a:hover { color: var(--green); }
+
+    /* ============================================================
+       MOBILE DOCK (Bottom Nav)
+    ============================================================ */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: var(--bg-bottom-nav);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+    }
+    @media (min-width: 860px) {
+      .bottom-nav { display: none; }
+    }
+    .bottom-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      padding: 4px 10px;
+      border-radius: var(--r-sm);
+      min-width: 58px;
+      min-height: 44px;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .bottom-nav-item svg { width: 18px; height: 18px; }
+    .bottom-nav-item.active {
+      color: var(--green);
+      background: var(--green-soft);
+    }
+    .bottom-nav-item.highlight-wa {
+      color: #FFFFFF;
+      background: #111814;
+      font-weight: 700;
+    }
+    [data-theme="dark"] .bottom-nav-item.highlight-wa {
+      background: var(--green);
+      color: var(--bg-0);
+    }
+    .bottom-nav-item.highlight-wa svg {
+      color: var(--green-neon);
+    }
+    [data-theme="dark"] .bottom-nav-item.highlight-wa svg {
+      color: var(--bg-0);
+    }
+
+    /* ============================================================
+       LIGHTBOX MODAL
+    ============================================================ */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(5, 8, 7, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .lightbox-modal.open {
+      display: flex;
+      opacity: 1;
+    }
+    .lightbox-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      max-width: 1080px;
+      width: 100%;
+      max-height: 92vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .lightbox-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-2);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .lightbox-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-0);
+      border: 1px solid var(--border);
+      color: var(--text-0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      transition: all 0.15s ease;
+    }
+    .lightbox-close-btn:hover {
+      background: var(--red);
+      color: #FFFFFF;
+      border-color: var(--red);
+    }
+    .lightbox-image-wrap {
+      background: #0E1410;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+    .lightbox-image-wrap img {
+      max-height: 65vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: var(--r-sm);
+    }
+    .lightbox-content {
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fade-up.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- JSON-LD Estruturado -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://turbinandoexperts.com/#kiko-soares",
+        "name": "Kiko Soares",
+        "jobTitle": "Especialista em Análise de Dados, Dashboards e Agentes de IA",
+        "url": "https://turbinandoexperts.com/portfolio-data-driven.html",
+        "sameAs": [
+          "https://turbinandoexperts.com",
+          "https://turbinandoexperts.rck.fun/kiko-soares-portfolio-data-driven"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://turbinandoexperts.com/portfolio-data-driven.html#service",
+        "name": "Implementação de Dashboards Power BI e Inteligência Data-Driven",
+        "provider": { "@id": "https://turbinandoexperts.com/#kiko-soares" },
+        "serviceType": "Business Intelligence & Data Analytics",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "description": "Desenvolvimento de dashboards executivos sob medida em Power BI, integração de bancos de dados SQL, planilhas e agentes de IA no WhatsApp para tomadas de decisão em tempo real.",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "BRL",
+          "description": "Diagnóstico inicial gratuito e implementação sob medida sem mensalidades por usuário."
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://turbinandoexperts.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portfólio Data-Driven",
+            "item": "https://turbinandoexperts.com/portfolio-data-driven.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- BANNER TOPO -->
+  <aside class="top-banner" aria-label="Aviso operacional">
+    <span class="dot" aria-hidden="true"></span>
+    <span>// PORTFÓLIO OFICIAL · DASHBOARDS &amp; IA DATA-DRIVEN · PORTO ALEGRE/RS &amp; BRASIL</span>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Turbinando Experts início">
+        <span class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </span>
+        <span class="logo-text">Turbinando <span>Experts</span></span>
+        <span class="header-badge">// DATA-DRIVEN</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Navegação principal">
+        <a href="#projetos">Dashboards</a>
+        <a href="#diferencial-ia">IA &amp; Alertas</a>
+        <a href="#comparativo">Comparativo</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#simulador">Diagnóstico</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro e escuro">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Vi%20seu%20portf%C3%B3lio%20de%20Dashboards%20e%20quero%20uma%20an%C3%A1lise%20dos%20dados%20da%20minha%20empresa." class="btn-header-wa" target="_blank" rel="noopener noreferrer" aria-label="Falar com Kiko Soares no WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span class="wa-label-desktop">Falar no WhatsApp</span>
+          <span class="wa-label-notebook">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-h1">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="pulse" aria-hidden="true"></span>
+            <span>PORTFÓLIO DATA-DRIVEN · POWER BI &amp; AGENTES DE IA</span>
+          </div>
+
+          <h1 id="hero-h1">
+            Transforme dados brutos em decisões que geram lucro em <span class="accent">5 segundos.</span>
+          </h1>
+
+          <div class="tldr">
+            <span class="tldr-label">[TL;DR · Resumo Executivo]</span>
+            <strong>Chega de planilhas quebradas e relatórios estáticos que ninguém lê.</strong>
+            Construímos dashboards sob medida no Power BI e conectamos Agentes de IA que entregam insights acionáveis e alertas no WhatsApp do seu time.
+          </div>
+
+          <p class="lede">
+            Análises financeiras, funil de vendas, controle de produção, SAC e gestão de pessoas. Não adaptamos sua empresa a modelos prontos: <strong>desenhamos a inteligência para a sua operação real.</strong>
+          </p>
+
+          <div class="hero-cta">
+            <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Gostaria%20de%20agendar%20uma%20an%C3%A1lise%20gratuita%20para%20implementar%20Dashboards%20e%20IA%20no%20meu%20neg%C3%B3cio." class="btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>Quero Meus Dados Organizados</span>
+            </a>
+            <a href="#projetos" class="btn-secondary">
+              <span>Ver Dashboards ao Vivo ↓</span>
+            </a>
+          </div>
+
+          <div class="cta-note">
+            <span>Power BI sem mensalidades por usuário</span>
+            <span>Conexão direta com ERP / SQL</span>
+            <span>Alertas com IA no WhatsApp</span>
+          </div>
+
+          <div class="hero-kpis">
+            <div class="hero-kpi-card">
+              <div class="hero-kpi-num">&lt; <span>7d</span></div>
+              <div class="hero-kpi-label">Primeiro Dash Rodando</div>
+            </div>
+            <div class="hero-kpi-card">
+              <div class="hero-kpi-num">100<span>%</span></div>
+              <div class="hero-kpi-label">Sob Medida p/ Seu Fluxo</div>
+            </div>
+            <div class="hero-kpi-card">
+              <div class="hero-kpi-num">24<span>/7</span></div>
+              <div class="hero-kpi-label">Monitoramento com IA</div>
+            </div>
+            <div class="hero-kpi-card">
+              <div class="hero-kpi-num">0<span>%</span></div>
+              <div class="hero-kpi-label">Dependência de Planilhas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Operacional de Engenharia de Dados -->
+        <div class="hero-visual">
+          <div class="terminal" aria-label="Terminal de automação e dados da Turbinando Experts">
+            <div class="terminal-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="terminal-title">turbinando-pipeline — data-driven.engine</div>
+            </div>
+            <div class="terminal-body">
+              <div class="term-line">
+                <span class="term-prompt">&gt;</span>
+                <span class="term-cmd">turbinando data-pipeline --connect erp,sheets,crm</span>
+              </div>
+              <div class="term-out">
+                <span class="hl">[CONEXÃO OK]</span> Bancos Postgres + Planilhas mapeados com sucesso.
+              </div>
+              <div class="term-line">
+                <span class="term-prompt">&gt;</span>
+                <span class="term-cmd">run etl --clean-nulls --unify-kpis</span>
+              </div>
+              <div class="term-out">
+                Processando 54.800 transações... <span class="term-tag">MODELO NORMALIZADO</span>
+              </div>
+              <div class="term-line">
+                <span class="term-prompt">&gt;</span>
+                <span class="term-cmd">deploy powerbi --refresh auto-15m</span>
+              </div>
+              <div class="term-out">
+                <span class="hl">[PUBLICADO]</span> 7 visões executivas prontas em Dark &amp; Light mode.
+              </div>
+              <div class="term-line">
+                <span class="term-prompt">&gt;</span>
+                <span class="term-cmd">agent-ia --notify-whatsapp "Meta de Vendas Diária"</span>
+              </div>
+              <div class="term-out">
+                <span class="term-tag" style="background: rgba(0, 230, 118, 0.15); color: var(--green-neon);">DISPARO WHATSAPP ENVIADO</span><br>
+                <em>"Kiko, meta diária atingida em 112%. Margem líquida: 36.4%. Alerta: 2 produtos com estoque abaixo do giro de 5 dias."</em>
+              </div>
+              <div class="term-line">
+                <span class="term-prompt">&gt;</span>
+                <span class="term-cmd">status --ready</span>
+                <span class="term-cursor" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE TECNOLOGIAS -->
+    <div class="marquee-section" aria-label="Ecossistema e ferramentas integradas">
+      <div class="marquee-label">Tecnologias, Conectores e Ferramentas Integradas</div>
+      <div class="marquee-track">
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Power BI</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v12H4z"/></svg>DAX Avançado</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>PostgreSQL</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>Google Sheets &amp; Excel</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>n8n Workflow Automation</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967"/></svg>WhatsApp Business API</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>Modelagem Dimensional</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4z"/></svg>Agentes de IA (Claude / OpenAI)</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>SQL Server / MySQL</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6z"/></svg>ERPs &amp; CRMs Próprios</div>
+        <!-- Duplicação para loop contínuo -->
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Power BI</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v12H4z"/></svg>DAX Avançado</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>PostgreSQL</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>Google Sheets &amp; Excel</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>n8n Workflow Automation</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967"/></svg>WhatsApp Business API</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>Modelagem Dimensional</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4z"/></svg>Agentes de IA (Claude / OpenAI)</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>SQL Server / MySQL</div>
+        <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6z"/></svg>ERPs &amp; CRMs Próprios</div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO: POR QUE DECISÕES NO ESCURO CUSTAM CARO -->
+    <section class="section" id="alerta" aria-labelledby="alerta-h2">
+      <div class="container">
+        <div class="warning-box fade-up">
+          <div class="warning-box-head">
+            <span class="warning-tag">🚨 Ponto Crítico de Negócio</span>
+          </div>
+          <h3 id="alerta-h2">Chega de plataformas genéricas e relatórios estáticos em PDF que ninguém consulta.</h3>
+          <p style="margin-top: 10px;">
+            A maioria das empresas comete dois erros clássicos: ou fica <strong>presa em dezenas de planilhas desatualizadas</strong> onde cada funcionário tem um número diferente, ou contrata softwares caros cheios de telas complexas que a equipe abandona em duas semanas.
+          </p>
+          <p style="margin-top: 12px;">
+            Aqui na <strong>Turbinando Experts</strong>, nós desenhamos a camada de dados sob medida: integramos suas fontes atuais (ERP, planilhas, CRM, notas fiscais), modelamos os cálculos de verdade e entregamos <strong>telas limpas e executivas</strong> onde qualquer sócio ou diretor bate o olho e sabe exatamente onde agir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: PROJETOS / GALERIA DE DASHBOARDS -->
+    <section class="section" id="projetos" aria-labelledby="projetos-h2">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">nossos projetos implementados</span>
+          <h2 id="projetos-h2">Dashboards Executivos de <span class="accent">Alto Impacto</span></h2>
+          <p class="lede">
+            Explore os painéis reais construídos para operações de diferentes segmentos. Clique em qualquer imagem para <strong>ampliar em alta definição</strong> e ver os indicadores monitorados.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar-wrap fade-up">
+          <div class="filter-pills" role="tablist" aria-label="Filtrar categoria de dashboard">
+            <button type="button" class="filter-btn active" data-filter="all">Todos <span class="count">(7)</span></button>
+            <button type="button" class="filter-btn" data-filter="financeiro">Financeiro <span class="count">(2)</span></button>
+            <button type="button" class="filter-btn" data-filter="vendas">Vendas &amp; Funil <span class="count">(1)</span></button>
+            <button type="button" class="filter-btn" data-filter="clientes">Perfil de Clientes <span class="count">(1)</span></button>
+            <button type="button" class="filter-btn" data-filter="operacoes">Produção <span class="count">(1)</span></button>
+            <button type="button" class="filter-btn" data-filter="rh">RH &amp; Pessoas <span class="count">(1)</span></button>
+            <button type="button" class="filter-btn" data-filter="sac">Atendimento SAC <span class="count">(1)</span></button>
+          </div>
+        </div>
+
+        <!-- DASHBOARD GRID -->
+        <div class="dashboard-grid" id="dashboards-container">
+
+          <!-- 1. DASHBOARD FINANCEIRO -->
+          <article class="dash-card fade-up" data-category="financeiro" data-title="Dashboard Financeiro Estratégico">
+            <div class="dash-card-header">
+              <span class="live-status">PRODUÇÃO ATIVA</span>
+              <span>REFRESH AUTOMÁTICO</span>
+            </div>
+            <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-financeiro.webp', 'Dashboard Financeiro Estratégico', 'Análise de Fluxo de Caixa, DRE Consolidado, Entradas x Saídas e Margem Líquida em tempo real.', 'DRE Gerencial, Fluxo de Caixa Diário, Saldo em Contas, Margem Líquida %, Previsibilidade de Contas a Pagar e Receber.')">
+              <img src="dashboards/dashboard-financeiro.webp" alt="Dashboard Financeiro em Power BI com gráficos de fluxo de caixa e DRE" loading="lazy">
+              <div class="media-overlay">
+                <span class="media-zoom-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  Ampliar em Detalhes
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <div>
+                <div class="dash-card-category">
+                  <span class="dash-category-badge">Gestão Financeira</span>
+                  <span class="badge">Power BI + ERP</span>
+                </div>
+                <h3>Dashboard Financeiro</h3>
+                <p class="dash-business-question">
+                  <strong>Pergunta respondida:</strong> "Para onde está indo cada centavo da empresa e qual é o real lucro líquido após custos fixos e variáveis?"
+                </p>
+                <div class="dash-kpis-list">
+                  <span class="dash-kpi-chip">DRE Gerencial</span>
+                  <span class="dash-kpi-chip">Fluxo de Caixa</span>
+                  <span class="dash-kpi-chip">Entradas vs Saídas</span>
+                  <span class="dash-kpi-chip">Margem Líquida</span>
+                  <span class="dash-kpi-chip">Inadimplência</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <div class="dash-tech-tag">// Fontes: ERP Bancário + Conciliação + Extratos</div>
+                <div class="dash-actions-row">
+                  <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Gostei%20do%20Dashboard%20Financeiro%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20projeto%20similar%20para%20minha%20empresa." class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    Solicitar no WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. DASHBOARD RECEITA X CUSTO X MARGEM -->
+          <article class="dash-card fade-up" data-category="financeiro" data-title="Dashboard Receita x Custo x Margem">
+            <div class="dash-card-header">
+              <span class="live-status">DUPLO TEMA (DARK / LIGHT)</span>
+              <span>LUCRO &amp; CONTRIBUIÇÃO</span>
+            </div>
+            <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-receita-custo-margem.webp', 'Dashboard Receita x Custo x Margem', 'Identificação cirúrgica de produtos e clientes que geram lucro versus os que drenam a margem.', 'Margem de Contribuição %, CMV (Custo da Mercadoria Vendida), Ponto de Equilíbrio Operacional, Curva ABC de Faturamento e Lucro Líquido.')">
+              <img src="dashboards/dashboard-receita-custo-margem.webp" alt="Dashboard Receita x Custo x Margem no Power BI com visão comparativa" loading="lazy">
+              <div class="media-overlay">
+                <span class="media-zoom-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  Ampliar em Detalhes
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <div>
+                <div class="dash-card-category">
+                  <span class="dash-category-badge">Rentabilidade &amp; Precificação</span>
+                  <span class="badge">Tema Dark &amp; Light</span>
+                </div>
+                <h3>Receita x Custo x Margem</h3>
+                <p class="dash-business-question">
+                  <strong>Pergunta respondida:</strong> "Quais produtos ou contratos trazem faturamento ilusório mas dão prejuízo, e quais são os motores reais do lucro?"
+                </p>
+                <div class="dash-kpis-list">
+                  <span class="dash-kpi-chip">Margem de Contribuição</span>
+                  <span class="dash-kpi-chip">CMV / CPV</span>
+                  <span class="dash-kpi-chip">Ponto de Equilíbrio</span>
+                  <span class="dash-kpi-chip">Curva ABC Lucro</span>
+                  <span class="dash-kpi-chip">Markup Real</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <div class="dash-tech-tag">// Fontes: Notas Fiscais + Planilhas de Custo + ERP</div>
+                <div class="dash-actions-row">
+                  <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Vi%20o%20Dashboard%20de%20Receita%20x%20Custo%20x%20Margem%20e%20preciso%20ajustar%20a%20lucratividade%20do%20meu%20neg%C3%B3cio." class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    Solicitar no WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. DASHBOARD DE VENDAS COM 4 TELAS INTERATIVAS -->
+          <article class="dash-card fade-up" data-category="vendas" data-title="Dashboard Vendas & Funil Comercial">
+            <div class="dash-card-header">
+              <span class="live-status">4 VISÕES INTEGRADAS</span>
+              <span>FUNIL COMPLETO</span>
+            </div>
+
+            <!-- Sub-abas de navegação entre as 4 telas de Vendas -->
+            <div class="vendas-tabs" aria-label="Selecionar visão do dashboard de vendas">
+              <button type="button" class="vendas-tab-btn active" onclick="switchVendasTab(1)">1. Visão Geral</button>
+              <button type="button" class="vendas-tab-btn" onclick="switchVendasTab(2)">2. Vendedores</button>
+              <button type="button" class="vendas-tab-btn" onclick="switchVendasTab(3)">3. Regional</button>
+              <button type="button" class="vendas-tab-btn" onclick="switchVendasTab(4)">4. Sazonalidade</button>
+            </div>
+
+            <div class="dash-card-media" id="vendas-media-container" onclick="openCurrentVendasLightbox()">
+              <img id="vendas-img" src="dashboards/dashboard-vendas-1.webp" alt="Dashboard de Vendas Tela 1 no Power BI" loading="lazy">
+              <div class="media-overlay">
+                <span class="media-zoom-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  Ampliar Visão Selecionada
+                </span>
+              </div>
+            </div>
+
+            <div class="dash-card-body">
+              <div>
+                <div class="dash-card-category">
+                  <span class="dash-category-badge">Comercial &amp; SDR</span>
+                  <span class="badge" id="vendas-subbadge">Visão 1: Geral</span>
+                </div>
+                <h3>Dashboard Vendas &amp; Funil</h3>
+                <p class="dash-business-question" id="vendas-desc">
+                  <strong>Pergunta respondida:</strong> "Onde o funil comercial está vazando, quais canais convertem mais e qual vendedor gera maior faturamento?"
+                </p>
+                <div class="dash-kpis-list" id="vendas-kpis">
+                  <span class="dash-kpi-chip">Faturamento vs Meta</span>
+                  <span class="dash-kpi-chip">Ticket Médio</span>
+                  <span class="dash-kpi-chip">Taxa de Conversão</span>
+                  <span class="dash-kpi-chip">Ciclo de Venda</span>
+                  <span class="dash-kpi-chip">Pipeline Ativo</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <div class="dash-tech-tag">// Fontes: CRM + WhatsApp Leads + E-commerce + ERP</div>
+                <div class="dash-actions-row">
+                  <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Gostei%20do%20Dashboard%20de%20Vendas%20(com%20as%204%20vis%C3%B5es)%20e%20quero%20aplicar%20no%20meu%20time%20comercial." class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    Solicitar no WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. DASHBOARD ANÁLISE DE PERFIL -->
+          <article class="dash-card fade-up" data-category="clientes" data-title="Dashboard Análise de Perfil & ICP">
+            <div class="dash-card-header">
+              <span class="live-status">SEGMENTAÇÃO RFM</span>
+              <span>INTELIGÊNCIA DE CLIENTES</span>
+            </div>
+            <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-analise-perfil.webp', 'Dashboard Análise de Perfil & ICP', 'Comportamento de compra, segmentação de base e perfil de cliente ideal que gera maior LTV.', 'Segmentação RFM (Recência, Frequência e Valor), LTV (Lifetime Value), Ticket Médio por Segmento, Taxa de Retenção e Churn.')">
+              <img src="dashboards/dashboard-analise-perfil.webp" alt="Dashboard de Análise de Perfil de Clientes e ICP no Power BI" loading="lazy">
+              <div class="media-overlay">
+                <span class="media-zoom-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  Ampliar em Detalhes
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <div>
+                <div class="dash-card-category">
+                  <span class="dash-category-badge">Inteligência de Mercado</span>
+                  <span class="badge">ICP &amp; Segmentação</span>
+                </div>
+                <h3>Dashboard Análise de Perfil</h3>
+                <p class="dash-business-question">
+                  <strong>Pergunta respondida:</strong> "Quem é exatamente o perfil de cliente mais valioso da minha base e como direcionar novos esforços de tráfego para atrair clones dele?"
+                </p>
+                <div class="dash-kpis-list">
+                  <span class="dash-kpi-chip">Segmentação RFM</span>
+                  <span class="dash-kpi-chip">LTV Médio</span>
+                  <span class="dash-kpi-chip">Frequência de Recompra</span>
+                  <span class="dash-kpi-chip">Perfil Demográfico/B2B</span>
+                  <span class="dash-kpi-chip">Clientes Churn Risk</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <div class="dash-tech-tag">// Fontes: Base de Clientes + Notas de Venda + Histórico</div>
+                <div class="dash-actions-row">
+                  <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Preciso%20do%20Dashboard%20de%20An%C3%A1lise%20de%20Perfil%20de%20Clientes%20para%20entender%20minha%20base." class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    Solicitar no WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. DASHBOARD PRODUÇÃO -->
+          <article class="dash-card fade-up" data-category="operacoes" data-title="Dashboard Produção & Operações">
+            <div class="dash-card-header">
+              <span class="live-status">LINHA OPERACIONAL</span>
+              <span>EFICIÊNCIA &amp; GARGALOS</span>
+            </div>
+            <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-producao.webp', 'Dashboard Produção & Operações', 'Monitoramento de capacidade produtiva, ordens de serviço, refugo e paradas de linha.', 'OEE (Eficiência Global), Volume Produzido vs Meta, Lead Time de Entrega, Perdas/Refugos e Tempo de Parada de Máquina.')">
+              <img src="dashboards/dashboard-producao.webp" alt="Dashboard de Produção e Operações Industriais no Power BI" loading="lazy">
+              <div class="media-overlay">
+                <span class="media-zoom-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  Ampliar em Detalhes
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <div>
+                <div class="dash-card-category">
+                  <span class="dash-category-badge">Operações &amp; Indústria</span>
+                  <span class="badge">OEE &amp; Lead Time</span>
+                </div>
+                <h3>Dashboard Produção</h3>
+                <p class="dash-business-question">
+                  <strong>Pergunta respondida:</strong> "Onde estão os gargalos que atrasam a entrega dos pedidos e como aumentar a capacidade produtiva sem inflar os custos?"
+                </p>
+                <div class="dash-kpis-list">
+                  <span class="dash-kpi-chip">OEE Operacional</span>
+                  <span class="dash-kpi-chip">Lead Time</span>
+                  <span class="dash-kpi-chip">Taxa de Refugo</span>
+                  <span class="dash-kpi-chip">Capacidade Instalada</span>
+                  <span class="dash-kpi-chip">Ordens Atrasadas</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <div class="dash-tech-tag">// Fontes: PCP + Ordens de Serviço + Sensores / Planilhas</div>
+                <div class="dash-actions-row">
+                  <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Gostaria%20de%20implementar%20o%20Dashboard%20de%20Produ%C3%A7%C3%A3o%20na%20minha%20f%C3%A1brica/opera%C3%A7%C3%A3o." class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    Solicitar no WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. DASHBOARD RH -->
+          <article class="dash-card fade-up" data-category="rh" data-title="Dashboard Gestão de Pessoas & RH">
+            <div class="dash-card-header">
+              <span class="live-status">GESTÃO DE TALENTOS</span>
+              <span>PEOPLE ANALYTICS</span>
+            </div>
+            <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-rh.webp', 'Dashboard Gestão de Pessoas & RH', 'Visão completa de rotatividade (turnover), absenteísmo, custo de folha salarial e clima.', 'Taxa de Turnover Geral e por Setor, Absenteísmo %, Custo Médio de Contratação, Folha Salarial vs Faturamento e Avaliação de Desempenho.')">
+              <img src="dashboards/dashboard-rh.webp" alt="Dashboard de RH e People Analytics no Power BI" loading="lazy">
+              <div class="media-overlay">
+                <span class="media-zoom-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  Ampliar em Detalhes
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <div>
+                <div class="dash-card-category">
+                  <span class="dash-category-badge">People Analytics</span>
+                  <span class="badge">Retenção de Talentos</span>
+                </div>
+                <h3>Dashboard RH</h3>
+                <p class="dash-business-question">
+                  <strong>Pergunta respondida:</strong> "Quanto a rotatividade está custando para a empresa e quais departamentos exigem intervenção imediata na liderança e retenção?"
+                </p>
+                <div class="dash-kpis-list">
+                  <span class="dash-kpi-chip">Turnover Mensal/Anual</span>
+                  <span class="dash-kpi-chip">Absenteísmo</span>
+                  <span class="dash-kpi-chip">Custo Folha / Receita</span>
+                  <span class="dash-kpi-chip">Headcount por Área</span>
+                  <span class="dash-kpi-chip">Tempo Médio de Casa</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <div class="dash-tech-tag">// Fontes: Folha de Pagamento + Sistema de Ponto + Avaliações</div>
+                <div class="dash-actions-row">
+                  <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Preciso%20de%20um%20Dashboard%20de%20RH%20/People%20Analytics%20para%20minha%20empresa." class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    Solicitar no WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. DASHBOARD SAC -->
+          <article class="dash-card fade-up" data-category="sac" data-title="Dashboard SAC & Atendimento">
+            <div class="dash-card-header">
+              <span class="live-status">PÓS-VENDA &amp; SUPORTE</span>
+              <span>EXPERIÊNCIA DO CLIENTE</span>
+            </div>
+            <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-sac.webp', 'Dashboard SAC & Atendimento', 'Tempo de resposta, resolução em primeiro contato, CSAT e volumetria de chamados.', 'Tempo Médio de Resposta (TMR), Tempo Médio de Atendimento (TMA), CSAT / NPS, Fila de Espera no WhatsApp e Motivos de Reclamação.')">
+              <img src="dashboards/dashboard-sac.webp" alt="Dashboard de SAC e Atendimento ao Cliente em Tempo Real no Power BI" loading="lazy">
+              <div class="media-overlay">
+                <span class="media-zoom-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  Ampliar em Detalhes
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <div>
+                <div class="dash-card-category">
+                  <span class="dash-category-badge">Suporte &amp; Customer Success</span>
+                  <span class="badge">SLA &amp; Satisfação</span>
+                </div>
+                <h3>Dashboard SAC</h3>
+                <p class="dash-business-question">
+                  <strong>Pergunta respondida:</strong> "Quanto tempo nossos clientes esperam para ser respondidos e quais problemas recorrentes estão queimando a reputação da marca?"
+                </p>
+                <div class="dash-kpis-list">
+                  <span class="dash-kpi-chip">TMR (Tempo Resposta)</span>
+                  <span class="dash-kpi-chip">TMA (Tempo Atendimento)</span>
+                  <span class="dash-kpi-chip">CSAT / NPS</span>
+                  <span class="dash-kpi-chip">First Contact Resolution</span>
+                  <span class="dash-kpi-chip">Categorias de Chamado</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <div class="dash-tech-tag">// Fontes: WhatsApp API + Helpdesk + Chamados + CRM</div>
+                <div class="dash-actions-row">
+                  <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Quero%20um%20Dashboard%20de%20SAC%20e%20Atendimento%20para%20controlar%20nosso%20suporte." class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    Solicitar no WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: AGENTES DE IA CONECTADOS AOS DASHBOARDS -->
+    <section class="section" id="diferencial-ia" aria-labelledby="ia-h2">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">a revolução da automação</span>
+          <h2 id="ia-h2">Agentes de IA Conectados ao seu Dashboard.<br><span class="accent">Muito além do gráfico na tela.</span></h2>
+          <p class="lede">
+            Um dashboard comum exige que o diretor lembre de abrir o sistema, filtrar datas e interpretar planilhas. Com a arquitetura da <strong>Turbinando Experts</strong>, seus dados trabalham ativamente por você:
+          </p>
+        </div>
+
+        <div class="ai-integration-grid">
+          <div class="ai-card fade-up">
+            <div class="ai-card-num">01</div>
+            <div>
+              <h3>Resumo Executivo Diário no WhatsApp</h3>
+              <p>
+                Todas as manhãs às 08h00, o Agente de IA lê o fechamento do dia anterior e envia no WhatsApp da diretoria um resumo direto com faturamento, margem e metas.
+              </p>
+            </div>
+            <div class="ai-card-quote">
+              "Bom dia! Ontem faturamos R$ 38.400 (106% da meta diária). O ticket médio aumentou 12% no produto principal."
+            </div>
+          </div>
+
+          <div class="ai-card fade-up">
+            <div class="ai-card-num">02</div>
+            <div>
+              <h3>Consultas em Linguagem Natural</h3>
+              <p>
+                Qualquer gestor pode mandar um áudio ou texto para a IA: <em>"Quanto faturamos no RS esta semana comparado ao mês passado?"</em> e receber a resposta em 3 segundos.
+              </p>
+            </div>
+            <div class="ai-card-quote">
+              "Você não precisa aprender DAX ou SQL. A IA consulta o modelo e responde na hora pelo celular."
+            </div>
+          </div>
+
+          <div class="ai-card fade-up">
+            <div class="ai-card-num">03</div>
+            <div>
+              <h3>Alertas Proativos de Anomalias</h3>
+              <p>
+                Se a margem líquida cair abaixo de 25%, o estoque de um produto de alto giro zerar ou o SAC acumular fila no WhatsApp, a IA alerta quem precisa agir imediatamente.
+              </p>
+            </div>
+            <div class="ai-card-quote">
+              "Descubra problemas no mesmo dia em que eles acontecem — não 30 dias depois, no fechamento do contador."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: COMPARATIVO PLANILHAS VS DASHBOARD SOB MEDIDA -->
+    <section class="section" id="comparativo" aria-labelledby="comp-h2">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">diferenciação estratégica</span>
+          <h2 id="comp-h2">Planilhas Soltas vs. <span class="accent">Dashboard Inteligente</span></h2>
+          <p class="lede">
+            Entenda por que continuar tomando decisões em planilhas manuais está custando caro para o crescimento da sua empresa:
+          </p>
+        </div>
+
+        <div class="compare-table-wrap fade-up">
+          <table class="compare-table" aria-label="Tabela comparativa entre planilhas manuais e dashboards sob medida">
+            <thead>
+              <tr>
+                <th scope="col">Aspecto</th>
+                <th scope="col">Planilhas Manuais / Excel</th>
+                <th scope="col" class="col-yes">Dashboard Turbinando Experts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="aspect">Tempo de Atualização</td>
+                <td class="no"><span class="cross">✕</span> Horas semanais copiando e colando células</td>
+                <td class="yes"><span class="check">✓</span> 100% automático via conectores e agendamento</td>
+              </tr>
+              <tr>
+                <td class="aspect">Confiabilidade</td>
+                <td class="no"><span class="cross">✕</span> Fórmulas quebradas e dados duplicados</td>
+                <td class="yes"><span class="check">✓</span> Modelo semântico auditado e regras unificadas</td>
+              </tr>
+              <tr>
+                <td class="aspect">Velocidade da Decisão</td>
+                <td class="no"><span class="cross">✕</span> Só descobre o resultado semanas depois</td>
+                <td class="yes"><span class="check">✓</span> Indicadores visíveis em 5 segundos no celular ou PC</td>
+              </tr>
+              <tr>
+                <td class="aspect">Segurança &amp; LGPD</td>
+                <td class="no"><span class="cross">✕</span> Arquivo compartilhado sem controle de acesso</td>
+                <td class="yes"><span class="check">✓</span> Permissões granulares por cargo, filial ou equipe</td>
+              </tr>
+              <tr>
+                <td class="aspect">Avisos e Ações</td>
+                <td class="no"><span class="cross">✕</span> Silencioso: ninguém sabe quando algo desanda</td>
+                <td class="yes"><span class="check">✓</span> Agente de IA notifica no WhatsApp ao bater metas ou desvios</td>
+              </tr>
+              <tr>
+                <td class="aspect">Custo Oculto</td>
+                <td class="no"><span class="cross">✕</span> Custo de salários gastos em trabalho burocrático</td>
+                <td class="yes"><span class="check">✓</span> Equipe focada em vender e produzir resultados</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: METODOLOGIA DE IMPLEMENTAÇÃO -->
+    <section class="section" id="metodologia" aria-labelledby="met-h2">
+      <div class="container">
+        <div class="section-head center">
+          <span class="mono">como entregamos</span>
+          <h2 id="met-h2">Esteira de Entrega em <span class="accent">4 Etapas</span></h2>
+          <p class="lede" style="margin: 0 auto;">
+            Sem projetos demorados de 6 meses. Uma esteira ágil para colocar sua empresa guiada por dados na primeira semana:
+          </p>
+        </div>
+
+        <div class="steps-flow-grid fade-up">
+          <div class="step-box">
+            <span class="step-box-num">Etapa 01</span>
+            <h3>Imersão &amp; Mapeamento</h3>
+            <p>
+              Sentamos com você para entender as decisões que precisa tomar, onde a operação está cega e quais sistemas guardam seus dados brutos.
+            </p>
+          </div>
+
+          <div class="step-box">
+            <span class="step-box-num">Etapa 02</span>
+            <h3>Engenharia &amp; Limpeza ETL</h3>
+            <p>
+              Conectamos seus bancos SQL, ERPs e planilhas, tratamos dados inconsistentes e criamos as regras de negócio e cálculos de margem.
+            </p>
+          </div>
+
+          <div class="step-box">
+            <span class="step-box-num">Etapa 03</span>
+            <h3>Design UX &amp; Construção no BI</h3>
+            <p>
+              Desenhamos o layout de alto contraste e fácil leitura. Cada gráfico tem objetivo claro: informar rápido sem poluição visual.
+            </p>
+          </div>
+
+          <div class="step-box">
+            <span class="step-box-num">Etapa 04</span>
+            <h3>Automação &amp; Agente de IA</h3>
+            <p>
+              Configuramos as rotinas de atualização diária e programamos o Agente de IA no WhatsApp para disparar alertas e resumos executivos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: DIAGNÓSTICO / SIMULADOR RÁPIDO -->
+    <section class="section" id="simulador" aria-labelledby="sim-h2">
+      <div class="container">
+        <div class="section-head center">
+          <span class="mono">simulador de projeto</span>
+          <h2 id="sim-h2">Descubra qual Dashboard sua empresa <span class="accent">precisa hoje</span></h2>
+          <p class="lede" style="margin: 0 auto;">
+            Selecione qual é a maior dor de gestão que trava seu crescimento hoje e veja a recomendação imediata:
+          </p>
+        </div>
+
+        <div class="sim-wrap fade-up">
+          <h3 class="sim-title">Qual é a principal dúvida ao abrir sua empresa de manhã?</h3>
+          <p class="sim-desc">Clique na alternativa que melhor descreve seu desafio atual:</p>
+
+          <div class="sim-options-grid">
+            <div class="sim-opt-card" onclick="selectSimOption(this, 'financeiro')">
+              <span>"Não sei o lucro real nem para onde o caixa está vazando"</span>
+              <span class="badge">Financeiro</span>
+            </div>
+            <div class="sim-opt-card" onclick="selectSimOption(this, 'vendas')">
+              <span>"Não sei quais vendedores convertem e onde o funil trava"</span>
+              <span class="badge">Comercial</span>
+            </div>
+            <div class="sim-opt-card" onclick="selectSimOption(this, 'clientes')">
+              <span>"Não sei quem são meus clientes mais lucrativos nem o LTV"</span>
+              <span class="badge">Clientes</span>
+            </div>
+            <div class="sim-opt-card" onclick="selectSimOption(this, 'operacoes')">
+              <span>"Entregas atrasam e não enxergo a capacidade de produção"</span>
+              <span class="badge">Operações</span>
+            </div>
+            <div class="sim-opt-card" onclick="selectSimOption(this, 'sac')">
+              <span>"Pós-venda e WhatsApp com demora e clientes reclamando"</span>
+              <span class="badge">Atendimento</span>
+            </div>
+            <div class="sim-opt-card" onclick="selectSimOption(this, 'rh')">
+              <span>"Rotatividade alta e custo de folha descontrolado"</span>
+              <span class="badge">RH &amp; Pessoas</span>
+            </div>
+          </div>
+
+          <div class="sim-result-box" id="sim-result">
+            <div class="sim-result-tag" id="sim-result-tag">// RECOMENDAÇÃO DE ENTRADA</div>
+            <h4 class="sim-result-title" id="sim-result-title">Dashboard Financeiro &amp; Margem</h4>
+            <p class="sim-result-desc" id="sim-result-desc">
+              Seu ponto de partida ideal é unificar as contas e obter a visão diária de Fluxo de Caixa e DRE Gerencial.
+            </p>
+            <a href="#" id="sim-result-btn" class="btn-primary" target="_blank" rel="noopener noreferrer">
+              Conversar com Kiko no WhatsApp sobre este Módulo →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: QUEM CONSTRÓI (KIKO SOARES) -->
+    <section class="section" id="sobre" aria-labelledby="sobre-h2">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">especialista</span>
+          <h2 id="sobre-h2">Dados e IA aplicados ao mundo real.<br><span class="accent">Sem enrolação, sem plataformas presas.</span></h2>
+          <p class="lede">
+            Você não vai falar com um vendedor que repassa para um estagiário. Eu mesmo sento com você, compreendo sua regra de negócio e <strong>construo a solução funcional</strong>.
+          </p>
+        </div>
+
+        <div class="about-card fade-up">
+          <div class="about-left">
+            <div class="avatar">
+              <img src="perfil.png" alt="Kiko Soares, especialista em Data-Driven e IA da Turbinando Experts" loading="lazy">
+            </div>
+            <div class="about-name">
+              <strong>Kiko Soares</strong>
+              <span>Turbinando Experts · Porto Alegre/RS</span>
+            </div>
+          </div>
+
+          <div class="about-bio">
+            <p>
+              Sou especialista em automação de processos, engenharia de dados e arquitetura de sistemas com inteligência artificial. Na <strong>Turbinando Experts</strong>, ajudo donos de empresas a saírem do "achismo" operacional para a tomada de decisões cirúrgica.
+            </p>
+            <p>
+              Utilizo o poder do <strong>Vibe Coding</strong> e tecnologias modernas para entregar em poucos dias o que consultorias tradicionais levam meses. Desenvolvo dashboards que os líderes realmente usam no dia a dia, com integrações diretas e alertas acionáveis no WhatsApp.
+            </p>
+            <p>
+              Com sede em <strong>Porto Alegre/RS</strong>, atendo empresas locais de forma próxima e projetos em todo o Brasil de forma 100% remota e segura.
+            </p>
+
+            <div class="stack-pills">
+              <span class="pill accent">Power BI &amp; DAX</span>
+              <span class="pill accent">Agentes de IA no WhatsApp</span>
+              <span class="pill accent">Modelagem de Dados</span>
+              <span class="pill">Integrações n8n</span>
+              <span class="pill">PostgreSQL &amp; SQL</span>
+              <span class="pill">CRM Sob Medida</span>
+              <span class="pill">Vibe Coding</span>
+              <span class="pill">Decisões em 5 Segundos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-h2">
+      <div class="container">
+        <div class="section-head center">
+          <span class="mono">perguntas frequentes</span>
+          <h2 id="faq-h2">Tirando suas <span class="accent">dúvidas</span></h2>
+          <p class="lede" style="margin: 0 auto;">
+            Respostas claras e transparentes sobre a implementação de dashboards e inteligência de dados:
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item fade-up">
+            <summary class="faq-q">
+              <span>Minha empresa usa planilhas do Excel e Google Sheets. Consigo ter um Dashboard?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-a">
+              <strong>Sim, com certeza.</strong> Muitas empresas começam exatamente com suas planilhas atuais. Nós conectamos as planilhas ao Power BI de forma automatizada, eliminando a necessidade de ficar ajustando formatos ou criando gráficos manualmente. Conforme sua empresa crescer, migramos os dados para bancos SQL sem perder o histórico.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-q">
+              <span>Preciso pagar licenças caras do Power BI para cada funcionário?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-a">
+              <strong>Não necessariamente.</strong> Desenhamos a arquitetura mais econômica e eficiente para o seu porte. É possível utilizar contas estratégicas, relatórios publicados de forma segura, painéis web ou envios automáticos de relatórios e resumos no WhatsApp sem precisar inflar seu custo mensal com dezenas de licenças corporativas.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-q">
+              <span>Como funciona a segurança e privacidade dos dados da minha empresa?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-a">
+              Seus dados pertencem 100% à sua empresa. Todas as conexões utilizam credenciais diretas do seu ambiente e criptografia ponta a ponta em conformidade com as melhores práticas e a LGPD. Não mantemos cópia dos seus dados financeiros em servidores de terceiros.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-q">
+              <span>Quanto tempo leva para o primeiro dashboard estar funcionando?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-a">
+              Seguimos a filosofia da Linha START: entregamos o <strong>primeiro painel funcional em menos de 7 dias</strong> após o mapeamento das fontes de dados. Você valida o resultado na prática de imediato, em vez de esperar meses por uma entrega gigantesca.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-q">
+              <span>Como funcionam os alertas e agentes de IA no WhatsApp?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-a">
+              Configuramos fluxos no n8n conectados ao modelo semântico dos dados e à API oficial do WhatsApp. Quando métricas essenciais sofrem alterações (como queda na margem, estouro de custo ou meta atingida), um agente inteligente dispara uma mensagem formatada e explicativa direto no celular do gestor responsável.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-q">
+              <span>E se eu precisar de novos relatórios ou ajustes no futuro?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-a">
+              Nossa arquitetura é 100% modular. Você não fica amarrado a mensalidades obrigatórias. Oferecemos pacotes pontuais de evolução ou nosso programa de acompanhamento contínuo (CARE / GROWTH) para implementar novos painéis, análises preditivas e automações sob demanda.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: CTA FINAL -->
+    <section class="cta-final" aria-labelledby="cta-final-h2">
+      <div class="container cta-final-inner">
+        <span class="mono" style="margin-bottom: 24px; color: var(--green-neon); border-color: rgba(0, 230, 118, 0.3);">próximo passo estratégico</span>
+        <h2 id="cta-final-h2">
+          Chega de gerenciar no escuro.<br><span class="accent">Coloque sua empresa no controle em 5 segundos.</span>
+        </h2>
+        <p>
+          Agende uma <strong>imersão de 30 minutos sem custo</strong> diretamente com o Kiko Soares. Mapearemos seus gargalos de informação e mostraremos o melhor ponto de partida para sua operação.
+        </p>
+
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Quero%20agendar%20minha%20imers%C3%A3o%20gratuita%20sobre%20Dashboards%20e%20Dados%20da%20minha%20empresa." class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Agendar Imersão Gratuita de Dados no WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar Análise dos Dados
+          </a>
+          <a href="#simulador" class="btn-secondary">
+            Simular Ponto de Partida
+          </a>
+        </div>
+
+        <div class="cta-note" style="justify-content: center; margin-top: 24px;">
+          <span>Sem compromisso comercial</span>
+          <span>Diagnóstico real da operação</span>
+          <span>Direto com o especialista</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="lightbox-card">
+      <div class="lightbox-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span class="badge" id="lightbox-badge">// DETALHES DO DASHBOARD</span>
+          <h3 id="lightbox-title" style="font-family: var(--font-display); font-size: 18px; color: var(--text-0);"></h3>
+        </div>
+        <button type="button" class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Fechar visualização">✕</button>
+      </div>
+      <div class="lightbox-image-wrap">
+        <img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Visualização em tela cheia do dashboard">
+      </div>
+      <div class="lightbox-content">
+        <p id="lightbox-desc" style="font-size: 15px; color: var(--text-1); line-height: 1.6;"></p>
+        <div style="background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px 18px;">
+          <strong style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); display: block; margin-bottom: 6px;">Indicadores-Chave (KPIs):</strong>
+          <span id="lightbox-kpis" style="font-size: 14px; color: var(--text-0); font-family: var(--font-mono);"></span>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; flex-wrap: wrap;">
+          <button type="button" class="btn-secondary btn-sm" onclick="closeLightbox()">Fechar</button>
+          <a id="lightbox-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
+            Quero Este Dashboard no WhatsApp →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 8px;" aria-label="Turbinando Experts início">
+          <span class="logo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          </span>
+          <span class="logo-text">Turbinando <span>Experts</span></span>
+        </a>
+        <p>
+          Estrutura digital, automações e IA sob medida.<br>
+          <strong>Camada de Inteligência e Dashboards Executivos em Tempo Real.</strong>
+        </p>
+      </div>
+
+      <div class="footer-meta">
+        <div><strong>Atuação &amp; Sede:</strong> Porto Alegre/RS · Brasil</div>
+        <div><strong>Atendimento:</strong> Remoto para todo o Brasil</div>
+        <div>WhatsApp: <a href="https://wa.me/5551920000513" target="_blank" rel="noopener noreferrer">+55 (51) 92000-0513</a></div>
+        <div style="margin-top: 8px;"><a href="index.html" style="color: var(--green); text-decoration: underline;">← Voltar para o Site Principal (TurbinandoExperts.com)</a></div>
+      </div>
+
+      <div class="footer-legal">
+        <div><a href="termos-de-uso.html">Termos de Uso</a></div>
+        <div><a href="politica-de-privacidade.html">Política de Privacidade</a></div>
+        <div style="opacity: 0.6; margin-top: 8px;">© 2026 Turbinando Experts · Kiko Soares. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM DOCK -->
+  <nav class="bottom-nav" aria-label="Ações rápidas móveis">
+    <a href="#hero" class="bottom-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+      <span>Início</span>
+    </a>
+    <a href="#projetos" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+      <span>Dashes</span>
+    </a>
+    <a href="#diferencial-ia" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      <span>IA Alertas</span>
+    </a>
+    <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Vi%20seu%20portf%C3%B3lio%20de%20Dashboards%20e%20gostaria%20de%20conversar." class="bottom-nav-item highlight-wa" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </nav>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Theme Switcher (persistência compartilhada com o site principal)
+    const themeToggle = document.getElementById('theme-toggle');
+    const metaTheme = document.getElementById('meta-theme-color');
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (metaTheme) metaTheme.setAttribute('content', '#050807');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        if (metaTheme) metaTheme.setAttribute('content', '#FAF8F5');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('te_theme') || 'light';
+    applyTheme(savedTheme);
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const next = isDark ? 'light' : 'dark';
+        localStorage.setItem('te_theme', next);
+        applyTheme(next);
+      });
+    }
+
+    // 2. IntersectionObserver (Animação Fade-Up)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -30px 0px'
+    });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // 3. Filtro de Categorias da Galeria
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const dashCards = document.querySelectorAll('.dash-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        dashCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+
+
+    // 5. Controle das 4 Telas de Vendas (Carrossel / Sub-abas)
+    const vendasData = {
+      1: {
+        src: 'dashboards/dashboard-vendas-1.webp',
+        badge: 'Visão 1: Geral de Faturamento',
+        desc: '<strong>Pergunta respondida:</strong> "Qual é a velocidade de faturamento do mês, meta acumulada e ticket médio geral da empresa?"',
+        kpis: ['Faturamento Realizado vs Meta', 'Ticket Médio', 'Quantidade de Vendas', 'Curva ABC de Clientes', 'Crescimento MoM%']
+      },
+      2: {
+        src: 'dashboards/dashboard-vendas-2.webp',
+        badge: 'Visão 2: Desempenho por Vendedor / SDR',
+        desc: '<strong>Pergunta respondida:</strong> "Qual consultor comercial tem a maior taxa de fechamento e onde os leads estão sendo descartados?"',
+        kpis: ['Ranking de Vendedores', 'Taxa de Conversão por Etapa', 'Tempo Médio até o Fechamento', 'Comissões Calculadas', 'Leads em Follow-up']
+      },
+      3: {
+        src: 'dashboards/dashboard-vendas-3.webp',
+        badge: 'Visão 3: Penetração Regional',
+        desc: '<strong>Pergunta respondida:</strong> "Quais regiões, estados e cidades concentram nosso maior volume de receita e onde temos oportunidade de expansão?"',
+        kpis: ['Vendas por Estado (RS, SC, PR, SP)', 'Mapa de Calor de Vendas', 'Custo de Frete / Logística', 'Ticket por Região']
+      },
+      4: {
+        src: 'dashboards/dashboard-vendas-4.webp',
+        badge: 'Visão 4: Sazonalidade & Histórico',
+        desc: '<strong>Pergunta respondida:</strong> "Como nossa receita se comporta historicamente mês a mês e qual é a previsão de churn de contratos?"',
+        kpis: ['Sazonalidade Trimestral', 'Comparativo YoY (Ano contra Ano)', 'Previsibilidade de Faturamento', 'Churn Comercial']
+      }
+    };
+
+    let currentVendasTab = 1;
+
+    function switchVendasTab(tabIndex) {
+      currentVendasTab = tabIndex;
+      const data = vendasData[tabIndex];
+      if (!data) return;
+
+      document.querySelectorAll('.vendas-tab-btn').forEach((btn, idx) => {
+        btn.classList.toggle('active', (idx + 1) === tabIndex);
+      });
+
+      const img = document.getElementById('vendas-img');
+      const badge = document.getElementById('vendas-subbadge');
+      const desc = document.getElementById('vendas-desc');
+      const kpisContainer = document.getElementById('vendas-kpis');
+
+      if (img) img.src = data.src;
+      if (badge) badge.textContent = data.badge;
+      if (desc) desc.innerHTML = data.desc;
+      if (kpisContainer) {
+        kpisContainer.innerHTML = data.kpis.map(k => `<span class="dash-kpi-chip">${k}</span>`).join('');
+      }
+    }
+
+    function openCurrentVendasLightbox() {
+      const data = vendasData[currentVendasTab];
+      openLightbox(
+        data.src,
+        `Dashboard Vendas (${data.badge})`,
+        data.desc.replace(/<[^>]+>/g, ''),
+        data.kpis.join(', ')
+      );
+    }
+
+    // 6. Lightbox Modal
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxKpis = document.getElementById('lightbox-kpis');
+    const lightboxWaBtn = document.getElementById('lightbox-wa-btn');
+
+    function openLightbox(src, title, desc, kpis) {
+      if (!lightboxModal) return;
+      lightboxImg.src = src;
+      lightboxTitle.textContent = title;
+      lightboxDesc.textContent = desc;
+      lightboxKpis.textContent = kpis;
+
+      const msg = encodeURIComponent(`Olá Kiko! Estava olhando o dashboard "${title}" no seu portfólio e gostaria de entender como implementar um painel assim para os dados da minha empresa.`);
+      lightboxWaBtn.href = `https://wa.me/5551920000513?text=${msg}`;
+
+      lightboxModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      if (!lightboxModal) return;
+      lightboxModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (lightboxModal) {
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightbox();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    }
+
+    // 7. Simulador Rápido de Dashboard
+    const simSolutions = {
+      financeiro: {
+        tag: "// RECOMENDAÇÃO: CONTROLE FINANCEIRO",
+        title: "Dashboard Financeiro & Margem de Contribuição",
+        desc: "Seu principal gargalo é a falta de clareza do lucro real. Recomendamos unificar suas contas bancárias, ERP e custos em um DRE Gerencial ao vivo com fluxo de caixa diário e ponto de equilíbrio.",
+        msg: "Olá Kiko! Fiz o simulador no seu portfólio de dados e minha maior dor é não saber o lucro real e o fluxo de caixa. Gostaria de uma análise para um Dashboard Financeiro."
+      },
+      vendas: {
+        tag: "// RECOMENDAÇÃO: INTELIGÊNCIA COMERCIAL",
+        title: "Dashboard de Vendas & Performance de Funil",
+        desc: "Sua oportunidade mais urgente é enxergar onde o funil trava. O Dashboard de Vendas consolida taxas de conversão por vendedor, ticket médio e metas em tempo real.",
+        msg: "Olá Kiko! Fiz o simulador no seu portfólio e preciso de visibilidade no meu funil de vendas e desempenho comercial."
+      },
+      clientes: {
+        tag: "// RECOMENDAÇÃO: PERFIL & LTV",
+        title: "Dashboard de Segmentação RFM & Análise de ICP",
+        desc: "Identificamos que entender sua base é a chave para aumentar o faturamento sem inflar o custo de aquisição. Mapeamos os 20% dos clientes que geram 80% do seu lucro.",
+        msg: "Olá Kiko! Fiz o simulador e quero um Dashboard de Perfil de Clientes e ICP para entender minha base e aumentar o LTV."
+      },
+      operacoes: {
+        tag: "// RECOMENDAÇÃO: EFICIÊNCIA PRODUTIVA",
+        title: "Dashboard de Produção & OEE Operacional",
+        desc: "Para eliminar atrasos de entrega e desperdícios, o Dashboard Operacional mapeia lead times de ordens de serviço, capacidade instalada e gargalos de linha.",
+        msg: "Olá Kiko! Fiz o simulador e preciso organizar a produção/operações da minha empresa com um dashboard sob medida."
+      },
+      sac: {
+        tag: "// RECOMENDAÇÃO: QUALIDADE & RETENÇÃO",
+        title: "Dashboard de SAC & Atendimento em Tempo Real",
+        desc: "Seu gargalo está na velocidade de resposta e satisfação. Monitoramos o tempo de fila no WhatsApp, notas de atendimento e chamados críticos.",
+        msg: "Olá Kiko! Fiz o simulador e preciso de um Dashboard de SAC e atendimento no WhatsApp para controlar o tempo de resposta da equipe."
+      },
+      rh: {
+        tag: "// RECOMENDAÇÃO: PEOPLE ANALYTICS",
+        title: "Dashboard de Gestão de Pessoas & RH Estratégico",
+        desc: "Controlamos a rotatividade (turnover), absenteísmo e relação entre folha salarial e faturamento para blindar sua equipe e reter talentos.",
+        msg: "Olá Kiko! Fiz o simulador e gostaria de conversar sobre um Dashboard de RH e People Analytics para minha empresa."
+      }
+    };
+
+    function selectSimOption(cardEl, key) {
+      document.querySelectorAll('.sim-opt-card').forEach(c => c.classList.remove('selected'));
+      cardEl.classList.add('selected');
+
+      const data = simSolutions[key];
+      if (!data) return;
+
+      const resBox = document.getElementById('sim-result');
+      const tag = document.getElementById('sim-result-tag');
+      const title = document.getElementById('sim-result-title');
+      const desc = document.getElementById('sim-result-desc');
+      const btn = document.getElementById('sim-result-btn');
+
+      if (tag) tag.textContent = data.tag;
+      if (title) title.textContent = data.title;
+      if (desc) desc.textContent = data.desc;
+      if (btn) btn.href = `https://wa.me/5551920000513?text=${encodeURIComponent(data.msg)}`;
+
+      if (resBox) resBox.style.display = 'block';
+    }
+
+    // 8. Bottom Nav Spy
+    const navItems = Array.from(document.querySelectorAll('.bottom-nav-item:not(.highlight-wa)'));
+    const spyTargets = navItems
+      .map(item => document.querySelector(item.getAttribute('href')))
+      .filter(Boolean);
+
+    function updateBottomNav() {
+      let current = null;
+      spyTargets.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 260) current = sec;
+      });
+      navItems.forEach(item => {
+        item.classList.toggle('active', !!current && item.getAttribute('href') === '#' + current.id);
+      });
+    }
+    if (navItems.length && spyTargets.length) {
+      window.addEventListener('scroll', updateBottomNav, { passive: true });
+      updateBottomNav();
+    }
+  </script>
+</body>
+</html>
