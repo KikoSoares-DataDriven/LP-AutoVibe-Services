@@ -4,7 +4,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.rockty.com.br; connect-src 'self' https://wa.me; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.rockty.com.br https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://wa.me https://*.google-analytics.com https://*.analytics.google.com; frame-ancestors 'none'
   Cache-Control: public, max-age=300, must-revalidate
 
 /*.svg
@@ -13,7 +13,7 @@
 /*.webp
   Cache-Control: public, max-age=31536000, immutable
 
-*.css
+/*.css
   Cache-Control: public, max-age=31536000, immutable
 
 /robots.txt
