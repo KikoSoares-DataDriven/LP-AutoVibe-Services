@@ -8,6 +8,23 @@
 
 Landing page "Turbinando Experts" — **sistemas sob medida com IA** para pequenas empresas (dashboards, CRM, automações, agente de IA). Dono: Kiko Soares, Porto Alegre/RS. WhatsApp: `+55 51 92000-0513`. Deploy target: `https://turbinando-experts.pages.dev/`.
 
+## 🔄 Mudança v3.3 (Cards Visíveis, Botão Tema Mobile & Scroll-Spy Ativo - 07/nov/2026)
+
+**Correções Mobile-First Definitivas Concluídas:**
+1. **Cards que Sumiam e Deixavam Grande Espaço Vazio:**
+   - `.fade-up` ajustado no mobile com `@media (max-width: 767px)` para `opacity: 1 !important; transform: none !important; transition: none !important; visibility: visible !important;`.
+   - Adicionada revelação imediata em JS via `fadeElements.forEach(el => el.classList.add('in'))` para larguras < 768px.
+   - Zero cards invisíveis, zero lacunas vazias no mobile.
+2. **Botão de Modo Claro/Escuro Fixo no Mobile:**
+   - Implementado debounce de 300ms entre eventos de toque (`touchend`) e clique para evitar toggle duplo instantâneo.
+   - Adicionado `touch-action: manipulation; -webkit-tap-highlight-color: transparent;` e tamanho touch de 42×42px.
+   - Protegido com `try...catch` no `localStorage` e destaque neon no modo escuro.
+3. **Menu Inferior Não Mostrava em Que Parte Estava:**
+   - Adicionado `id="cta-final"` no HTML da seção final.
+   - Implementado scroll-spy monotônico sem zonas mortas (`top <= scrollPos`).
+   - Adicionado indicador visual duplo: barra superior luminosa (`::before` em `top: 0; left: 12%; right: 12%; height: 3px;`), totalmente visível e imune à barra de gestos do mobile, além de fundo em cápsula, tipografia weight 800 e traço inferior (`::after`).
+   - Feedback tátil imediato no clique de cada item do dock inferior móvel.
+
 ## 🔄 Mudança v3.2 (Mobile-First Overhaul Definitivo - 07/nov/2026)
 
 **Correção Definitiva de Layout Mobile e Sincronização de Navegação:**

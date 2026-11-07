@@ -1,16 +1,42 @@
 # STATE — LP Turbinando Experts
 
-**Fase:** v2.1 Implementada (Correção Definitiva Mobile-First: Fim do Overflow Horizontal, Bottom Nav Simétrico em Grid com Indicador Ativo Inferior e Modal LGPD Resiliente com Gatilho de Clique) · 07/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, 100% de testes automatizados aprovados no Playwright ✅
+**Fase:** v2.2 Implementada (Correção Definitiva Mobile: Visibilidade Total dos Cards sem Espaços Vazios, Alternador Claro/Escuro Mobile Touch-Debounced e Scroll-Spy Monotônico com Indicadores Ativos Superiores e Inferiores) · 07/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, 100% de testes automatizados aprovados no Playwright ✅
 
 ## Estado atual
-- `index.html` = Versão 2.1 ativa com protagonismo na **Sessão Estratégica Gratuita (30 min) para Implementação de Agentes de IA**, Design System Claude Warm Light + Verde da Marca + Terracotta do Claude (`#DA7756`), Dual-View Showcase (WhatsApp Simulator + Terminal), Toast LGPD e **Marcadores Ativos de Navegação em Tempo Real (Desktop & Mobile)**.
-- `portfolio-data-driven.html` = Versão 2.1 sincronizada com layout mobile-first blindado.
-- Backup da v1.2 preservado em `index.html.v1.2-audit.bak`.
-- `og-image.png` (1200×630px) gerado e vinculado para previews sociais em WhatsApp, Facebook, LinkedIn e Twitter.
-- URL canônica: `https://turbinandoexperts.com/`. `robots.txt`, `sitemap.xml` atualizados.
+- `index.html` = Versão 2.2 ativa com cards 100% visíveis em mobile (zero sumiço, zero lacunas vazias), alternador de tema claro/escuro resiliente a toques mobile e scroll-spy monotônico com destaque ativo vibrante no menu dock inferior.
+- `portfolio-data-driven.html` = Versão 2.2 sincronizada com galeria de dashboards e cards de IA sempre visíveis no mobile, alternador de tema responsivo e navegação inferior em tempo real.
 - Deploy: push no `main` → Cloudflare Pages.
 
-## Feito nesta sessão (Versão 2.1 - Correção Definitiva Mobile-First & LGPD)
+## Feito nesta sessão (Versão 2.2 - Cards Visíveis, Alternador de Tema Mobile e Scroll-Spy Preciso)
+1. **Cards que Sumiam e Deixavam Espaço Vazio no Mobile (Resolvido Definitivamente):**
+   - **Causa Raiz:** O seletor `.fade-up` iniciava com `opacity: 0; transform: translateY(...)`. Em navegadores mobile (WebKit/Blink touch), o `IntersectionObserver` com margem negativa falhava ou atrasava, mantendo os cards ocupando sua altura física completa no DOM, porém invisíveis (`opacity: 0`), criando um vazio enorme de milhares de pixels.
+   - **Correção:** Em `@media (max-width: 767px)`, forçado `.fade-up { opacity: 1 !important; transform: none !important; transition: none !important; visibility: visible !important; }`.
+   - No JavaScript: Adicionada verificação imediata na inicialização (`if (window.innerWidth < 768) fadeElements.forEach(el => el.classList.add('in'))`).
+   - Resultado: 100% dos cards (`.pain-card-v11`, `.pillar-card`, `.start-card`, `.depo-card`, `.dash-card`, `.ai-card`, etc.) renderizados com nitidez imediata no mobile.
+
+2. **Botão de Alternar Modo Claro/Escuro no Topo Mobile (Resolvido Definitivamente):**
+   - **Causa Raiz:** No mobile, o toque dispara eventos `touchend` seguidos de evento emulado de `click` (~300ms depois). Sem debounce, o tema alternava e voltava imediatamente para o estado anterior, parecendo congelado no modo claro. Além disso, acessos a `localStorage` sem `try/catch` podiam falhar em modo de navegação anônima ou WebViews.
+   - **Correção:**
+     - Adicionado `type="button"` e dimensionamento ergonômico touch de 42×42px (`touch-action: manipulation; -webkit-tap-highlight-color: transparent;`).
+     - No JS: implementado manipulador com debounce de 300ms entre eventos e prevenção de cliques duplicados.
+     - Proteção completa com `try...catch` em todas as leituras e gravações de `localStorage`.
+     - Estilo escuro enriquecido com destaque em verde neon (`--green-neon`), contraste nítido e atualização dinâmica de `aria-label`.
+
+3. **Menu Inferior Não Mostrava Onde o Usuário Estava (Resolvido Definitivamente):**
+   - **Causa Raiz:** O cálculo de interseção continha lacunas entre seções e a seção `#cta-final` não possuía ID no DOM do `index.html`. Além disso, a barra inferior de 2px era parcialmente obscurecida pela barra de gestos (home indicator) do iOS/Android.
+   - **Correção:**
+     - Adicionado `id="cta-final"` no HTML da seção final.
+     - Implementado algoritmo de scroll-spy monotônico (`top <= scrollPos`), eliminando qualquer zona morta entre seções.
+     - Mapeamento robusto de todas as seções para os 4 itens âncora do dock inferior móvel.
+     - Indicador visual duplo: barra superior luminosa (`::before` em `top: 0; left: 12%; right: 12%; height: 3px;`), totalmente visível e imune à barra do sistema operacional móvel, além de fundo em cápsula (`rgba(0, 135, 68, 0.12)`), tipografia weight 800 e traço inferior pulsante (`::after`).
+     - Adicionado feedback tátil instantâneo no toque dos itens móveis.
+
+4. **Testes Automatizados & Validação:**
+   - 100% de aprovação na suíte Playwright mobile (375px) cobrindo:
+     - 0 cards invisíveis (todos com `opacity: 1` e altura real).
+     - Alternância de tema entre light e dark.
+     - Scroll-spy ativo correspondendo a cada seção percorrida.
+     - Zero overflow horizontal.
 1. **Eliminação Definitiva do Overflow Horizontal (Mobile Viewports 320px–480px)**:
    - `html` e `body` blindados com `overflow-x: hidden; overflow-x: clip; width: 100%; max-width: 100vw; box-sizing: border-box;`.
    - `.marquee-section`: aplicada proteção `overflow: hidden; overflow-x: clip; width: 100%; max-width: 100%; box-sizing: border-box;`, impedindo o rastro infinito de vazar o viewport.

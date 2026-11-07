@@ -7,12 +7,14 @@
   <meta name="color-scheme" content="light dark">
   <script>
     (function() {
-      var saved = localStorage.getItem('te_theme') || 'light';
-      if (saved === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-      }
+      try {
+        var saved = localStorage.getItem('te_theme') || 'light';
+        if (saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+      } catch (e) {}
     })();
   </script>
   <!-- GEO Meta Tags (Porto Alegre, RS, Brasil) -->
@@ -531,8 +533,13 @@
     }
     .theme-toggle .icon-moon { display: block; }
     .theme-toggle .icon-sun { display: none; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle {
+      color: var(--green-neon) !important;
+      background: var(--bg-3) !important;
+      border-color: var(--border-strong) !important;
+    }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none !important; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block !important; }
 
     .btn-header-wa {
       display: inline-flex;
@@ -576,18 +583,24 @@
         height: 15px;
       }
       .header-actions {
-        gap: 6px;
+        gap: 8px;
       }
       .theme-toggle {
-        width: 38px;
-        height: 38px;
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        min-height: 42px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
       }
       .btn-header-wa {
-        width: 38px;
-        height: 38px;
+        width: 42px;
+        height: 42px;
         padding: 0;
         justify-content: center;
         border-radius: var(--r-sm);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
       }
       .btn-header-wa span {
         display: none !important;
@@ -2253,23 +2266,39 @@
       flex-shrink: 0;
       transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), stroke-width 0.2s;
     }
-    /* MARCADOR ATIVO MOBILE (TIPOGRAFIA FORTE + COR DE ACENTO + TRAÇO/PILL INDICADOR EMBAIXO) */
+    /* MARCADOR ATIVO MOBILE (TIPOGRAFIA FORTE + COR DE ACENTO + PILL INDICADOR SUPERIOR & INFERIOR) */
     .bottom-nav-item.active {
       color: var(--green) !important;
       font-weight: 800;
-      background: var(--green-soft);
+      background: rgba(0, 135, 68, 0.12) !important;
     }
     [data-theme="dark"] .bottom-nav-item.active {
       color: var(--green-neon) !important;
-      background: rgba(0, 230, 118, 0.12);
+      background: rgba(0, 230, 118, 0.16) !important;
     }
     .bottom-nav-item.active svg {
-      transform: translateY(-1px) scale(1.08);
+      transform: translateY(-1px) scale(1.12);
       stroke-width: 2.3;
       color: var(--green) !important;
     }
     [data-theme="dark"] .bottom-nav-item.active svg {
       color: var(--green-neon) !important;
+    }
+    .bottom-nav-item.active::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 12%;
+      right: 12%;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+      display: block !important;
+    }
+    [data-theme="dark"] .bottom-nav-item.active::before {
+      background: var(--green-neon);
+      box-shadow: 0 0 10px var(--green-neon);
     }
     .bottom-nav-item.active::after {
       content: '';
@@ -2277,7 +2306,7 @@
       bottom: 2px;
       left: 18%;
       right: 18%;
-      height: 3px;
+      height: 2px;
       border-radius: 999px;
       background: var(--green);
       box-shadow: 0 0 8px var(--green);
@@ -2762,6 +2791,14 @@
       opacity: 1;
       transform: translateY(0);
     }
+    @media (max-width: 767px) {
+      .fade-up {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        visibility: visible !important;
+      }
+    }
   </style>
 
     <!-- Structured Data JSON-LD (Super GEO & Generative AI Optimized) -->
@@ -2962,7 +2999,7 @@
       </nav>
 
       <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema visual" title="Alternar tema">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema visual" title="Alternar tema">
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
@@ -4008,7 +4045,7 @@
     </section>
 
     <!-- SEÇÃO: CTA FINAL -->
-    <section class="cta-final" aria-labelledby="cta-final-h2">
+    <section class="cta-final" id="cta-final" aria-labelledby="cta-final-h2">
       <div class="container cta-final-inner">
         <span class="mono" style="margin-bottom: 24px;">próximo passo</span>
         <h2 id="cta-final-h2">
@@ -4182,7 +4219,7 @@
       initLgpdToast();
     }
 
-    // 0. Theme Switcher (Apenas ícone com persistência)
+    // 0. Theme Switcher (Touch-friendly, debounced e persistência segura)
     const themeToggle = document.getElementById('theme-toggle');
     const metaTheme = document.getElementById('meta-theme-color');
 
@@ -4190,25 +4227,47 @@
       if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         if (metaTheme) metaTheme.setAttribute('content', '#050807');
+        if (themeToggle) themeToggle.setAttribute('aria-label', 'Mudar para modo claro');
       } else {
         document.documentElement.removeAttribute('data-theme');
         if (metaTheme) metaTheme.setAttribute('content', '#FAF8F5');
+        if (themeToggle) themeToggle.setAttribute('aria-label', 'Mudar para modo escuro');
       }
     }
 
-    const savedTheme = localStorage.getItem('te_theme') || 'light';
+    let savedTheme = 'light';
+    try {
+      savedTheme = localStorage.getItem('te_theme') || 'light';
+    } catch (_) {}
     applyTheme(savedTheme);
 
     if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
+      let lastToggleTime = 0;
+      function handleThemeToggle(e) {
+        const now = Date.now();
+        if (now - lastToggleTime < 300) {
+          if (e && e.preventDefault) e.preventDefault();
+          return;
+        }
+        lastToggleTime = now;
+        if (e && e.preventDefault) e.preventDefault();
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
         const next = isDark ? 'light' : 'dark';
-        localStorage.setItem('te_theme', next);
+        try {
+          localStorage.setItem('te_theme', next);
+        } catch (_) {}
         applyTheme(next);
-      });
+      }
+
+      themeToggle.addEventListener('click', handleThemeToggle);
+      themeToggle.addEventListener('touchend', handleThemeToggle, { passive: false });
     }
 
-    // 1. Scroll Animations (IntersectionObserver)
+    // 1. Scroll Animations (IntersectionObserver com revelação imediata mobile)
+    const fadeElements = document.querySelectorAll('.fade-up');
+    if (window.innerWidth < 768) {
+      fadeElements.forEach(el => el.classList.add('in'));
+    }
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -4216,10 +4275,10 @@
         }
       });
     }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -30px 0px'
+      threshold: 0.05,
+      rootMargin: '40px 0px 40px 0px'
     });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    fadeElements.forEach(el => observer.observe(el));
 
     // 2. SCROLL-SPY DUAL INTELIGENTE (Desktop Header Nav + Mobile Bottom Nav)
     const desktopNavLinks = Array.from(document.querySelectorAll('.site-header .nav a[href^="#"]'));
@@ -4247,27 +4306,22 @@
       .filter(Boolean);
 
     function updateActiveNavigation() {
-      // Ponto de leitura dinâmico (35% da altura da viewport para conforto ergonômico)
-      const scrollPos = window.scrollY + (window.innerHeight * 0.35);
-      let activeSection = null;
+      // Ponto dinâmico de leitura ergonômico (38% da viewport)
+      const scrollPos = window.scrollY + (window.innerHeight * 0.38);
+      let activeSection = trackedElements[0];
 
       // Se o usuário rolou até o final da página (rodapé/CTA final)
-      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 90)) {
+      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 70)) {
         activeSection = trackedElements[trackedElements.length - 1];
       } else {
         for (let i = 0; i < trackedElements.length; i++) {
           const sec = trackedElements[i];
-          const rect = sec.getBoundingClientRect();
-          const top = rect.top + window.scrollY;
-          const height = sec.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
+          const top = sec.getBoundingClientRect().top + window.scrollY;
+          if (top <= scrollPos) {
             activeSection = sec;
+          } else {
             break;
           }
-        }
-        // Fallback para o hero se estiver no topo da página
-        if (!activeSection && window.scrollY < 350 && trackedElements.length > 0) {
-          activeSection = trackedElements[0];
         }
       }
 
@@ -4325,6 +4379,14 @@
         });
       }
     }
+
+    // Feedback tátil imediato ao tocar nos itens mobile
+    mobileNavLinks.forEach(item => {
+      item.addEventListener('click', () => {
+        mobileNavLinks.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
 
     if (trackedElements.length) {
       window.addEventListener('scroll', updateActiveNavigation, { passive: true });
