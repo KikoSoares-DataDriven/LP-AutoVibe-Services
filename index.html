@@ -3908,6 +3908,22 @@
   </footer>
 
   <!-- JAVASCRIPT: Scroll Animations + Quiz Engine + Bottom Nav Spy -->
+  <!-- LGPD CONSENT TOAST (Ultra-compacto & À Esquerda) -->
+  <aside class="te-lgpd-toast" id="te-lgpd-toast" role="dialog" aria-live="polite" aria-label="Aviso de Privacidade e LGPD">
+    <div style="display: flex; flex-direction: column; gap: 4px; flex: 1;">
+      <div class="te-lgpd-toast-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Privacidade &amp; LGPD</span>
+      </div>
+      <p>
+        Usamos cookies essenciais da operação. Seus dados são protegidos (Lei 13.709/2018). <a href="politica-de-privacidade">Política</a>
+      </p>
+    </div>
+    <div class="te-lgpd-toast-actions">
+      <button class="btn-lgpd-accept" id="btn-lgpd-accept" aria-label="Aceitar privacidade e fechar">Concordar</button>
+    </div>
+  </aside>
+
   <script>
     
     // 0.1 Dual-View Showcase Tab Switcher (Hero)
@@ -3937,22 +3953,31 @@
     }
 
     // LGPD Toast Controller (Ultra-compacto & À Esquerda)
-    const lgpdToast = document.getElementById('te-lgpd-toast');
-    const btnLgpdAccept = document.getElementById('btn-lgpd-accept');
-    if (lgpdToast && !localStorage.getItem('te_lgpd_accepted')) {
-      setTimeout(() => {
-        lgpdToast.style.display = 'flex';
-      }, 700);
-    }
-    if (btnLgpdAccept) {
-      btnLgpdAccept.addEventListener('click', () => {
-        localStorage.setItem('te_lgpd_accepted', 'true');
-        if (lgpdToast) {
+    function initLgpdToast() {
+      const lgpdToast = document.getElementById('te-lgpd-toast');
+      const btnLgpdAccept = document.getElementById('btn-lgpd-accept');
+      if (!lgpdToast) return;
+
+      if (!localStorage.getItem('te_lgpd_accepted')) {
+        setTimeout(() => {
+          lgpdToast.style.display = 'flex';
+        }, 700);
+      }
+
+      if (btnLgpdAccept) {
+        btnLgpdAccept.addEventListener('click', () => {
+          localStorage.setItem('te_lgpd_accepted', 'true');
           lgpdToast.style.opacity = '0';
           lgpdToast.style.transform = 'translateY(12px)';
           setTimeout(() => { lgpdToast.style.display = 'none'; }, 300);
-        }
-      });
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLgpdToast);
+    } else {
+      initLgpdToast();
     }
 
     // 0. Theme Switcher (Apenas ícone com persistência)
@@ -4307,21 +4332,7 @@
     // Inicia quiz
     renderStep();
   </script>
-  <!-- LGPD CONSENT TOAST (Ultra-compacto & À Esquerda) -->
-  <aside class="te-lgpd-toast" id="te-lgpd-toast" role="dialog" aria-live="polite" aria-label="Aviso de Privacidade e LGPD">
-    <div style="display: flex; flex-direction: column; gap: 4px; flex: 1;">
-      <div class="te-lgpd-toast-header">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Privacidade &amp; LGPD</span>
-      </div>
-      <p>
-        Usamos cookies essenciais da operação. Seus dados são protegidos (Lei 13.709/2018). <a href="politica-de-privacidade">Política</a>
-      </p>
-    </div>
-    <div class="te-lgpd-toast-actions">
-      <button class="btn-lgpd-accept" id="btn-lgpd-accept" aria-label="Aceitar privacidade e fechar">Concordar</button>
-    </div>
-  </aside>
+  
 
 </body>
 </html>

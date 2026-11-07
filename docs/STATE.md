@@ -57,6 +57,8 @@
    - **Contraste WCAG AAA**: Contraste do botão sobre a tela Warm Linen de **5.5:1** e do texto/logo sobre o botão de **4.6:1**.
    - **Sincronizado**: Aplicado em todas as chamadas para ação em `index.html` e `portfolio-data-driven.html`, mantendo o terracota (`#DA7756`) reservado para badges, pulsos e acentos editoriais.
 
+- **Fix de Timing do Toast LGPD**: Corrigido posicionamento do `<aside id="te-lgpd-toast">` em `index.html` (que estava após a tag `<script>` no DOM, causando `null` na busca pelo elemento) e encapsulado o controller em função resiliente com listener de `DOMContentLoaded` em ambas as páginas.
+
 ---
 
 ## Feito na sessão anterior (Versão 1.2 - Claude AI Light System)
