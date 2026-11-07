@@ -1613,6 +1613,12 @@
     /* ============================================================
        TABELA COMPARATIVA
     ============================================================ */
+    .compare-desktop-wrap {
+      display: block;
+    }
+    .compare-mobile-cards {
+      display: none;
+    }
     .compare-table-wrap {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -2203,6 +2209,60 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+    }
+    .footer-portfolio-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green) !important;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      padding: 6px 12px;
+      background: var(--green-soft);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-height: 40px;
+      box-sizing: border-box;
+      width: fit-content;
+    }
+    .footer-portfolio-link:hover {
+      background: var(--green);
+      color: #FFFFFF !important;
+      border-color: var(--green);
+      box-shadow: 0 4px 14px rgba(0, 135, 68, 0.25);
+      transform: translateX(3px);
+      text-decoration: underline;
+    }
+    .footer-portfolio-link .icon-nav-arrow {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+    .footer-portfolio-link:hover .icon-nav-arrow {
+      transform: translateX(3px);
+    }
+    [data-theme="dark"] .footer-portfolio-link {
+      color: var(--green-neon) !important;
+      background: rgba(0, 230, 118, 0.08);
+      border-color: rgba(0, 230, 118, 0.25);
+    }
+    [data-theme="dark"] .footer-portfolio-link:hover {
+      background: var(--green-neon);
+      color: #050807 !important;
+      border-color: var(--green-neon);
+      box-shadow: 0 0 16px rgba(0, 230, 118, 0.35);
+    }
+    @media (max-width: 767px) {
+      .footer-portfolio-link {
+        min-height: 44px;
+        padding: 8px 14px;
+        font-size: 12.5px;
+      }
     }
 
     /* ============================================================
@@ -3001,21 +3061,115 @@
         word-break: break-word !important;
         line-height: 1.25 !important;
       }
-      .table-scroll-hint {
+      /* ============================================================
+         COMPARATIVO: CARDS DE CONTRASTE VERTICAL NO MOBILE
+      ============================================================ */
+      .compare-desktop-wrap {
+        display: none !important;
+      }
+      .compare-mobile-cards {
         display: flex !important;
-        align-items: center;
-        justify-content: center;
-        padding: 7px 12px;
+        flex-direction: column !important;
+        gap: 14px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .compare-card-v11 {
+        background: var(--bg-1);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        padding: 16px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-sizing: border-box;
+        box-shadow: var(--shadow-sm);
+        width: 100% !important;
+      }
+      .compare-card-badge {
         font-family: var(--font-mono);
         font-size: 11px;
+        font-weight: 700;
         color: var(--green);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 3px 8px;
         background: var(--green-soft);
-        border-bottom: 1px solid var(--border-accent);
-        letter-spacing: 0.04em;
+        border: 1px solid var(--border-accent);
+        border-radius: 4px;
+        align-self: flex-start;
       }
-      .compare-table th, .compare-table td {
-        padding: 10px 8px !important;
-        font-size: 12px !important;
+      .compare-card-pain {
+        background: rgba(239, 68, 68, 0.04);
+        border: 1px solid rgba(239, 68, 68, 0.18);
+        border-radius: var(--r-sm);
+        padding: 10px 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .compare-card-solution {
+        background: rgba(0, 135, 68, 0.06);
+        border: 1px solid var(--border-accent);
+        border-radius: var(--r-sm);
+        padding: 10px 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .compare-card-marker {
+        font-family: var(--font-mono);
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 1.3;
+        flex-shrink: 0;
+      }
+      .marker-cross {
+        color: var(--red);
+      }
+      .marker-check {
+        color: var(--green);
+      }
+      .compare-card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .compare-card-pain .compare-card-text strong {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-2);
+      }
+      .compare-card-pain .compare-card-text span {
+        color: var(--text-1);
+      }
+      .compare-card-solution .compare-card-text strong {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--green);
+      }
+      .compare-card-solution .compare-card-text span {
+        color: var(--text-0);
+        font-weight: 500;
+      }
+      [data-theme="dark"] .compare-card-pain {
+        background: rgba(255, 77, 77, 0.06);
+        border-color: rgba(255, 77, 77, 0.22);
+      }
+      [data-theme="dark"] .compare-card-solution {
+        background: rgba(0, 230, 118, 0.07);
+        border-color: rgba(0, 230, 118, 0.25);
+      }
+      [data-theme="dark"] .compare-card-solution .compare-card-text strong {
+        color: var(--green-neon) !important;
       }
     }
   </style>
@@ -3948,10 +4102,8 @@
           </p>
         </div>
 
-        <div class="compare-table-wrap fade-up">
-          <div class="table-scroll-hint" aria-hidden="true">
-            <span>⇄ Deslize para ver o comparativo completo</span>
-          </div>
+        <!-- Desktop Compare Table (md / lg screens) -->
+        <div class="compare-desktop-wrap compare-table-wrap">
           <table class="compare-table" aria-label="Tabela comparativa entre sistemas genéricos e sob medida">
             <thead>
               <tr>
@@ -3993,6 +4145,123 @@
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- Mobile Contrast Cards (Vertical / No horizontal scrolling) -->
+        <div class="compare-mobile-cards" aria-label="Comparativo entre sistemas genéricos e sob medida no mobile">
+          <!-- Card 1: Adaptação -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 01. ADAPTAÇÃO</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Template / Plataforma Engessada:</strong>
+                <span>Você é forçado a adaptar seu processo ao sistema</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Sob Medida (Turbinando Experts):</strong>
+                <span>O sistema é desenhado exatamente para o seu fluxo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Funcionalidades -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 02. FUNCIONALIDADES</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Template / Plataforma Engessada:</strong>
+                <span>Dezenas de abas inúteis que só complicam</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Sob Medida (Turbinando Experts):</strong>
+                <span>Somente o que sua equipe realmente precisa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Integrações -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 03. INTEGRAÇÕES</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Template / Plataforma Engessada:</strong>
+                <span>Travadas, pagas à parte ou inexistentes</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Sob Medida (Turbinando Experts):</strong>
+                <span>Conexão direta com WhatsApp, CRM, planilhas e APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Evolução & Escala -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 04. EVOLUÇÃO &amp; ESCALA</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Template / Plataforma Engessada:</strong>
+                <span>Bloqueado por planos caros e limitações da ferramenta</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Sob Medida (Turbinando Experts):</strong>
+                <span>Evolução modular: START → FLOW → CONTROL → SCALE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Independência -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 05. INDEPENDÊNCIA</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Template / Plataforma Engessada:</strong>
+                <span>Preso a mensalidades crescentes por usuário</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Sob Medida (Turbinando Experts):</strong>
+                <span>Sua solução, sua arquitetura, sem plataforma engessada</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Diferencial -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 06. DIFERENCIAL</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Template / Plataforma Engessada:</strong>
+                <span>Visual e fluxo idênticos aos concorrentes</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Sob Medida (Turbinando Experts):</strong>
+                <span>Ativo digital exclusivo construído sob medida</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -4322,7 +4591,12 @@
       </div>
 
       <div class="footer-legal">
-        <div><a href="portfolio-data-driven">Portfólio Data-Driven &amp; Dashboards</a></div>
+        <div>
+          <a href="portfolio-data-driven" class="footer-portfolio-link" aria-label="Acessar Portfólio Data-Driven & Dashboards">
+            <span>Portfólio Data-Driven &amp; Dashboards</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-nav-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
         <div><a href="termos-de-uso">Termos de Uso</a></div>
         <div><a href="politica-de-privacidade">Política de Privacidade</a></div>
         <div><button type="button" class="btn-footer-privacy" id="btn-open-lgpd" aria-haspopup="dialog">Privacidade &amp; Cookies (LGPD)</button></div>

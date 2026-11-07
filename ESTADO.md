@@ -8,6 +8,23 @@
 
 Landing page "Turbinando Experts" — **sistemas sob medida com IA** para pequenas empresas (dashboards, CRM, automações, agente de IA). Dono: Kiko Soares, Porto Alegre/RS. WhatsApp: `+55 51 92000-0513`. Deploy target: `https://turbinando-experts.pages.dev/`.
 
+## 🔄 Mudança v3.5 (Comparativo em Cards Verticais Mobile, Modal Responsivo & Link de Portfólio Interativo - 07/nov/2026)
+
+**Melhorias de Usabilidade & UX Mobile Implementadas:**
+1. **Seção "Genérico vs. Sob Medida" (`index.html`):**
+   - Tabela tradicional ativa apenas no desktop (`.compare-desktop-wrap`).
+   - No mobile, substituída por 6 Cards de Contraste Vertical com badge monospace no topo, bloco vermelho sutil para o problema (`✕`) e bloco verde destacado para a solução (`✓`), eliminando 100% de `overflow-x`.
+2. **Seção "Planilhas Soltas vs. Dashboard Inteligente" (`portfolio-data-driven.html`):**
+   - Mesmo padrão de Cards de Contraste Vertical no mobile por aspecto comparado, preservando a tabela clássica no desktop.
+3. **Modal / Popup de Detalhes dos Dashboards (`portfolio-data-driven.html`):**
+   - Container reconfigurado para `max-w-[90vw] md:max-w-2xl lg:max-w-4xl mx-auto`.
+   - Botão fechar (`✕`) com touch target de 44×44px fixado relativamente no card (`absolute top-3 right-3`) com `z-index: 50`.
+   - Rolagem estritamente vertical (`max-h-[85vh] overflow-y-auto overflow-x-hidden`) sem vazamento lateral.
+4. **Link do Portfólio no Rodapé (`index.html`):**
+   - Affordance clara de link com `.footer-portfolio-link`: badge verde suave, fonte mono negrito, seta com transição suave no hover (`transform: translateX(3px)`) e touch target mínimo de 44px.
+5. **Validação 100% Aprovada:**
+   - Suíte Playwright executada com sucesso total em todos os cenários.
+
 ## 🔄 Mudança v3.4 (Botões Compactos, Alinhamento Perfil Kiko Soares & Limites dos Cards - 07/nov/2026)
 
 **Refinamento Mobile Cirúrgico Concluído:**

@@ -1,13 +1,35 @@
 # STATE — LP Turbinando Experts
 
-**Fase:** v2.3 Implementada (Refinamento Mobile Cirúrgico: Botões de WhatsApp Compactos e Elegantes, Alinhamento Perfeito do Card de Perfil Kiko Soares, Envelopamento e Proteção Total dos Limites Direitos dos Cards e Sub-abas Responsivas de Vendas) · 07/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, 100% de testes automatizados aprovados no Playwright ✅
+**Fase:** v2.4 Implementada (Cards de Contraste Vertical no Comparativo Mobile, Modal de Detalhes dos Dashboards Responsivo com Botão Fechar Ergonômico e Link Interativo para Portfólio no Rodapé) · 07/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, 100% de testes automatizados aprovados no Playwright ✅
 
 ## Estado atual
-- `index.html` = Versão 2.3 com botões de ação e WhatsApp redimensionados para altura ergonômica de 44px–63px (eliminando botões gigantes de 114px–138px), alinhamento harmonioso no card de perfil (`#sobre`), proteção do limite direito em todos os cards e badge de rolagem sutil no comparativo.
-- `portfolio-data-driven.html` = Versão 2.3 sincronizada com botões compactos, galeria de abas do dashboard de vendas em grade 2x2 sem transbordamento lateral e card de perfil alinhado.
+- `index.html` = Versão 2.4 com tabela comparativa mantida em telas médias/grandes (`md:`) e convertida em Cards de Contraste Vertical no mobile (`// ASPECTO`, dor em bloco vermelho sutil `✕`, solução em bloco verde destacado `✓`), e link interativo para o portfólio no rodapé com affordance clara (botão pill com hover, transição, ícone de seta e touch target de 44px).
+- `portfolio-data-driven.html` = Versão 2.4 com comparativo "Planilhas Soltas vs. Dashboard Inteligente" em Cards de Contraste Vertical no mobile, e Modal de Detalhes com `max-w-[90vw] md:max-w-2xl lg:max-w-4xl`, rolagem estritamente vertical (`max-h-[85vh] overflow-y-auto overflow-x-hidden`) e botão "X" fixado relativamente no card (`absolute top-3 right-3`) com touch target de 44×44px sempre visível.
 - Deploy: push no `main` → Cloudflare Pages.
 
-## Feito nesta sessão (Versão 2.3 - Refinamentos Visuais Mobile: Botões, Perfil e Limites dos Cards)
+## Feito nesta sessão (Versão 2.4 - Cards de Contraste, Modal e Affordance de Links)
+1. **Seção "Genérico vs. Sob Medida" (Home / `index.html`):**
+   - Tabela tradicional preservada exclusivamente no desktop (`.compare-desktop-wrap`, `display: block` em `>= 768px`).
+   - No mobile (`< 768px`), substituída por 6 Cards de Contraste Vertical (`.compare-card-v11`), contendo:
+     1. Badge monospace no topo (`// 01. ADAPTAÇÃO`, `// 02. FUNCIONALIDADES`, etc.).
+     2. Bloco com borda/fundo vermelho sutil para a dor: `✕ Template / Plataforma Engessada: [texto]`.
+     3. Bloco verde destacado para a solução: `✓ Sob Medida (Turbinando Experts): [texto]`.
+   - Zero scroll lateral (`scrollWidth === innerWidth`).
+
+2. **Seção "Planilhas Soltas vs. Dashboard Inteligente" (Portfólio / `portfolio-data-driven.html`):**
+   - Mesma arquitetura responsiva: tabela mantida no desktop e transformada em 6 Cards de Contraste Vertical no mobile.
+   - Apresentação nítida e direta dos 6 critérios (Tempo de Atualização, Confiabilidade, Velocidade da Decisão, Segurança & LGPD, Avisos e Ações, Custo Oculto).
+
+3. **Modal / Popup de Detalhes dos Dashboards (Portfólio / `portfolio-data-driven.html`):**
+   - Dimensionamento travado: `width: 100%; max-width: 90vw; md:max-w-2xl lg:max-w-4xl; margin: 0 auto; box-sizing: border-box;`.
+   - Rolagem restrita ao eixo vertical: `max-height: 85vh; overflow-y: auto; overflow-x: hidden;`, com imagem reescalada proporcionalmente (`max-height: 46vh`).
+   - Botão de fechar (`✕`) posicionado relativo ao card (`position: absolute; top: 12px; right: 12px; z-index: 50;`) com dimensão touch ergonômica de 44×44px, imune a quebras de título ou rolagem.
+
+4. **Link para o Portfólio no Rodapé (`index.html`):**
+   - Substituído texto plano por botão interativo estilizado (`.footer-portfolio-link`) com fundo verde sutil, borda de acento, fonte mono em negrito, seta indicadora de navegação com transição suave no hover (`transform: translateX(3px)`), sublinhado e touch target mínimo de 44px no mobile.
+
+5. **Validação Automatizada:**
+   - Suíte Playwright executada com 100% de aprovação (testes de visibilidade desktop/mobile, dimensões do modal, toque do botão fechar e link de rodapé).
 1. **Redução e Harmonização dos Botões de WhatsApp e CTAs no Mobile:**
    - **Problema:** Botões como `.btn-large` e `.btn-primary` herdavam paddings e tipografias de desktop (`20px 32px`, `font-size: 15px`), estourando em alturas gigantescas de 90px até 138px em telas móveis.
    - **Solução:** Aplicada calibração em `@media (max-width: 767px)` com `padding: 12px 18px !important; font-size: 12.5px !important; min-height: 44px !important; max-width: 320px !important;` e `.btn-large` com `padding: 13px 20px !important; font-size: 13px !important;` reduzindo a altura máxima para 63px (mais de 50% de redução), elegante, perfeitamente tocável e sem dominar a tela.

@@ -1489,6 +1489,12 @@
     /* ============================================================
        BEFORE & AFTER COMPARISON TABLE
     ============================================================ */
+    .compare-desktop-wrap {
+      display: block;
+    }
+    .compare-mobile-cards {
+      display: none;
+    }
     .compare-table-wrap {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -1506,15 +1512,6 @@
       border-collapse: collapse;
       font-size: 14.5px;
       text-align: left;
-    }
-    @media (max-width: 767px) {
-      .compare-table {
-        min-width: 480px;
-      }
-      .compare-table th, .compare-table td {
-        padding: 12px 10px !important;
-        font-size: 13px !important;
-      }
     }
     .compare-table th {
       padding: 16px 20px;
@@ -2093,14 +2090,16 @@
     .lightbox-modal {
       position: fixed;
       inset: 0;
-      z-index: 1000;
+      z-index: 2000;
       background: rgba(5, 8, 7, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 12px;
+      box-sizing: border-box;
+      overflow-x: hidden;
       opacity: 0;
       transition: opacity 0.25s ease;
     }
@@ -2112,45 +2111,81 @@
       background: var(--bg-1);
       border: 1px solid var(--border);
       border-radius: var(--r-xl);
-      max-width: 1080px;
       width: 100%;
-      max-height: 92vh;
+      max-width: 90vw;
+      max-height: 85vh;
       overflow-y: auto;
+      overflow-x: hidden;
       box-shadow: 0 24px 64px rgba(0,0,0,0.5);
       position: relative;
       display: flex;
       flex-direction: column;
+      margin: 0 auto;
+      box-sizing: border-box;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (min-width: 768px) {
+      .lightbox-card {
+        max-width: 672px; /* max-w-2xl */
+        max-height: 88vh;
+      }
+    }
+    @media (min-width: 1024px) {
+      .lightbox-card {
+        max-width: 896px; /* max-w-4xl */
+      }
     }
     .lightbox-header {
-      padding: 16px 24px;
+      padding: 14px 60px 14px 18px;
       border-bottom: 1px solid var(--border);
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 4px;
       background: var(--bg-2);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+    @media (min-width: 768px) {
+      .lightbox-header {
+        padding: 16px 60px 16px 24px;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+      }
     }
     .lightbox-close-btn {
-      width: 36px;
-      height: 36px;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
       border-radius: 50%;
       background: var(--bg-0);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-strong);
       color: var(--text-0);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
+      line-height: 1;
+      z-index: 50;
       transition: all 0.15s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
     }
     .lightbox-close-btn:hover {
       background: var(--red);
       color: #FFFFFF;
       border-color: var(--red);
+      transform: scale(1.05);
     }
     .lightbox-image-wrap {
       background: #0E1410;
@@ -2158,19 +2193,53 @@
       align-items: center;
       justify-content: center;
       padding: 12px;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
     }
     .lightbox-image-wrap img {
-      max-height: 65vh;
+      max-height: 46vh;
+      max-width: 100%;
       width: auto;
       height: auto;
       object-fit: contain;
       border-radius: var(--r-sm);
     }
     .lightbox-content {
-      padding: 24px 28px;
+      padding: 18px 16px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
+      box-sizing: border-box;
+      width: 100%;
+      overflow-x: hidden;
+    }
+    @media (min-width: 768px) {
+      .lightbox-content {
+        padding: 24px 28px;
+        gap: 16px;
+      }
+    }
+    .lightbox-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    @media (max-width: 767px) {
+      .lightbox-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .lightbox-actions a,
+      .lightbox-actions button {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
     }
 
     /* Animations */
@@ -2337,6 +2406,118 @@
         padding: 10px 14px !important;
         font-size: 10.5px !important;
         box-sizing: border-box !important;
+      }
+
+      /* ============================================================
+         COMPARATIVO: CARDS DE CONTRASTE VERTICAL NO MOBILE
+      ============================================================ */
+      .compare-desktop-wrap {
+        display: none !important;
+      }
+      .compare-mobile-cards {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-top: 24px !important;
+      }
+      .compare-card-v11 {
+        background: var(--bg-1);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        padding: 16px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-sizing: border-box;
+        box-shadow: var(--shadow-sm);
+        width: 100% !important;
+      }
+      .compare-card-badge {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--green);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 3px 8px;
+        background: var(--green-soft);
+        border: 1px solid var(--border-accent);
+        border-radius: 4px;
+        align-self: flex-start;
+      }
+      .compare-card-pain {
+        background: rgba(239, 68, 68, 0.04);
+        border: 1px solid rgba(239, 68, 68, 0.18);
+        border-radius: var(--r-sm);
+        padding: 10px 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .compare-card-solution {
+        background: rgba(0, 135, 68, 0.06);
+        border: 1px solid var(--border-accent);
+        border-radius: var(--r-sm);
+        padding: 10px 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .compare-card-marker {
+        font-family: var(--font-mono);
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 1.3;
+        flex-shrink: 0;
+      }
+      .marker-cross {
+        color: var(--red);
+      }
+      .marker-check {
+        color: var(--green);
+      }
+      .compare-card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .compare-card-pain .compare-card-text strong {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-2);
+      }
+      .compare-card-pain .compare-card-text span {
+        color: var(--text-1);
+      }
+      .compare-card-solution .compare-card-text strong {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--green);
+      }
+      .compare-card-solution .compare-card-text span {
+        color: var(--text-0);
+        font-weight: 500;
+      }
+      [data-theme="dark"] .compare-card-pain {
+        background: rgba(255, 77, 77, 0.06);
+        border-color: rgba(255, 77, 77, 0.22);
+      }
+      [data-theme="dark"] .compare-card-solution {
+        background: rgba(0, 230, 118, 0.07);
+        border-color: rgba(0, 230, 118, 0.25);
+      }
+      [data-theme="dark"] .compare-card-solution .compare-card-text strong {
+        color: var(--green-neon) !important;
       }
     }
     @keyframes fadeIn {
@@ -3319,7 +3500,8 @@
           </p>
         </div>
 
-        <div class="compare-table-wrap fade-up">
+        <!-- Desktop Compare Table (md / lg screens) -->
+        <div class="compare-desktop-wrap compare-table-wrap">
           <table class="compare-table" aria-label="Tabela comparativa entre planilhas manuais e dashboards sob medida">
             <thead>
               <tr>
@@ -3361,6 +3543,123 @@
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- Mobile Contrast Cards (Vertical / No horizontal scrolling) -->
+        <div class="compare-mobile-cards" aria-label="Comparativo entre planilhas manuais e dashboards sob medida no mobile">
+          <!-- Card 1: Tempo de Atualização -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 01. TEMPO DE ATUALIZAÇÃO</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Planilhas Manuais / Excel:</strong>
+                <span>Horas semanais copiando e colando células</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Dashboard Turbinando Experts:</strong>
+                <span>100% automático via conectores e agendamento</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Confiabilidade -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 02. CONFIABILIDADE</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Planilhas Manuais / Excel:</strong>
+                <span>Fórmulas quebradas e dados duplicados</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Dashboard Turbinando Experts:</strong>
+                <span>Modelo semântico auditado e regras unificadas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Velocidade da Decisão -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 03. VELOCIDADE DA DECISÃO</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Planilhas Manuais / Excel:</strong>
+                <span>Só descobre o resultado semanas depois</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Dashboard Turbinando Experts:</strong>
+                <span>Indicadores visíveis em 5 segundos no celular ou PC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Segurança & LGPD -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 04. SEGURANÇA &amp; LGPD</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Planilhas Manuais / Excel:</strong>
+                <span>Arquivo compartilhado sem controle de acesso</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Dashboard Turbinando Experts:</strong>
+                <span>Permissões granulares por cargo, filial ou equipe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Avisos e Ações -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 05. AVISOS E AÇÕES</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Planilhas Manuais / Excel:</strong>
+                <span>Silencioso: ninguém sabe quando algo desanda</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Dashboard Turbinando Experts:</strong>
+                <span>Agente de IA notifica no WhatsApp ao bater metas ou desvios</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Custo Oculto -->
+          <div class="compare-card-v11 fade-up">
+            <div class="compare-card-badge">// 06. CUSTO OCULTO</div>
+            <div class="compare-card-pain">
+              <span class="compare-card-marker marker-cross" aria-hidden="true">✕</span>
+              <div class="compare-card-text">
+                <strong>Planilhas Manuais / Excel:</strong>
+                <span>Custo de salários gastos em trabalho burocrático</span>
+              </div>
+            </div>
+            <div class="compare-card-solution">
+              <span class="compare-card-marker marker-check" aria-hidden="true">✓</span>
+              <div class="compare-card-text">
+                <strong>Dashboard Turbinando Experts:</strong>
+                <span>Equipe focada em vender e produzir resultados</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -3624,23 +3923,21 @@
   <!-- LIGHTBOX MODAL -->
   <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
     <div class="lightbox-card">
+      <button type="button" class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Fechar visualização">✕</button>
       <div class="lightbox-header">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <span class="badge" id="lightbox-badge">// DETALHES DO DASHBOARD</span>
-          <h3 id="lightbox-title" style="font-family: var(--font-display); font-size: 18px; color: var(--text-0);"></h3>
-        </div>
-        <button type="button" class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Fechar visualização">✕</button>
+        <span class="badge" id="lightbox-badge">// DETALHES DO DASHBOARD</span>
+        <h3 id="lightbox-title" style="font-family: var(--font-display); font-size: 18px; color: var(--text-0); margin-top: 4px;"></h3>
       </div>
       <div class="lightbox-image-wrap">
         <img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Visualização em tela cheia do dashboard">
       </div>
       <div class="lightbox-content">
-        <p id="lightbox-desc" style="font-size: 15px; color: var(--text-1); line-height: 1.6;"></p>
-        <div style="background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px 18px;">
+        <p id="lightbox-desc" style="font-size: 14.5px; color: var(--text-1); line-height: 1.6; margin: 0;"></p>
+        <div style="background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px 16px;">
           <strong style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); display: block; margin-bottom: 6px;">Indicadores-Chave (KPIs):</strong>
-          <span id="lightbox-kpis" style="font-size: 14px; color: var(--text-0); font-family: var(--font-mono);"></span>
+          <span id="lightbox-kpis" style="font-size: 13.5px; color: var(--text-0); font-family: var(--font-mono); word-break: break-word;"></span>
         </div>
-        <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; flex-wrap: wrap;">
+        <div class="lightbox-actions">
           <button type="button" class="btn-secondary btn-sm" onclick="closeLightbox()">Fechar</button>
           <a id="lightbox-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
             Quero Este Dashboard no WhatsApp →
