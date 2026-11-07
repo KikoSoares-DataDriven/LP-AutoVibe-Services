@@ -21,8 +21,8 @@
   <meta name="geo.position" content="-30.0346;-51.2177">
   <meta name="ICBM" content="-30.0346, -51.2177">
 
-  <title>Portfólio Data-Driven & Dashboards Power BI · Kiko Soares · Turbinando Experts</title>
-  <meta name="description" content="Portfólio de Dashboards Executivos e Análise de Dados: Power BI, integração com bancos SQL, CRM e Agentes de IA no WhatsApp para decisões em 5 segundos. Por Kiko Soares.">
+  <title>Portfólio Data-Driven &amp; Dashboards Power BI · Turbinando Experts</title>
+  <meta name="description" content="Dashboards executivos no Power BI com inteligência de dados e Agentes de IA. Decisões em 5 segundos que geram lucro. Agende sua call estratégica gratuita.">
   <meta name="keywords" content="dashboards power bi, data driven negocios, analise de dados porto alegre, dashboards executivos, kiko soares portfolio, turbinando experts, business intelligence sob medida, agentes ia whatsapp dados, kpis vendas financeiro producao">
   <meta name="author" content="Kiko Soares">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -40,18 +40,20 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://turbinandoexperts.com/portfolio-data-driven">
   <meta property="og:site_name" content="Turbinando Experts">
-  <meta property="og:title" content="Portfólio Data-Driven & Dashboards Power BI · Kiko Soares">
-  <meta property="og:description" content="Transforme dados dispersos em decisões que geram lucro em 5 segundos. Dashboards sob medida e Agentes de IA no WhatsApp.">
-  <meta property="og:image" content="https://turbinandoexperts.com/og-image.svg">
+  <meta property="og:title" content="Portfólio Data-Driven &amp; Dashboards Power BI · Turbinando Experts">
+  <meta property="og:description" content="Transforme dados dispersos em decisões que geram lucro em 5 segundos. Dashboards sob medida e Agentes de IA no WhatsApp. Atendimento 100% digital.">
+  <meta property="og:image" content="https://turbinandoexperts.com/og-image.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Portfólio de Dashboards e IA Data-Driven — Kiko Soares">
+  <meta property="og:image:alt" content="Portfólio de Dashboards e IA Data-Driven — Turbinando Experts">
+  <meta property="article:modified_time" content="2026-11-06T22:30:00-03:00">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Portfólio Data-Driven & Dashboards Power BI · Kiko Soares">
+  <meta name="twitter:title" content="Portfólio Data-Driven &amp; Dashboards Power BI · Turbinando Experts">
   <meta name="twitter:description" content="Dashboards sob medida no Power BI com alertas de IA no WhatsApp. Decisões estratégicas rápidas e precisas.">
-  <meta name="twitter:image" content="https://turbinandoexperts.com/og-image.svg">
+  <meta name="twitter:image" content="https://turbinandoexperts.com/og-image.png">
 
   <!-- Fonts & DNS Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,6 +70,13 @@
       --bg-3: #ECE5DC;          /* Subtle hover and active fills */
       --bg-header: rgba(250, 248, 245, 0.94);
       --bg-bottom-nav: rgba(250, 248, 245, 0.96);
+
+            /* Claude AI Signature Terracotta / Clay Accent */
+      --claude-clay: #DA7756;
+      --claude-clay-hover: #C15F3C;
+      --claude-clay-soft: rgba(218, 119, 86, 0.10);
+      --claude-clay-border: rgba(218, 119, 86, 0.28);
+      --claude-clay-glow: 0 4px 20px rgba(218, 119, 86, 0.22);
 
       /* Borders & Dividers */
       --border: #E8E3DA;
@@ -158,6 +167,13 @@
       --text-1: #B8C8BC;
       --text-2: #6A7A70;
       --text-inverse: #050807;
+      /* Claude AI Signature Terracotta in Dark Mode */
+      --claude-clay: #E08263;
+      --claude-clay-hover: #F09678;
+      --claude-clay-soft: rgba(224, 130, 99, 0.15);
+      --claude-clay-border: rgba(224, 130, 99, 0.35);
+      --claude-clay-glow: 0 4px 24px rgba(224, 130, 99, 0.3);
+
       --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
       --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
       --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.6);
@@ -428,23 +444,65 @@
     @media (min-width: 860px) {
       .nav {
         display: flex;
-        gap: clamp(8px, 1.3vw, 18px);
+        gap: clamp(4px, 0.7vw, 10px);
         align-items: center;
         flex-shrink: 1;
+        background: rgba(232, 227, 218, 0.45);
+        padding: 4px 6px;
+        border-radius: var(--r-pill);
+        border: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      [data-theme="dark"] .nav {
+        background: rgba(17, 24, 20, 0.6);
+        border-color: rgba(26, 37, 32, 0.8);
       }
       .nav a {
-        transition: color 0.15s, background-color 0.15s;
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         font-family: var(--font-mono);
         font-size: clamp(11px, 0.88vw, 12px);
         letter-spacing: 0.03em;
         color: var(--text-1);
         white-space: nowrap;
-        padding: 5px 6px;
-        border-radius: var(--r-sm);
+        padding: 6px 12px;
+        border-radius: var(--r-pill);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid transparent;
       }
       .nav a:hover {
         color: var(--green);
         background: var(--green-soft);
+      }
+      .nav a.active {
+        color: var(--green) !important;
+        background: var(--bg-1) !important;
+        font-weight: 700;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--border-accent);
+      }
+      [data-theme="dark"] .nav a.active {
+        background: var(--dark-panel) !important;
+        color: var(--green-neon) !important;
+        border-color: rgba(0, 230, 118, 0.35);
+        box-shadow: 0 0 14px rgba(0, 230, 118, 0.2);
+      }
+      .nav a.active::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 8px var(--green);
+        display: inline-block;
+        animation: pulseLiveDot 1.8s infinite;
+        flex-shrink: 0;
+      }
+      [data-theme="dark"] .nav a.active::before {
+        background: var(--green-neon);
+        box-shadow: 0 0 8px var(--green-neon);
       }
     }
 
@@ -459,8 +517,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 38px;
-      height: 38px;
+      width: 44px;
+      height: 44px;
       padding: 0;
       background: var(--bg-2);
       border: 1px solid var(--border);
@@ -647,8 +705,8 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: #111814;
-      color: #FFFFFF;
+      background: linear-gradient(135deg, var(--green) 0%, #006834 100%);
+      color: #FFFFFF !important;
       font-family: var(--font-mono);
       font-size: 14px;
       font-weight: 700;
@@ -656,13 +714,13 @@
       text-transform: uppercase;
       padding: 18px 28px;
       border-radius: var(--r-md);
-      border: 1px solid #111814;
+      border: 1px solid rgba(0, 135, 68, 0.4);
       cursor: pointer;
       text-decoration: none;
       position: relative;
       overflow: hidden;
       transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-      box-shadow: 0 4px 14px rgba(17, 24, 20, 0.15);
+      box-shadow: 0 4px 18px rgba(0, 135, 68, 0.25);
     }
     .btn-primary::before {
       content: '';
@@ -673,11 +731,11 @@
       transition: transform 0.6s ease;
     }
     .btn-primary:hover {
-      background: var(--green);
-      border-color: var(--green);
-      color: #FFFFFF;
+      background: linear-gradient(135deg, var(--green-bright) 0%, var(--green) 100%);
+      border-color: var(--green-bright);
+      color: #FFFFFF !important;
       transform: translateY(-2px);
-      box-shadow: var(--shadow-glow);
+      box-shadow: 0 8px 24px rgba(0, 135, 68, 0.35);
     }
     .btn-primary:hover::before { transform: translateX(100%); }
     .btn-primary:active { transform: translateY(0); }
@@ -685,8 +743,9 @@
       width: 18px;
       height: 18px;
       flex-shrink: 0;
-      color: var(--green-neon);
-      transition: color 0.2s ease;
+      color: #FFFFFF !important;
+      fill: currentColor;
+      transition: transform 0.2s ease;
     }
     .btn-primary:hover svg { color: #FFFFFF; }
 
@@ -1819,11 +1878,48 @@
     .bottom-nav-item.active {
       color: var(--green);
       background: var(--green-soft);
+      position: relative;
+    }
+    .bottom-nav-item.active::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 18%;
+      right: 18%;
+      height: 3px;
+      background: var(--green);
+      border-radius: 0 0 3px 3px;
+      box-shadow: 0 2px 8px var(--green);
+      animation: pulsePip 2s infinite;
+    }
+    .bottom-nav-item.active svg {
+      transform: translateY(-2px) scale(1.15);
+      color: var(--green);
+    }
+    [data-theme="dark"] .bottom-nav-item.active {
+      color: var(--green-neon);
+      background: rgba(0, 230, 118, 0.12);
+    }
+    [data-theme="dark"] .bottom-nav-item.active::before {
+      background: var(--green-neon);
+      box-shadow: 0 2px 10px var(--green-neon);
+    }
+    [data-theme="dark"] .bottom-nav-item.active svg {
+      color: var(--green-neon);
     }
     .bottom-nav-item.highlight-wa {
-      color: #FFFFFF;
-      background: #111814;
+      color: #FFFFFF !important;
+      background: linear-gradient(135deg, var(--green) 0%, #006834 100%);
       font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .bottom-nav-item.highlight-wa svg {
+      color: #FFFFFF !important;
+    }
+    [data-theme="dark"] .bottom-nav-item.highlight-wa {
+      background: linear-gradient(135deg, var(--green-dim) 0%, var(--claude-clay) 100%);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.2);
     }
     [data-theme="dark"] .bottom-nav-item.highlight-wa {
       background: var(--green);
@@ -1936,6 +2032,148 @@
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
+  
+    /* ==========================================
+       CLAUDE TERRACOTTA ACCENTS & BADGES
+    ========================================== */
+    .badge-clay {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: var(--r-pill);
+      color: var(--claude-clay);
+      background: var(--claude-clay-soft);
+      border: 1px solid var(--claude-clay-border);
+    }
+    .accent-clay {
+      color: var(--claude-clay);
+    }
+    .pulse-clay {
+      background: var(--claude-clay) !important;
+      box-shadow: 0 0 12px var(--claude-clay) !important;
+    }
+    .btn-clay {
+      background: linear-gradient(135deg, var(--green) 0%, #006834 100%) !important;
+      color: #FFFFFF !important;
+      border-color: rgba(0, 135, 68, 0.4) !important;
+      box-shadow: 0 4px 18px rgba(0, 135, 68, 0.25) !important;
+    }
+    .btn-clay svg {
+      color: #FFFFFF !important;
+    }
+    .btn-clay:hover {
+      background: linear-gradient(135deg, var(--claude-clay-hover) 0%, #B05332 100%) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(218, 119, 86, 0.35) !important;
+    }
+
+    @keyframes pulseLiveDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+    @keyframes pulsePip {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.55; }
+    }
+
+        /* ==========================================
+       LGPD CONSENT TOAST (Ultra-compacto & À Esquerda)
+    ========================================== */
+    .te-lgpd-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 20px;
+      right: auto;
+      max-width: 320px;
+      background: var(--bg-1);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-md);
+      padding: 12px 14px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+      z-index: 1000;
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 11.5px;
+      line-height: 1.4;
+      color: var(--text-1);
+      animation: toastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    [data-theme="dark"] .te-lgpd-toast {
+      background: rgba(14, 20, 16, 0.95);
+      border-color: rgba(0, 230, 118, 0.25);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+    }
+    @media (max-width: 768px) {
+      .te-lgpd-toast {
+        left: 12px;
+        right: 12px;
+        bottom: calc(66px + env(safe-area-inset-bottom));
+        max-width: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 14px;
+        gap: 10px;
+      }
+    }
+    @keyframes toastIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .te-lgpd-toast-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 11.5px;
+      color: var(--text-0);
+    }
+    .te-lgpd-toast-header svg {
+      width: 14px;
+      height: 14px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+    .te-lgpd-toast p {
+      margin: 0;
+      font-size: 11px;
+      color: var(--text-1);
+      line-height: 1.35;
+    }
+    .te-lgpd-toast strong { color: var(--text-0); }
+    .te-lgpd-toast a { color: var(--green); text-decoration: underline; white-space: nowrap; }
+    .te-lgpd-toast-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .btn-lgpd-accept {
+      background: var(--green);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      border: none;
+      padding: 6px 14px;
+      border-radius: var(--r-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .btn-lgpd-accept:hover {
+      opacity: 0.92;
+      transform: scale(1.02);
+    }
+
   </style>
 
   <!-- JSON-LD Estruturado -->
@@ -1944,32 +2182,173 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://turbinandoexperts.com/#organization",
+        "name": "Turbinando Experts",
+        "alternateName": "Turbinando Experts Inteligência de Dados & Agentes de IA",
+        "url": "https://turbinandoexperts.com",
+        "logo": "https://turbinandoexperts.com/og-image.png",
+        "image": "https://turbinandoexperts.com/og-image.png",
+        "description": "Desenvolvimento de Dashboards Executivos no Power BI, automação com Agentes de IA no WhatsApp e inteligência de dados sob medida com atendimento 100% digital.",
+        "telephone": "+55-51-92000-0513",
+        "email": "contato@turbinandoexperts.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Porto Alegre",
+          "addressRegion": "RS",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Porto Alegre" },
+          { "@type": "State", "name": "Rio Grande do Sul" },
+          { "@type": "Country", "name": "Brasil" }
+        ],
+        "founder": { "@id": "https://turbinandoexperts.com/#kiko-soares" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Catálogo de Serviços Data-Driven & IA",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Call Estratégica Gratuita (30 min) com Kiko Soares",
+              "description": "Diagnóstico inicial sem custo para mapear gargalos de dados, fontes de informação e demonstrar o melhor ponto de partida para sua operação.",
+              "price": "0.00",
+              "priceCurrency": "BRL",
+              "availability": "https://schema.org/InStock",
+              "url": "https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Quero%20agendar%20minha%20call%20estrat%C3%A9gica%20gratuita%20de%2030%20min."
+            },
+            {
+              "@type": "Offer",
+              "name": "Dashboards Executivos Power BI Sob Medida",
+              "description": "Painéis interativos para finanças, vendas, produção, SAC e gestão de pessoas sem mensalidades abusivas por usuário.",
+              "priceCurrency": "BRL",
+              "url": "https://turbinandoexperts.com/portfolio-data-driven"
+            },
+            {
+              "@type": "Offer",
+              "name": "Agentes de IA e Alertas Preditivos no WhatsApp",
+              "description": "Integração do modelo semântico a agentes inteligentes que entregam alertas acionáveis em tempo real no WhatsApp da equipe.",
+              "priceCurrency": "BRL",
+              "url": "https://turbinandoexperts.com/portfolio-data-driven"
+            }
+          ]
+        }
+      },
+      {
         "@type": "Person",
         "@id": "https://turbinandoexperts.com/#kiko-soares",
         "name": "Kiko Soares",
-        "jobTitle": "Especialista em Análise de Dados, Dashboards e Agentes de IA",
+        "jobTitle": "Especialista em Análise de Dados, Dashboards Executivos e Agentes de IA",
+        "worksFor": { "@id": "https://turbinandoexperts.com/#organization" },
         "url": "https://turbinandoexperts.com/portfolio-data-driven",
         "sameAs": [
           "https://turbinandoexperts.com",
           "https://turbinandoexperts.rck.fun/kiko-soares-portfolio-data-driven"
+        ],
+        "knowsAbout": [
+          "Power BI",
+          "Dashboards Executivos",
+          "Agentes de IA",
+          "Business Intelligence",
+          "DAX",
+          "SQL",
+          "WhatsApp Automation",
+          "Modelagem Semântica de Dados",
+          "n8n Workflow Automation"
         ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://turbinandoexperts.com/portfolio-data-driven#webpage",
+        "url": "https://turbinandoexperts.com/portfolio-data-driven",
+        "name": "Portfólio Data-Driven & Dashboards Power BI · Turbinando Experts",
+        "description": "Portfólio de Dashboards Executivos e Análise de Dados: Power BI, integração com bancos SQL, CRM e Agentes de IA no WhatsApp para decisões em 5 segundos.",
+        "inLanguage": "pt-BR",
+        "isPartOf": { "@id": "https://turbinandoexperts.com/#organization" },
+        "about": { "@id": "https://turbinandoexperts.com/portfolio-data-driven#service" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [
+            "#hero-h1",
+            ".tldr",
+            "#cta-final-h2",
+            ".faq-item summary"
+          ]
+        }
       },
       {
         "@type": "Service",
         "@id": "https://turbinandoexperts.com/portfolio-data-driven#service",
         "name": "Implementação de Dashboards Power BI e Inteligência Data-Driven",
-        "provider": { "@id": "https://turbinandoexperts.com/#kiko-soares" },
+        "provider": { "@id": "https://turbinandoexperts.com/#organization" },
         "serviceType": "Business Intelligence & Data Analytics",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Brasil"
-        },
+        "areaServed": [
+          { "@type": "City", "name": "Porto Alegre" },
+          { "@type": "State", "name": "Rio Grande do Sul" },
+          { "@type": "Country", "name": "Brasil" }
+        ],
         "description": "Desenvolvimento de dashboards executivos sob medida em Power BI, integração de bancos de dados SQL, planilhas e agentes de IA no WhatsApp para tomadas de decisão em tempo real.",
         "offers": {
           "@type": "Offer",
+          "price": "0.00",
           "priceCurrency": "BRL",
-          "description": "Diagnóstico inicial gratuito e implementação sob medida sem mensalidades por usuário."
+          "description": "Call estratégica inicial gratuita de 30 minutos e implementação sob medida sem mensalidades por usuário."
         }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://turbinandoexperts.com/portfolio-data-driven#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Minha empresa usa planilhas do Excel e Google Sheets. Consigo ter um Dashboard?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, com certeza. Muitas empresas começam exatamente com suas planilhas atuais. Nós conectamos as planilhas ao Power BI de forma estruturada e automatizada, eliminando retrabalho manual e consolidando tudo num único painel que atualiza sozinho."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso pagar licenças caras do Power BI para cada funcionário?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não necessariamente. Desenhamos a arquitetura mais econômica e eficiente para o seu porte. É possível utilizar contas específicas do Power BI Pro apenas para quem publica, ou publicar relatórios embutidos com segurança, evitando custos recorrentes desnecessários."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona a segurança e privacidade dos dados da minha empresa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Seus dados pertencem 100% à sua empresa. Todas as conexões utilizam credenciais diretas do seu ambiente e criptografia ponta a ponta, em total conformidade com a LGPD (Lei 13.709/2018). Suas informações nunca são compartilhadas ou usadas para treinar modelos externos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto tempo leva para o primeiro dashboard estar funcionando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Seguimos metodologia ágil: entregamos o primeiro painel funcional em até 7 dias após o mapeamento das fontes de dados. Você já começa a tomar decisões na primeira semana, sem projetos de meses que nunca terminam."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funcionam os alertas e agentes de IA no WhatsApp?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Configuramos fluxos inteligentes conectados ao modelo semântico dos dados e à API oficial do WhatsApp. Quando métricas essenciais fogem da meta ou metas são batidas, o agente dispara alertas com resumo executivo direto no WhatsApp dos responsáveis."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "E se eu precisar de novos relatórios ou ajustes no futuro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nossa arquitetura é 100% modular. Você não fica amarrado a mensalidades obrigatórias. Oferecemos pacotes pontuais de evolução sob demanda ou suporte continuado conforme o ritmo de crescimento do seu negócio."
+            }
+          }
+        ]
       },
       {
         "@type": "BreadcrumbList",
@@ -1998,13 +2377,13 @@
   <!-- BANNER TOPO -->
   <aside class="top-banner" aria-label="Aviso operacional">
     <span class="dot" aria-hidden="true"></span>
-    <span>// PORTFÓLIO OFICIAL · DASHBOARDS &amp; IA DATA-DRIVEN · PORTO ALEGRE/RS &amp; BRASIL</span>
+    <span>Base em Porto Alegre/RS · Atendimento 100% digital onde quer que sua empresa esteja</span>
   </aside>
 
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a  ="index.html" class="logo" aria-label="Turbinando Experts início">
+      <a href="index.html" class="logo" aria-label="Turbinando Experts início">
         <span class="logo-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
         </span>
@@ -2013,12 +2392,13 @@
       </a>
 
       <nav class="nav" role="navigation" aria-label="Navegação principal">
+        <a href="#hero" class="active">Início</a>
         <a href="#projetos">Dashboards</a>
         <a href="#diferencial-ia">IA &amp; Alertas</a>
         <a href="#comparativo">Comparativo</a>
         <a href="#metodologia">Metodologia</a>
         <a href="#simulador">Diagnóstico</a>
-        <a href="#faq">FAQ</a>
+        <a href="#faq">Perguntas</a>
       </nav>
 
       <div class="header-actions">
@@ -2042,18 +2422,19 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="hero-eyebrow">
-            <span class="pulse" aria-hidden="true"></span>
+            <span class="pulse pulse-clay" aria-hidden="true"></span>
             <span>PORTFÓLIO DATA-DRIVEN · POWER BI &amp; AGENTES DE IA</span>
+            <span class="badge-clay" style="margin-left: 6px;">CALL GRATUITA DE 30 MIN</span>
           </div>
 
           <h1 id="hero-h1">
-            Transforme dados brutos em decisões que geram lucro em <span class="accent">5 segundos.</span>
+            Transforme dados brutos em decisões que geram lucro em <span class="accent-clay">5 segundos.</span>
           </h1>
 
           <div class="tldr">
             <span class="tldr-label">[TL;DR · Resumo Executivo]</span>
             <strong>Chega de planilhas quebradas e relatórios estáticos que ninguém lê.</strong>
-            Construímos dashboards sob medida no Power BI e conectamos Agentes de IA que entregam insights acionáveis e alertas no WhatsApp do seu time.
+            Construímos dashboards sob medida no Power BI e conectamos Agentes de IA que entregam insights acionáveis e alertas no WhatsApp da sua equipe. Atendimento 100% digital onde quer que sua empresa esteja.
           </div>
 
           <p class="lede">
@@ -2061,9 +2442,9 @@
           </p>
 
           <div class="hero-cta">
-            <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Gostaria%20de%20agendar%20uma%20an%C3%A1lise%20gratuita%20para%20implementar%20Dashboards%20e%20IA%20no%20meu%20neg%C3%B3cio." class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Gostaria%20de%20agendar%20uma%20call%20estrat%C3%A9gica%20gratuita%20de%2030%20min%20sobre%20Dashboards%20e%20IA." class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Agendar Call Estratégica Gratuita">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <span>Quero Meus Dados Organizados</span>
+              <span>Agendar Call Estratégica Gratuita (30 min)</span>
             </a>
             <a href="#projetos" class="btn-secondary">
               <span>Ver Dashboards ao Vivo ↓</span>
@@ -2071,8 +2452,9 @@
           </div>
 
           <div class="cta-note">
-            <span>Power BI sem mensalidades por usuário</span>
-            <span>Conexão direta com ERP / SQL</span>
+            <span>✓ Power BI sem mensalidades abusivas</span>
+            <span>✓ Conexão direta com ERP / SQL</span>
+            <span>✓ Call estratégica gratuita de 30 min com Kiko Soares</span>
             <span>Alertas com IA no WhatsApp</span>
           </div>
 
@@ -2785,7 +3167,7 @@
               Utilizo o poder do <strong>Vibe Coding</strong> e tecnologias modernas para entregar em poucos dias o que consultorias tradicionais levam meses. Desenvolvo dashboards que os líderes realmente usam no dia a dia, com integrações diretas e alertas acionáveis no WhatsApp.
             </p>
             <p>
-              Com sede em <strong>Porto Alegre/RS</strong>, atendo empresas locais de forma próxima e projetos em todo o Brasil de forma 100% remota e segura.
+              Com base em <strong>Porto Alegre/RS</strong>, atuamos de forma próxima e 100% digital, eliminando distâncias para atender sua empresa com agilidade onde quer que ela esteja.
             </p>
 
             <div class="stack-pills">
@@ -2879,23 +3261,23 @@
     </section>
 
     <!-- SEÇÃO: CTA FINAL -->
-    <section class="cta-final" aria-labelledby="cta-final-h2">
+    <section class="cta-final" id="cta-final" aria-labelledby="cta-final-h2">
       <div class="container cta-final-inner">
-        <span class="mono" style="margin-bottom: 24px; color: var(--green-neon); border-color: rgba(0, 230, 118, 0.3);">próximo passo estratégico</span>
+        <span class="mono badge-clay" style="margin-bottom: 24px;">// call estratégica gratuita de 30 minutos</span>
         <h2 id="cta-final-h2">
-          Chega de gerenciar no escuro.<br><span class="accent">Coloque sua empresa no controle em 5 segundos.</span>
+          Chega de gerenciar no escuro.<br><span class="accent-clay">Coloque sua empresa no controle em 5 segundos.</span>
         </h2>
         <p>
-          Agende uma <strong>imersão de 30 minutos sem custo</strong> diretamente com o Kiko Soares. Mapearemos seus gargalos de informação e mostraremos o melhor ponto de partida para sua operação.
+          Agende sua <strong>call estratégica de 30 minutos sem custo</strong> diretamente com Kiko Soares. Mapearemos seus gargalos de informação e mostraremos o melhor ponto de partida para sua operação — atendimento 100% digital onde quer que sua empresa esteja.
         </p>
 
         <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-          <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Quero%20agendar%20minha%20imers%C3%A3o%20gratuita%20sobre%20Dashboards%20e%20Dados%20da%20minha%20empresa." class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Agendar Imersão Gratuita de Dados no WhatsApp">
+          <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Quero%20agendar%20minha%20call%20estrat%C3%A9gica%20gratuita%20sobre%20Dashboards%20e%20Dados%20da%20minha%20empresa." class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Agendar Call Estratégica Gratuita no WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Agendar Análise dos Dados
+            Agendar Call Estratégica Gratuita (30 min)
           </a>
           <a href="#simulador" class="btn-secondary">
-            Simular Ponto de Partida
+            Simular Diagnóstico
           </a>
         </div>
 
@@ -2955,7 +3337,7 @@
 
       <div class="footer-meta">
         <div><strong>Atuação &amp; Sede:</strong> Porto Alegre/RS · Brasil</div>
-        <div><strong>Atendimento:</strong> Remoto para todo o Brasil</div>
+        <div><strong>Atendimento:</strong> 100% digital e conectado · Atendemos sua empresa onde quer que ela esteja</div>
         <div>WhatsApp: <a href="https://wa.me/5551920000513" target="_blank" rel="noopener noreferrer">+55 (51) 92000-0513</a></div>
         <div style="margin-top: 8px;"><a href="/" style="color: var(--green); text-decoration: underline;">← Voltar para o Site Principal (TurbinandoExperts.com)</a></div>
       </div>
@@ -2968,23 +3350,43 @@
     </div>
   </footer>
 
+    <!-- LGPD CONSENT TOAST (Ultra-compacto & À Esquerda) -->
+  <aside class="te-lgpd-toast" id="te-lgpd-toast" role="dialog" aria-live="polite" aria-label="Aviso de Privacidade e LGPD">
+    <div style="display: flex; flex-direction: column; gap: 4px; flex: 1;">
+      <div class="te-lgpd-toast-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Privacidade &amp; LGPD</span>
+      </div>
+      <p>
+        Usamos cookies essenciais da operação. Seus dados são protegidos (Lei 13.709/2018). <a href="politica-de-privacidade">Política</a>
+      </p>
+    </div>
+    <div class="te-lgpd-toast-actions">
+      <button class="btn-lgpd-accept" id="btn-lgpd-accept" aria-label="Aceitar privacidade e fechar">Concordar</button>
+    </div>
+  </aside>
+
   <!-- MOBILE BOTTOM DOCK -->
   <nav class="bottom-nav" aria-label="Ações rápidas móveis">
-    <a href="#hero" class="bottom-nav-item active">
+    <a href="#hero" class="bottom-nav-item active" aria-label="Ir ao início">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
       <span>Início</span>
     </a>
-    <a href="#projetos" class="bottom-nav-item">
+    <a href="#projetos" class="bottom-nav-item" aria-label="Dashboards">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
       <span>Dashes</span>
     </a>
-    <a href="#diferencial-ia" class="bottom-nav-item">
+    <a href="#diferencial-ia" class="bottom-nav-item" aria-label="IA & Alertas">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
       <span>IA Alertas</span>
     </a>
-    <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Vi%20seu%20portf%C3%B3lio%20de%20Dashboards%20e%20gostaria%20de%20conversar." class="bottom-nav-item highlight-wa" target="_blank" rel="noopener noreferrer">
+    <a href="#simulador" class="bottom-nav-item" aria-label="Diagnóstico">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      <span>Diagnóstico</span>
+    </a>
+    <a href="https://wa.me/5551920000513?text=Ol%C3%A1%20Kiko!%20Gostaria%20de%20agendar%20minha%20call%20estrat%C3%A9gica%20gratuita%20de%2030%20min%20sobre%20Dashboards%20e%20IA." class="bottom-nav-item highlight-wa" target="_blank" rel="noopener noreferrer" aria-label="Agendar Call Estratégica Gratuita">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span>WhatsApp</span>
+      <span>Call Grátis</span>
     </a>
   </nav>
 
@@ -3211,25 +3613,114 @@
       if (resBox) resBox.style.display = 'block';
     }
 
-    // 8. Bottom Nav Spy
-    const navItems = Array.from(document.querySelectorAll('.bottom-nav-item:not(.highlight-wa)'));
-    const spyTargets = navItems
-      .map(item => document.querySelector(item.getAttribute('href')))
+    // 8. Dual Scroll Spy INTELIGENTE (Desktop Header Nav + Mobile Bottom Nav)
+    const desktopNavLinks = Array.from(document.querySelectorAll('.site-header .nav a[href^="#"]'));
+    const mobileNavLinks = Array.from(document.querySelectorAll('.bottom-nav-item[href^="#"]'));
+
+    const trackedSectionIds = [
+      'hero',
+      'alerta',
+      'projetos',
+      'diferencial-ia',
+      'comparativo',
+      'metodologia',
+      'simulador',
+      'sobre',
+      'faq',
+      'cta-final'
+    ];
+
+    const trackedElements = trackedSectionIds
+      .map(id => document.getElementById(id))
       .filter(Boolean);
 
-    function updateBottomNav() {
-      let current = null;
-      spyTargets.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if (rect.top <= 260) current = sec;
-      });
-      navItems.forEach(item => {
-        item.classList.toggle('active', !!current && item.getAttribute('href') === '#' + current.id);
-      });
+    function updateActiveNavigation() {
+      const scrollPos = window.scrollY + 200; // Offset ideal de leitura
+      let activeSection = null;
+
+      // Se o usuário rolou até o final da página
+      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 70)) {
+        activeSection = trackedElements[trackedElements.length - 1];
+      } else {
+        for (let i = 0; i < trackedElements.length; i++) {
+          const sec = trackedElements[i];
+          const top = sec.offsetTop;
+          const height = sec.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            activeSection = sec;
+            break;
+          }
+        }
+        // Fallback para o hero se estiver no topo
+        if (!activeSection && window.scrollY < 300 && trackedElements.length > 0) {
+          activeSection = trackedElements[0];
+        }
+      }
+
+      if (activeSection) {
+        const activeId = activeSection.id;
+        const targetHref = '#' + activeId;
+
+        // 1. Atualiza Desktop Header Nav
+        desktopNavLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          const isDirectMatch = (href === targetHref);
+          // Mapeamentos contextuais para links secundários
+          const isHeroContext = (href === '#hero' && (activeId === 'hero' || activeId === 'alerta'));
+          const isFaqContext = (href === '#faq' && (activeId === 'faq' || activeId === 'sobre' || activeId === 'cta-final'));
+          const isActive = isDirectMatch || isHeroContext || isFaqContext;
+
+          link.classList.toggle('active', isActive);
+          if (isActive) {
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+
+        // 2. Atualiza Mobile Bottom Nav (5 itens no dock)
+        mobileNavLinks.forEach(item => {
+          const href = item.getAttribute('href');
+          const isDirectMatch = (href === targetHref);
+          const isHeroMatch = (href === '#hero' && (activeId === 'hero' || activeId === 'alerta'));
+          const isProjetosMatch = (href === '#projetos' && activeId === 'projetos');
+          const isIaMatch = (href === '#diferencial-ia' && (activeId === 'diferencial-ia' || activeId === 'comparativo' || activeId === 'metodologia'));
+          const isSimuladorMatch = (href === '#simulador' && (activeId === 'simulador' || activeId === 'sobre' || activeId === 'faq' || activeId === 'cta-final'));
+          const isActive = isDirectMatch || isHeroMatch || isProjetosMatch || isIaMatch || isSimuladorMatch;
+
+          item.classList.toggle('active', isActive);
+          if (isActive) {
+            item.setAttribute('aria-current', 'page');
+          } else {
+            item.removeAttribute('aria-current');
+          }
+        });
+      }
     }
-    if (navItems.length && spyTargets.length) {
-      window.addEventListener('scroll', updateBottomNav, { passive: true });
-      updateBottomNav();
+
+    if (trackedElements.length) {
+      window.addEventListener('scroll', updateActiveNavigation, { passive: true });
+      window.addEventListener('resize', updateActiveNavigation, { passive: true });
+      updateActiveNavigation();
+    }
+
+    // LGPD Toast Controller (Ultra-compacto & À Esquerda)
+    const lgpdToast = document.getElementById('te-lgpd-toast');
+    const btnLgpdAccept = document.getElementById('btn-lgpd-accept');
+    if (lgpdToast && !localStorage.getItem('te_lgpd_accepted')) {
+      setTimeout(() => {
+        lgpdToast.style.display = 'flex';
+      }, 700);
+    }
+    if (btnLgpdAccept) {
+      btnLgpdAccept.addEventListener('click', () => {
+        localStorage.setItem('te_lgpd_accepted', 'true');
+        if (lgpdToast) {
+          lgpdToast.style.opacity = '0';
+          lgpdToast.style.transform = 'translateY(12px)';
+          setTimeout(() => { lgpdToast.style.display = 'none'; }, 300);
+        }
+      });
     }
   </script>
 </body>
