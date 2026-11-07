@@ -8,6 +8,27 @@
 
 Landing page "Turbinando Experts" — **sistemas sob medida com IA** para pequenas empresas (dashboards, CRM, automações, agente de IA). Dono: Kiko Soares, Porto Alegre/RS. WhatsApp: `+55 51 92000-0513`. Deploy target: `https://turbinando-experts.pages.dev/`.
 
+## 🔄 Mudança v3.4 (Botões Compactos, Alinhamento Perfil Kiko Soares & Limites dos Cards - 07/nov/2026)
+
+**Refinamento Mobile Cirúrgico Concluído:**
+1. **Botões de WhatsApp e CTAs Proporcionais no Mobile:**
+   - Reduzida a altura dos botões gigantes de 90px–138px para 44px–63px.
+   - `.btn-primary` com `padding: 12px 18px !important; font-size: 12.5px !important; max-width: 320px; width: 100%; margin: 0 auto;`.
+   - `.btn-large` com `padding: 13px 20px !important; font-size: 13px !important; max-width: 320px; width: 100%; margin: 0 auto;`.
+   - `.btn-secondary` com `padding: 11px 18px !important; font-size: 12px !important; max-width: 320px;`.
+   - `.btn-sm` com `padding: 8px 14px !important; font-size: 11px !important; max-width: 240px; min-height: 38px;`.
+2. **Card de Perfil Kiko Soares (`#sobre`) Harmonizado:**
+   - Adicionado `align-items: center;` no desktop e tablet.
+   - No mobile: avatar compacto de 128px perfeitamente centralizado com margens simétricas, bloco de stats em grid 3-colunas equilibrado (`repeat(3, 1fr)`) e stack-pills alinhadas.
+3. **Cards e Textos sem Cortes no Limite Direito:**
+   - Universal guard em todos os cards (`box-sizing: border-box !important; max-width: 100% !important; min-width: 0 !important; overflow-wrap: break-word !important; word-break: break-word !important;`).
+   - `.pillar-card`: padding otimizado para 22px 16px e checkmarks alinhados no topo da primeira linha.
+   - `.result-card`: padding 16px 12px e `.result-tag` com quebra natural sem corte.
+   - `.compare-table-wrap`: adicionado badge sutil `table-scroll-hint` ("⇄ Deslize para ver o comparativo completo").
+   - `portfolio-data-driven.html`: sub-abas de vendas reorganizadas em grid responsivo 2x2 com `flex-wrap: wrap`, eliminando 100% do transbordamento lateral de 164px.
+4. **Validação 100% Aprovada:**
+   - Zero card overflow, zero viewport overflow, scroll-spy e theme toggle preservados.
+
 ## 🔄 Mudança v3.3 (Cards Visíveis, Botão Tema Mobile & Scroll-Spy Ativo - 07/nov/2026)
 
 **Correções Mobile-First Definitivas Concluídas:**

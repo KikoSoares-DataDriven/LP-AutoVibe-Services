@@ -1,13 +1,35 @@
 # STATE — LP Turbinando Experts
 
-**Fase:** v2.2 Implementada (Correção Definitiva Mobile: Visibilidade Total dos Cards sem Espaços Vazios, Alternador Claro/Escuro Mobile Touch-Debounced e Scroll-Spy Monotônico com Indicadores Ativos Superiores e Inferiores) · 07/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, 100% de testes automatizados aprovados no Playwright ✅
+**Fase:** v2.3 Implementada (Refinamento Mobile Cirúrgico: Botões de WhatsApp Compactos e Elegantes, Alinhamento Perfeito do Card de Perfil Kiko Soares, Envelopamento e Proteção Total dos Limites Direitos dos Cards e Sub-abas Responsivas de Vendas) · 07/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, 100% de testes automatizados aprovados no Playwright ✅
 
 ## Estado atual
-- `index.html` = Versão 2.2 ativa com cards 100% visíveis em mobile (zero sumiço, zero lacunas vazias), alternador de tema claro/escuro resiliente a toques mobile e scroll-spy monotônico com destaque ativo vibrante no menu dock inferior.
-- `portfolio-data-driven.html` = Versão 2.2 sincronizada com galeria de dashboards e cards de IA sempre visíveis no mobile, alternador de tema responsivo e navegação inferior em tempo real.
+- `index.html` = Versão 2.3 com botões de ação e WhatsApp redimensionados para altura ergonômica de 44px–63px (eliminando botões gigantes de 114px–138px), alinhamento harmonioso no card de perfil (`#sobre`), proteção do limite direito em todos os cards e badge de rolagem sutil no comparativo.
+- `portfolio-data-driven.html` = Versão 2.3 sincronizada com botões compactos, galeria de abas do dashboard de vendas em grade 2x2 sem transbordamento lateral e card de perfil alinhado.
 - Deploy: push no `main` → Cloudflare Pages.
 
-## Feito nesta sessão (Versão 2.2 - Cards Visíveis, Alternador de Tema Mobile e Scroll-Spy Preciso)
+## Feito nesta sessão (Versão 2.3 - Refinamentos Visuais Mobile: Botões, Perfil e Limites dos Cards)
+1. **Redução e Harmonização dos Botões de WhatsApp e CTAs no Mobile:**
+   - **Problema:** Botões como `.btn-large` e `.btn-primary` herdavam paddings e tipografias de desktop (`20px 32px`, `font-size: 15px`), estourando em alturas gigantescas de 90px até 138px em telas móveis.
+   - **Solução:** Aplicada calibração em `@media (max-width: 767px)` com `padding: 12px 18px !important; font-size: 12.5px !important; min-height: 44px !important; max-width: 320px !important;` e `.btn-large` com `padding: 13px 20px !important; font-size: 13px !important;` reduzindo a altura máxima para 63px (mais de 50% de redução), elegante, perfeitamente tocável e sem dominar a tela.
+   - Botões secundários e botões de dashboard compactados para 38px–44px.
+
+2. **Alinhamento do Card de Perfil Kiko Soares (`#sobre`):**
+   - **Problema:** O card de perfil no desktop não possuía alinhamento vertical (`align-items: center;`), deixando a foto e o texto com alturas desencontradas. No mobile, a foto de 160px era desproporcional e os stats ficavam com margens assimétricas.
+   - **Solução:**
+     - Adicionado `align-items: center;` no desktop e tablet.
+     - No mobile: foto redimensionada para 128px perfeitamente centralizada, bloco de estatísticas reorganizado em grade simétrica de 3 colunas (`grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 300px; margin: 6px auto;`) e pills de tecnologia centralizadas.
+
+3. **Correção dos Textos e Limites Direitos dos Cards:**
+   - **Problema:** Textos e tags internas (como `.result-tag` com "DISPONIBILIDADE CONTÍNUA" e listas com checkmarks) sofriam compressão ou tocavam a borda direita nos cards em telas estreitas (360px–375px). No portfólio, os botões `.vendas-tab-btn` vazavam 164px para fora do card.
+   - **Solução:**
+     - Universal guard em `.pain-card-v11, .pillar-card, .start-card, .strategy-card, .flow-card, .empathy-card, .depo-card, .result-card, .about-card, .dash-card` com `box-sizing: border-box !important; max-width: 100% !important; min-width: 0 !important; overflow-wrap: break-word !important; word-break: break-word !important;`.
+     - `.pillar-card`: padding otimizado para 22px 16px, lista com `align-items: flex-start` para alinhar checkmark ao topo da primeira linha.
+     - `.result-card`: padding 16px 12px e `.result-tag` com quebra natural sem corte.
+     - `.compare-table-wrap`: adicionado badge sutil `table-scroll-hint` ("⇄ Deslize para ver o comparativo completo").
+     - `portfolio-data-driven.html`: `.vendas-tabs` refatorado com `flex-wrap: wrap` e botões em 2x2 (`flex: 1 1 calc(50% - 6px)`), eliminando 100% do transbordamento lateral.
+
+4. **Testes Automatizados & Validação:**
+   - 100% aprovado no Playwright: 0 vazamentos em cards, 0 overflows no viewport em 320px, 360px, 375px e desktop.
 1. **Cards que Sumiam e Deixavam Espaço Vazio no Mobile (Resolvido Definitivamente):**
    - **Causa Raiz:** O seletor `.fade-up` iniciava com `opacity: 0; transform: translateY(...)`. Em navegadores mobile (WebKit/Blink touch), o `IntersectionObserver` com margem negativa falhava ou atrasava, mantendo os cards ocupando sua altura física completa no DOM, porém invisíveis (`opacity: 0`), criando um vazio enorme de milhares de pixels.
    - **Correção:** Em `@media (max-width: 767px)`, forçado `.fade-up { opacity: 1 !important; transform: none !important; transition: none !important; visibility: visible !important; }`.
