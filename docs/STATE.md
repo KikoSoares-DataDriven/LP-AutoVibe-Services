@@ -1,15 +1,44 @@
 # STATE — LP Turbinando Experts
 
-**Fase:** v2.0 Implementada (Auto-Auditoria Completa: Oferta Call Agentes de IA, Claude Terracotta, Super GEO, Segurança/LGPD e Marcadores Ativos de Scroll-Spy) · 06/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido ✅
+**Fase:** v2.1 Implementada (Correção Definitiva Mobile-First: Fim do Overflow Horizontal, Bottom Nav Simétrico em Grid com Indicador Ativo Inferior e Modal LGPD Resiliente com Gatilho de Clique) · 07/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, 100% de testes automatizados aprovados no Playwright ✅
 
 ## Estado atual
-- `index.html` = Versão 2.0 ativa com protagonismo na **Sessão Estratégica Gratuita (30 min) para Implementação de Agentes de IA**, Design System Claude Warm Light + Verde da Marca + Terracotta do Claude (`#DA7756`), Dual-View Showcase (WhatsApp Simulator + Terminal), Toast LGPD e **Marcadores Ativos de Navegação em Tempo Real (Desktop & Mobile)**.
+- `index.html` = Versão 2.1 ativa com protagonismo na **Sessão Estratégica Gratuita (30 min) para Implementação de Agentes de IA**, Design System Claude Warm Light + Verde da Marca + Terracotta do Claude (`#DA7756`), Dual-View Showcase (WhatsApp Simulator + Terminal), Toast LGPD e **Marcadores Ativos de Navegação em Tempo Real (Desktop & Mobile)**.
+- `portfolio-data-driven.html` = Versão 2.1 sincronizada com layout mobile-first blindado.
 - Backup da v1.2 preservado em `index.html.v1.2-audit.bak`.
 - `og-image.png` (1200×630px) gerado e vinculado para previews sociais em WhatsApp, Facebook, LinkedIn e Twitter.
 - URL canônica: `https://turbinandoexperts.com/`. `robots.txt`, `sitemap.xml` atualizados.
 - Deploy: push no `main` → Cloudflare Pages.
 
-## Feito nesta sessão (Versão 2.0 - Auto-Auditoria Completa & Marcadores Ativos)
+## Feito nesta sessão (Versão 2.1 - Correção Definitiva Mobile-First & LGPD)
+1. **Eliminação Definitiva do Overflow Horizontal (Mobile Viewports 320px–480px)**:
+   - `html` e `body` blindados com `overflow-x: hidden; overflow-x: clip; width: 100%; max-width: 100vw; box-sizing: border-box;`.
+   - `.marquee-section`: aplicada proteção `overflow: hidden; overflow-x: clip; width: 100%; max-width: 100%; box-sizing: border-box;`, impedindo o rastro infinito de vazar o viewport.
+   - `.hero::before` e `.cta-final::before`: reescalados no mobile para `max-width: 100%; right: -30px;` e dimensões proporcionais, eliminando o esticamento da viewport.
+   - `.compare-table-wrap`: protegido com `width: 100%; max-width: 100%; box-sizing: border-box; overflow-x: auto; -webkit-overflow-scrolling: touch;`, com células compactadas e rolagem interna touch fluida sem alargar o corpo do documento.
+   - Testado e validado em 320px, 360px, 375px, 390px e 412px: `scrollWidth === window.innerWidth` em 100% dos testes.
+
+2. **Menu de Navegação Inferior (Rodapé Mobile) Totalmente Refatorado**:
+   - Barra fixa `.bottom-nav` configurada com `w-full` (`width: 100%; max-width: 100%; left: 0; right: 0; margin: 0 auto; box-sizing: border-box;`).
+   - Distribuição perfeitamente simétrica em CSS Grid: `grid-template-columns: repeat(5, minmax(0, 1fr));`, garantindo exatamente 20% de largura para cada item sem desvios ou compressão à esquerda.
+   - Touch targets ergonômicos: `min-height: 48px; min-width: 44px; width: 100%;` (cumpre e supera o padrão WCAG de 44px).
+   - Marcador Ativo Moderno:
+     - Tipografia reforçada (`font-weight: 800; font-size: clamp(9.5px, 2.3vw, 10.5px)`).
+     - Cor de acento da marca (`var(--green)` no light e `var(--green-neon)` no dark).
+     - Traço/pill indicador embaixo: pseudo-elemento `::after` posicionado na base (`bottom: 2px; left: 18%; right: 18%; height: 3px; border-radius: 999px; background: var(--green);`).
+     - Fundo em cápsula suave (`background: var(--green-soft);`).
+   - Desktop preservado: `@media (min-width: 768px/860px) { .bottom-nav { display: none !important; } }`.
+
+3. **Banner / Modal de LGPD 100% Funcional e Resiliente**:
+   - Tratamento de `localStorage` seguro com bloco `try...catch`, impedindo que modos de navegação anônima ou restrições de terceiros travem a execução do script.
+   - Disparo automático com timer após 600ms quando não aceito previamente, ou sob demanda via parâmetro de URL (`?lgpd=1` ou hash `#lgpd`).
+   - Botão gatilho no rodapé legal de ambas as páginas: `<button type="button" class="btn-footer-privacy" id="btn-open-lgpd">Privacidade & Cookies (LGPD)</button>`, além de ouvintes para seletores `[data-open-lgpd]`, `a[href="#lgpd"]` e `a[href="#privacidade"]`.
+   - Funções globais expostas: `window.openLgpdModal()` e `window.closeLgpdModal()`.
+   - Camada visual com `z-index: 1000` (acima de z-50), posicionado acima do dock móvel com `bottom: calc(64px + env(safe-area-inset-bottom))`, sem obstruir a navegação nem vazar a largura do viewport.
+
+4. **Preservação de Visualizações Desktop & Validação de Build**:
+   - Menus desktop (`.site-header .nav`) mantidos íntegros com visualização flex, cápsulas segmentadas e scroll-spy sincronizado.
+   - Suíte de testes automatizados com Playwright executada com 100% de aprovação (JSON-LD bem formado, zero erros no console, zero overflow horizontal em todas as larguras).
 1. **Segurança & LGPD Blindadas**:
    - `_headers`: Adicionadas diretivas `base-uri 'self'`, `form-action 'self' https://wa.me`, `Cross-Origin-Opener-Policy: same-origin` e `Cross-Origin-Resource-Policy: same-origin`.
    - **Toast de Privacidade LGPD Redesenhado (Ultra-compacto & À Esquerda)**: Posicionado no canto inferior esquerdo (`left: 20px; bottom: 24px; right: auto; max-width: 320px;`), liberando totalmente o lado direito onde ficam os exemplos práticos, simuladores e terminais. No mobile, converte-se em barra horizontal compacta acima do dock inferior (`bottom: calc(66px + env(safe-area-inset-bottom))`), sem obstruir a tela. Aplicado de forma idêntica e consistente tanto em `index.html` quanto em `portfolio-data-driven.html`.

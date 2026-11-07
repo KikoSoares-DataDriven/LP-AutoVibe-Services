@@ -8,6 +8,28 @@
 
 Landing page "Turbinando Experts" — **sistemas sob medida com IA** para pequenas empresas (dashboards, CRM, automações, agente de IA). Dono: Kiko Soares, Porto Alegre/RS. WhatsApp: `+55 51 92000-0513`. Deploy target: `https://turbinando-experts.pages.dev/`.
 
+## 🔄 Mudança v3.2 (Mobile-First Overhaul Definitivo - 07/nov/2026)
+
+**Correção Definitiva de Layout Mobile e Sincronização de Navegação:**
+1. **Fim dos Espaços em Branco / Overflow Horizontal (320px–480px):**
+   - Blindagem total em `html` e `body` com `overflow-x: hidden; overflow-x: clip; width: 100%; max-width: 100vw; box-sizing: border-box;`.
+   - `.marquee-section`, `.hero::before` e `.cta-final::before` contidos sem vazar o viewport lateral no mobile.
+   - `.compare-table-wrap` com `width: 100%; max-width: 100%; box-sizing: border-box; overflow-x: auto; -webkit-overflow-scrolling: touch;`.
+   - `scrollWidth` testado e cravado exatamente igual a `innerWidth` em 320px, 360px, 375px, 390px, 412px, 768px, 1024px e 1280px (100% aprovado).
+2. **Menu Inferior (Bottom Nav Dock) Simétrico & Traço Inferior:**
+   - Barra fixa ocupando `w-full` (`width: 100%; max-width: 100%; left: 0; right: 0; margin: 0 auto;`).
+   - Distribuição rigorosamente simétrica em CSS Grid (`grid-template-columns: repeat(5, minmax(0, 1fr));`), cada item com 20% da tela.
+   - Touch targets ergonômicos de 48px de altura (supera os 44px exigidos).
+   - Item ativo com tipografia mais forte (weight 800), cor de acento e traço/pill indicador embaixo (`::after` na base com glow suave).
+3. **Banner / Modal de LGPD Resiliente com Gatilho de Reabertura:**
+   - Tratamento de `localStorage` em `try...catch` contra bloqueios de terceiros ou navegação anônima.
+   - Abertura automática garantida após 600ms e via query/hash (`?lgpd=1` ou `#lgpd`).
+   - Gatilho explícito no rodapé (`#btn-open-lgpd`) e seletores `[data-open-lgpd]`.
+   - `z-index: 1000` (acima de z-50), posicionado acima da bottom bar sem sobreposição.
+4. **Desktop Íntegro & Validação Limpa:**
+   - Menus desktop (`.site-header .nav`) preservados com display flex e cápsulas ativas.
+   - JSON-LD e testes Playwright rodados e 100% aprovados.
+
 ## 🔄 Mudança v3.1 (04/jun/2026)
 
 **Ícones Academia/FitPro:** SVG genérico (nuvem/cérebro no marquee, troféu no depoimento) → ícone de **pessoa levantando peso** (halterofilista com barra e anilhas).
