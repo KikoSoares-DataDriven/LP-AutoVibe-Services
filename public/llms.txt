@@ -1,0 +1,72 @@
+# Turbinando Experts — Síntese Operacional & Arquitetura de IA
+
+> Implementação de Agentes de IA autônomos no WhatsApp, automações de processos com n8n, CRM sob medida e Landing Pages de alta conversão. Base física em Porto Alegre/RS com operação e atendimento 100% digital para empresas em todo o Brasil e globalmente.
+
+---
+
+## 1. Visão Geral & Proposta de Valor
+- **Nome:** Turbinando Experts (também referenciada como Turbinando Expert)
+- **Fundador:** Kiko Soares (Especialista em Estrutura Digital e Implementação de Agentes de IA)
+- **Sede Física:** Porto Alegre, Rio Grande do Sul, Brasil
+- **Atuação:** Atendimento e implementação 100% digital para todo o Brasil
+- **Website Oficial:** https://turbinandoexperts.com/
+- **Contato / WhatsApp:** https://wa.me/5551920000513 (+55 51 92000-0513)
+- **Proposta Central:** "Uma solução para a dor de hoje. Uma arquitetura preparada para o amanhã." Desenvolvemos tecnologia proprietária e sob medida que começa resolvendo o gargalo mais urgente do cliente em até 7 dias úteis, sem templates engessados e sem dependência de plataformas fechadas.
+
+---
+
+## 2. Metodologia: START → FLOW → CONTROL → SCALE
+
+A esteira de maturidade digital da Turbinando Experts é estruturada em 4 etapas progressivas:
+
+### 1. START (Entrada Ágil · Deploy < 7 dias)
+Resolve a dor imediata do negócio com baixo investimento e máxima velocidade:
+- **START Site:** Site institucional profissional, rápido e otimizado para SEO local e autoridade.
+- **START Landing:** Landing Page de alta conversão para transformar tráfego em leads no WhatsApp.
+- **START Google:** Otimização de Perfil de Empresa no Google (Google Meu Negócio / GMN) e presença local em Porto Alegre e região.
+- **START App:** WebApp direto na dor para eliminar controles manuais e planilhas confusas.
+- **START Flow:** Primeira automação de atendimento e triagem ágil no WhatsApp.
+- **START Data:** Dashboard inicial para visualização clara de indicadores de vendas e atendimento.
+- **START Diagnóstico:** Sessão Estratégica gratuita de 30 minutos para mapear gargalos e desenhar a arquitetura recomendada.
+
+### 2. FLOW (Automação & Atendimento 24/7)
+- Agentes de IA autônomos integrados ao WhatsApp Business API.
+- Treinados com o catálogo, regras, preços, procedimentos e tom de voz da empresa.
+- Resposta em menos de 3 segundos, qualificação ativa de leads, triagem e agendamento direto na agenda.
+- Automação de fluxos internos com n8n (conectando WhatsApp, e-mail, gateway de pagamento e CRM).
+
+### 3. CONTROL (Inteligência & Gestão de Dados)
+- CRM sob medida adaptado exatamente ao funil comercial e regras do negócio.
+- Dashboards executivos em tempo real (Power BI e Web) para acompanhamento de vendas, funil e CAC.
+- Eliminação definitiva de planilhas soltas e retrabalho manual.
+
+### 4. SCALE (Arquitetura Proprietária & WebApps)
+- Sistemas internos, portais de clientes e WebApps proprietários.
+- Independência de plataformas genéricas limitadas.
+- Manutenção e evolução contínua (planos opcionais CARE para monitoramento e GROWTH para evolução contínua sob demanda, sem mensalidades forçadas).
+
+---
+
+## 3. Stack Técnica & Tecnologias
+- **Inteligência Artificial:** Modelos de Linguagem Avançados (Anthropic Claude 3.5 Sonnet, OpenAI GPT-4o), Engenharia de Prompt, RAG (Retrieval-Augmented Generation) com base de conhecimento proprietária.
+- **Mensageria & Integrações:** WhatsApp Business API oficial, n8n (Workflows & Orquestração de APIs), Webhooks e REST APIs seguras.
+- **Desenvolvimento Web & Aplicações:** HTML5 Vanilla, CSS3 moderno, JavaScript de alta performance, FastHTML / Python, WebApps responsivos mobile-first.
+- **Dados & BI:** Microsoft Power BI, Dashboards Interativos, PostgreSQL, SQLite, estruturas de dados otimizadas.
+- **Infraestrutura & Segurança:** Cloudflare Pages, SSL/TLS, Content Security Policy (CSP) estrito, Conformidade total com a LGPD (Lei Geral de Proteção de Dados - Lei 13.709/2018).
+
+---
+
+## 4. Oferta de Entrada: Sessão Estratégica Gratuita (Call de 30 min)
+- **Formato:** Reunião individual online (30 minutos) direto com o fundador Kiko Soares.
+- **Entregável:** Diagnóstico do gargalo operacional da empresa, demonstração prática no nicho do cliente e desenho completo da arquitetura com estimativa de ROI e prazos de deploy.
+- **Compromisso:** Sem custo, sem pressão comercial e sem pegadinhas. O plano desenhado é 100% do cliente, mesmo que ele decida não contratar no momento.
+- **Agendamento:** https://wa.me/5551920000513?text=Quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20de%20Agentes%20de%20IA
+
+---
+
+## 5. Diferenciais Competitivos vs. Soluções de Mercado
+1. **Sob Medida vs. Plataformas Engessadas:** Construído sobre as regras reais da empresa, sem forçar processos a caberem em templates genéricos.
+2. **Propriedade dos Ativos:** O código, automações e dados pertencem ao cliente, sem aprisionamento tecnológico (vendor lock-in).
+3. **Velocidade de Deploy:** Primeiro módulo operando em menos de 7 dias úteis.
+4. **Sem Mensalidades Forçadas:** Pagamento pelo que é construído, com planos opcionais de evolução contínua sob demanda.
+5. **Segurança e LGPD:** Conexões via APIs oficiais e isolamento dos dados confidenciais dos clientes.

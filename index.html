@@ -23,13 +23,13 @@
   <meta name="geo.position" content="-30.0346;-51.2177">
   <meta name="ICBM" content="-30.0346, -51.2177">
 
-  <title>Agentes de IA e Automação para Negócios · Turbinando Experts</title>
-  <meta name="description" content="Implemente Agentes de IA autônomos no WhatsApp, automações e sistemas sob medida. Atendimento 24/7 que qualifica e gera receita. Agende sua call estratégica.">
-  <meta name="keywords" content="agentes de ia whatsapp, implementacao agentes de ia, automacao de processos com ia, turbinando experts, call estrategica ia, sistemas sob medida, ia para empresas, chatbots inteligentes, dashboards power bi, n8n automacao, porto alegre rs">
+  <title>Agentes de IA no WhatsApp &amp; Automações em Porto Alegre | Turbinando Experts</title>
+  <meta name="description" content="Implementação de Agentes de IA autônomos no WhatsApp, automações de processos com n8n, CRM sob medida e Landing Pages. Base em Porto Alegre/RS e atendimento 100% digital.">
+  <meta name="keywords" content="agentes de ia whatsapp, implementacao agentes de ia, automacao de processos com n8n, turbinando experts, call estrategica ia, crm sob medida, landing pages, dashboards power bi, porto alegre rs, ia para empresas">
   <meta name="author" content="Kiko Soares">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
-  <meta name="article:modified_time" content="2026-11-06">
+  <meta name="article:modified_time" content="2026-11-08">
 
   <link rel="canonical" href="https://turbinandoexperts.com/">
   <link rel="alternate" hreflang="pt-BR" href="https://turbinandoexperts.com/">
@@ -42,18 +42,18 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://turbinandoexperts.com/">
   <meta property="og:site_name" content="Turbinando Experts">
-  <meta property="og:title" content="Agentes de IA e Automação para Negócios · Turbinando Experts">
-  <meta property="og:description" content="Implemente Agentes de IA autônomos no WhatsApp, automações e sistemas sob medida. Atendimento 24/7 que qualifica e gera receita. Agende sua call estratégica.">
+  <meta property="og:title" content="Agentes de IA no WhatsApp &amp; Automações em Porto Alegre | Turbinando Experts">
+  <meta property="og:description" content="Implementação de Agentes de IA autônomos no WhatsApp, automações de processos com n8n, CRM sob medida e Landing Pages. Base em Porto Alegre/RS e atendimento 100% digital.">
   <meta property="og:image" content="https://turbinandoexperts.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Turbinando Experts — Implementação de Agentes de IA e Automações Sob Medida">
-  <meta property="article:modified_time" content="2026-11-06">
+  <meta property="article:modified_time" content="2026-11-08">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Agentes de IA e Automação para Negócios · Turbinando Experts">
-  <meta name="twitter:description" content="Implemente Agentes de IA autônomos no WhatsApp, automações e sistemas sob medida. Atendimento 24/7 que qualifica e gera receita. Agende sua call estratégica.">
+  <meta name="twitter:title" content="Agentes de IA no WhatsApp &amp; Automações em Porto Alegre | Turbinando Experts">
+  <meta name="twitter:description" content="Implementação de Agentes de IA autônomos no WhatsApp, automações de processos com n8n, CRM sob medida e Landing Pages. Base em Porto Alegre/RS e atendimento 100% digital.">
   <meta name="twitter:image" content="https://turbinandoexperts.com/og-image.png">
 
   <!-- Fonts & DNS Preconnect -->
@@ -77,12 +77,15 @@
       --border-strong: #D6CFBF;
       --border-accent: rgba(0, 135, 68, 0.22);
 
-            /* Claude AI Signature Terracotta / Clay Accent */
-      --claude-clay: #DA7756;
-      --claude-clay-hover: #C15F3C;
-      --claude-clay-soft: rgba(218, 119, 86, 0.10);
-      --claude-clay-border: rgba(218, 119, 86, 0.28);
-      --claude-clay-glow: 0 4px 20px rgba(218, 119, 86, 0.22);
+      /* Claude AI Signature Terracotta / Vibrant Orange Accent (#C96442 / #D97706) */
+      --claude-clay: #C96442;
+      --claude-clay-hover: #B35334;
+      --claude-clay-soft: rgba(201, 100, 66, 0.10);
+      --claude-clay-border: rgba(201, 100, 66, 0.32);
+      --claude-clay-glow: 0 4px 20px rgba(201, 100, 66, 0.28);
+      --claude-orange: #C96442;
+      --claude-orange-hover: #B35334;
+      --claude-amber: #D97706;
 
       /* The User's Preponderant Colors: Verde, Preto e Branco */
       /* Verde (High contrast on light backgrounds + vibrant neon for dark widgets) */
@@ -153,6 +156,9 @@
       --claude-clay-soft: rgba(224, 130, 99, 0.15);
       --claude-clay-border: rgba(224, 130, 99, 0.35);
       --claude-clay-glow: 0 4px 24px rgba(224, 130, 99, 0.3);
+      --claude-orange: #E08263;
+      --claude-orange-hover: #F09678;
+      --claude-amber: #D97706;
 
       --bg-0: #050807;
       --bg-1: #0A0F0B;
@@ -805,12 +811,13 @@
     /* ============================================================
        BUTTONS
     ============================================================ */
-    .btn-primary {
+    .btn-primary,
+    .btn-cta-claude {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: linear-gradient(135deg, var(--green) 0%, #006834 100%);
+      background: linear-gradient(135deg, #C96442 0%, #D97706 100%);
       color: #FFFFFF !important;
       font-family: var(--font-mono);
       font-size: 14px;
@@ -818,16 +825,21 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       padding: 18px 28px;
+      min-height: 48px;
       border-radius: var(--r-md);
-      border: 1px solid rgba(0, 135, 68, 0.4);
+      border: 1px solid rgba(201, 100, 66, 0.45);
       cursor: pointer;
       text-decoration: none;
       position: relative;
       overflow: hidden;
       transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-      box-shadow: 0 4px 18px rgba(0, 135, 68, 0.25);
+      box-shadow: 0 4px 18px rgba(201, 100, 66, 0.32);
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
-    .btn-primary::before {
+    .btn-primary::before,
+    .btn-cta-claude::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -835,18 +847,22 @@
       transform: translateX(-100%);
       transition: transform 0.6s ease;
     }
-    .btn-primary:hover {
-      background: linear-gradient(135deg, var(--green-bright) 0%, var(--green) 100%);
-      border-color: var(--green-bright);
+    .btn-primary:hover,
+    .btn-cta-claude:hover {
+      background: linear-gradient(135deg, #D97706 0%, #B35334 100%);
+      border-color: #D97706;
       color: #FFFFFF !important;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 135, 68, 0.35);
+      box-shadow: 0 8px 26px rgba(201, 100, 66, 0.45);
     }
-    .btn-primary:hover::before {
+    .btn-primary:hover::before,
+    .btn-cta-claude:hover::before {
       transform: translateX(100%);
     }
-    .btn-primary:active { transform: translateY(0); }
-    .btn-primary svg {
+    .btn-primary:active,
+    .btn-cta-claude:active { transform: translateY(0); }
+    .btn-primary svg,
+    .btn-cta-claude svg {
       width: 18px;
       height: 18px;
       flex-shrink: 0;
@@ -854,24 +870,29 @@
       fill: currentColor;
       transition: transform 0.2s ease;
     }
-    .btn-primary:hover svg {
+    .btn-primary:hover svg,
+    .btn-cta-claude:hover svg {
       color: #FFFFFF;
     }
 
-    [data-theme="dark"] .btn-primary {
-      background: var(--green);
-      color: var(--bg-0);
-      border-color: var(--green);
-      box-shadow: var(--shadow-glow);
+    [data-theme="dark"] .btn-primary,
+    [data-theme="dark"] .btn-cta-claude {
+      background: linear-gradient(135deg, #D97706 0%, #C96442 100%);
+      color: #FFFFFF !important;
+      border-color: #E08263;
+      box-shadow: 0 0 24px rgba(201, 100, 66, 0.4);
     }
-    [data-theme="dark"] .btn-primary svg {
-      color: var(--bg-0);
+    [data-theme="dark"] .btn-primary svg,
+    [data-theme="dark"] .btn-cta-claude svg {
+      color: #FFFFFF !important;
+      fill: currentColor;
     }
-    [data-theme="dark"] .btn-primary:hover {
-      background: var(--green-bright);
-      border-color: var(--green-bright);
-      color: var(--bg-0);
-      box-shadow: var(--shadow-glow-strong);
+    [data-theme="dark"] .btn-primary:hover,
+    [data-theme="dark"] .btn-cta-claude:hover {
+      background: linear-gradient(135deg, #E08263 0%, #B35334 100%);
+      border-color: #E08263;
+      color: #FFFFFF !important;
+      box-shadow: 0 0 36px rgba(201, 100, 66, 0.55);
     }
 
     .btn-secondary {
@@ -1436,6 +1457,8 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      min-height: 44px;
+      padding: 8px 0;
       transition: color 0.15s;
     }
     .start-card-action a:hover {
@@ -1550,6 +1573,7 @@
       gap: 16px;
       box-shadow: var(--shadow-sm);
     }
+    .flow-card h3,
     .flow-card h4 {
       font-family: var(--font-display);
       font-size: 17px;
@@ -1754,27 +1778,40 @@
       background: var(--bg-2);
     }
     .quiz-option-card.selected {
-      border-color: var(--green);
-      background: var(--green-soft);
+      border-color: #C96442;
+      background: rgba(201, 100, 66, 0.08);
+      box-shadow: 0 0 0 1px #C96442, 0 4px 16px rgba(201, 100, 66, 0.14);
       color: var(--text-0);
       font-weight: 700;
     }
+    [data-theme="dark"] .quiz-option-card.selected {
+      border-color: #E08263;
+      background: rgba(224, 130, 99, 0.12);
+      box-shadow: 0 0 0 1px #E08263, 0 4px 20px rgba(224, 130, 99, 0.22);
+      color: #FFFFFF;
+    }
     .quiz-option-card .check-circle {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       border: 1px solid var(--border-strong);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: 12px;
       color: transparent;
       transition: all 0.15s;
     }
     .quiz-option-card.selected .check-circle {
-      background: var(--green);
-      border-color: var(--green);
-      color: #FFFFFF;
+      background: var(--green) !important;
+      border-color: var(--green) !important;
+      color: #FFFFFF !important;
+      font-weight: 800;
+    }
+    [data-theme="dark"] .quiz-option-card.selected .check-circle {
+      background: var(--green-neon) !important;
+      border-color: var(--green-neon) !important;
+      color: #050807 !important;
       font-weight: 800;
     }
 
@@ -1848,6 +1885,24 @@
       font-weight: 700;
       color: var(--green);
       line-height: 1;
+    }
+    .result-num-urgency,
+    .results-grid .result-card:first-child .result-num {
+      color: #C96442 !important;
+    }
+    [data-theme="dark"] .result-num-urgency,
+    [data-theme="dark"] .results-grid .result-card:first-child .result-num {
+      color: #E08263 !important;
+    }
+    .results-grid .result-card:first-child .result-tag {
+      color: #C96442;
+      border-color: rgba(201, 100, 66, 0.35);
+      background: rgba(201, 100, 66, 0.08);
+    }
+    [data-theme="dark"] .results-grid .result-card:first-child .result-tag {
+      color: #E08263;
+      border-color: rgba(224, 130, 99, 0.4);
+      background: rgba(224, 130, 99, 0.12);
     }
     .result-label {
       font-size: 13.5px;
@@ -1965,6 +2020,14 @@
       font-family: var(--font-display);
       font-size: 16px;
       color: var(--green);
+    }
+    .about-stat:first-child strong,
+    .about-stat.urgency strong {
+      color: #C96442 !important;
+    }
+    [data-theme="dark"] .about-stat:first-child strong,
+    [data-theme="dark"] .about-stat.urgency strong {
+      color: #E08263 !important;
     }
     .about-stat span {
       font-size: 11px;
@@ -2138,22 +2201,23 @@
       color: var(--green-neon);
     }
     .cta-final .btn-primary {
-      background: var(--green-neon);
-      color: #050807;
-      border-color: var(--green-neon);
-      box-shadow: 0 4px 20px rgba(0, 230, 118, 0.28);
+      background: linear-gradient(135deg, #C96442 0%, #D97706 100%);
+      color: #FFFFFF !important;
+      border-color: rgba(201, 100, 66, 0.5);
+      box-shadow: 0 4px 24px rgba(201, 100, 66, 0.4);
     }
     .cta-final .btn-primary svg {
-      color: #050807;
+      color: #FFFFFF !important;
+      fill: #FFFFFF !important;
     }
     .cta-final .btn-primary:hover {
-      background: #39FF88;
-      border-color: #39FF88;
-      color: #050807;
-      box-shadow: 0 6px 28px rgba(0, 230, 118, 0.45);
+      background: linear-gradient(135deg, #D97706 0%, #B35334 100%);
+      border-color: #D97706;
+      color: #FFFFFF !important;
+      box-shadow: 0 6px 32px rgba(201, 100, 66, 0.55);
     }
     .cta-final .btn-primary:hover svg {
-      color: #050807;
+      color: #FFFFFF !important;
     }
     .cta-final .btn-secondary {
       background: rgba(255, 255, 255, 0.08);
@@ -2266,6 +2330,80 @@
     }
 
     /* ============================================================
+       STICKY ACTION BAR (MOBILE ONLY < 768px - CRO OPTIMIZED)
+    ============================================================ */
+    .sticky-action-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
+      background: var(--bg-bottom-nav);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-top: 1px solid var(--border);
+      padding: 8px 16px calc(8px + env(safe-area-inset-bottom));
+      z-index: 990;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.14);
+    }
+    @media (min-width: 768px) {
+      .sticky-action-bar,
+      .md\:hidden {
+        display: none !important;
+      }
+    }
+    .btn-sticky-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 480px;
+      min-height: 48px;
+      height: 48px;
+      padding: 0 20px;
+      background: linear-gradient(135deg, #C96442 0%, #D97706 100%);
+      color: #FFFFFF !important;
+      font-family: var(--font-mono);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: var(--r-md);
+      border: 1px solid rgba(201, 100, 66, 0.45);
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(201, 100, 66, 0.35);
+      transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    .btn-sticky-action:hover {
+      background: linear-gradient(135deg, #D97706 0%, #B35334 100%);
+      box-shadow: 0 6px 22px rgba(201, 100, 66, 0.45);
+    }
+    .btn-sticky-action:active {
+      transform: scale(0.98);
+    }
+    .btn-sticky-action svg {
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+      fill: #FFFFFF !important;
+      color: #FFFFFF !important;
+    }
+    [data-theme="dark"] .btn-sticky-action {
+      background: linear-gradient(135deg, #D97706 0%, #C96442 100%);
+      border-color: #E08263;
+      box-shadow: 0 0 24px rgba(201, 100, 66, 0.45);
+    }
+
+    /* ============================================================
        MODERN BOTTOM NAV (MOBILE)
     ============================================================ */
     .bottom-nav {
@@ -2281,7 +2419,7 @@
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-top: 1px solid var(--border);
-      display: grid;
+      display: none !important;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       align-items: stretch;
       padding: 4px 6px calc(6px + env(safe-area-inset-bottom));
@@ -2522,7 +2660,8 @@
       font-size: 13px;
       flex-shrink: 0;
     }
-    .wa-sim-info h4 {
+    .wa-sim-info h4,
+    .wa-sim-info .wa-sim-title {
       font-size: 13px;
       font-weight: 700;
       color: #FFFFFF;
@@ -2700,16 +2839,18 @@
       margin: 0;
     }
     .btn-clay {
-      background: linear-gradient(135deg, var(--green) 0%, #006834 100%) !important;
+      background: linear-gradient(135deg, #C96442 0%, #D97706 100%) !important;
       color: #FFFFFF !important;
-      border-color: rgba(0, 135, 68, 0.4) !important;
-      box-shadow: 0 4px 18px rgba(0, 135, 68, 0.25) !important;
+      border-color: rgba(201, 100, 66, 0.45) !important;
+      box-shadow: 0 4px 18px rgba(201, 100, 66, 0.32) !important;
     }
     .btn-clay svg {
       color: #FFFFFF !important;
+      fill: #FFFFFF !important;
     }
     .btn-clay:hover {
-      box-shadow: 0 6px 24px rgba(0, 135, 68, 0.35);
+      background: linear-gradient(135deg, #D97706 0%, #B35334 100%) !important;
+      box-shadow: 0 6px 26px rgba(201, 100, 66, 0.45) !important;
     }
 
         /* ==========================================
@@ -2750,14 +2891,17 @@
         right: 10px;
         width: calc(100% - 20px);
         max-width: calc(100% - 20px);
-        bottom: calc(64px + env(safe-area-inset-bottom));
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 12px;
-        gap: 8px;
+        bottom: calc(72px + env(safe-area-inset-bottom));
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 14px;
+        gap: 10px;
         z-index: 1000;
         box-sizing: border-box;
+      }
+      .te-lgpd-toast-actions {
+        width: 100%;
+        justify-content: flex-start;
       }
     }
     .btn-footer-privacy {
@@ -2805,24 +2949,46 @@
       display: flex;
       gap: 8px;
       align-items: center;
-      flex-shrink: 0;
+      flex-wrap: wrap;
     }
     .btn-lgpd-accept {
       background: var(--green);
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       font-family: var(--font-mono);
       font-size: 11px;
       font-weight: 700;
-      border: none;
-      padding: 6px 14px;
+      border: 1px solid var(--green);
+      padding: 7px 12px;
       border-radius: var(--r-sm);
       cursor: pointer;
       transition: all 0.15s ease;
       white-space: nowrap;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
     .btn-lgpd-accept:hover {
-      opacity: 0.92;
-      transform: scale(1.02);
+      background: var(--green-bright);
+      border-color: var(--green-bright);
+    }
+    .btn-lgpd-reject {
+      background: transparent;
+      color: var(--text-2);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid var(--border-strong);
+      padding: 7px 11px;
+      border-radius: var(--r-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-lgpd-reject:hover {
+      border-color: var(--text-1);
+      color: var(--text-0);
+      background: var(--bg-2);
     }
 
     .lgpd-quiz-badge {
@@ -2865,12 +3031,14 @@
       }
 
       /* ============================================================
-         BOTOES COMPACTOS E PROPORCIONAIS NO MOBILE (WhatsApp & CTAs)
+         BOTOES ERGONOMICOS NO MOBILE (ALTURA MINIMA 48PX - WCAG AA)
       ============================================================ */
       .btn-primary,
       .btn-secondary,
-      .btn-large {
-        min-height: 44px !important;
+      .btn-large,
+      .btn-cta-claude,
+      .btn-sticky-action {
+        min-height: 48px !important;
         letter-spacing: 0.03em !important;
         text-align: center !important;
         justify-content: center !important;
@@ -3180,7 +3348,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ProfessionalService"],
+      "@type": ["ProfessionalService", "LocalBusiness", "Organization"],
       "@id": "https://turbinandoexperts.com/#organization",
       "name": "Turbinando Experts",
       "alternateName": [
@@ -3191,7 +3359,7 @@
       "url": "https://turbinandoexperts.com/",
       "logo": "https://turbinandoexperts.com/og-image.png",
       "image": "https://turbinandoexperts.com/og-image.png",
-      "description": "Especialistas na implementação de Agentes de IA autônomos no WhatsApp, automações de processos e sistemas sob medida para empresas. Base em Porto Alegre/RS e operação 100% digital para atender empresas onde quer que estejam.",
+      "description": "Implementação de Agentes de IA autônomos no WhatsApp, automações de processos com n8n, CRM sob medida e Landing Pages. Base em Porto Alegre/RS e atendimento 100% digital.",
       "telephone": "+5551920000513",
       "priceRange": "$$",
       "founder": {
@@ -3219,20 +3387,29 @@
           "@type": "State",
           "name": "Rio Grande do Sul"
         },
-        "BR"
+        {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Atendimento 100% Digital para todo o Brasil"
+        }
       ],
       "knowsAbout": [
-        "Agentes de IA Autônomos",
-        "Implementação de Agentes de IA para Empresas",
-        "Atendimento Automatizado 24h no WhatsApp",
-        "WhatsApp Business API Oficial",
-        "Automação de Processos com n8n",
-        "Engenharia de Prompt e LLMs Corporativas",
-        "Modelos Claude 3.5 Sonnet e OpenAI",
-        "Sistemas RAG e Base de Conhecimento",
-        "Dashboards Executivos e Power BI",
+        "Agentes de IA",
+        "WhatsApp API",
+        "n8n",
         "CRM Sob Medida",
-        "Vibe Coding e Sistemas Web Proprietários"
+        "Dashboards",
+        "Landing Pages",
+        "Agentes de IA no WhatsApp",
+        "Automação de Processos com n8n",
+        "WhatsApp Business API Oficial",
+        "Dashboards Power BI",
+        "Sistemas e WebApps Sob Medida",
+        "Modelos Claude 3.5 Sonnet e OpenAI",
+        "Sistemas RAG e Base de Conhecimento"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -3384,29 +3561,13 @@
     </div>
   </header>
 
-  <!-- BOTTOM NAV (MOBILE) -->
-  <nav class="bottom-nav" aria-label="Navegação móvel rápida">
-    <a href="#hero" class="bottom-nav-item active" aria-label="Ir ao topo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-      <span>Início</span>
+  <!-- STICKY ACTION BAR (MOBILE - md:hidden) -->
+  <aside class="sticky-action-bar md:hidden" id="sticky-action-bar" aria-label="Agendamento rápido de call">
+    <a href="https://wa.me/5551920000513?text=Quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20de%20Agentes%20de%20IA" class="btn-sticky-action" target="_blank" rel="noopener noreferrer" aria-label="Agendar Call de 30 minutos no WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span>Agendar Call (30 min)</span>
     </a>
-    <a href="#sessao-estrategica" class="bottom-nav-item" aria-label="Call de IA">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <span>Call IA</span>
-    </a>
-    <a href="#solucoes" class="bottom-nav-item" aria-label="Soluções">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-      <span>Soluções</span>
-    </a>
-    <a href="#diagnostico" class="bottom-nav-item" aria-label="Diagnóstico">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-      <span>Diagnóstico</span>
-    </a>
-    <a href="https://wa.me/5551920000513?text=Quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20de%20Agentes%20de%20IA" class="bottom-nav-item highlight-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span>WhatsApp</span>
-    </a>
-  </nav>
+  </aside>
 
   <main id="main">
     <!-- HERO -->
@@ -3428,13 +3589,13 @@
           </div>
 
           <p class="lede">
-            Descubra exatamente onde a Inteligência Artificial pode gerar receita e economizar dezenas de horas da sua equipe. Agende uma <strong>Sessão Estratégica gratuita de 30 minutos</strong> direto com o especialista.
+            Descubra exatamente onde a Inteligência Artificial pode gerar receita e economizar dezenas de horas da sua equipe. Agende seu <strong>diagnóstico individual gratuito de 30 minutos</strong>: você sai da call com a arquitetura desenhada e estimativa de ROI para o seu negócio, sem pressão comercial e sem compromisso.
           </p>
 
           <div class="hero-cta">
-            <a href="https://wa.me/5551920000513?text=Quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20de%20Agentes%20de%20IA" class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Agendar Sessão Estratégica Gratuita">
+            <a href="https://wa.me/5551920000513?text=Quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20de%20Agentes%20de%20IA" class="btn-primary btn-large btn-cta-claude" target="_blank" rel="noopener noreferrer" aria-label="Garantir Diagnóstico de 30 Minutos Gratuito">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Agendar Sessão Estratégica (30 min)
+              Garantir Diagnóstico de 30 Minutos Gratuito
             </a>
             <a href="#sessao-estrategica" class="btn-secondary">
               Como funciona a call ↓
@@ -3442,9 +3603,8 @@
           </div>
 
           <div class="cta-note">
-            <span>Call 100% gratuita</span>
-            <span>Direto com Kiko Soares</span>
-            <span>Sem pressão comercial</span>
+            <span>Call técnica individual com Kiko Soares · Sem pressão comercial</span>
+            <span>Arquitetura desenhada e estimativa de ROI mesmo que não contrate no momento</span>
           </div>
         </div>
 
@@ -3466,7 +3626,7 @@
             <div class="wa-sim-header">
               <div class="wa-sim-avatar">IA</div>
               <div class="wa-sim-info">
-                <h4>Agente Turbinando Experts</h4>
+                <div class="wa-sim-title">Agente Turbinando Experts</div>
                 <span>● Online · Resposta em 3 segundos</span>
               </div>
             </div>
@@ -3888,7 +4048,7 @@
             </div>
             <div class="start-card-action">
               <span class="badge">Presença</span>
-              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Site" target="_blank" rel="noopener noreferrer">Solicitar →</a>
+              <a href="https://wa.me/5551920000513?text=Quero%20agendar%20um%20diagn%C3%B3stico%20do%20START%20Site" target="_blank" rel="noopener noreferrer">Agendar Diagnóstico deste Módulo →</a>
             </div>
           </article>
 
@@ -3901,7 +4061,7 @@
             </div>
             <div class="start-card-action">
               <span class="badge">Vendas</span>
-              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Landing" target="_blank" rel="noopener noreferrer">Solicitar →</a>
+              <a href="https://wa.me/5551920000513?text=Quero%20agendar%20um%20diagn%C3%B3stico%20do%20START%20Landing" target="_blank" rel="noopener noreferrer">Agendar Diagnóstico deste Módulo →</a>
             </div>
           </article>
 
@@ -3914,7 +4074,7 @@
             </div>
             <div class="start-card-action">
               <span class="badge">Local SEO</span>
-              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Google" target="_blank" rel="noopener noreferrer">Solicitar →</a>
+              <a href="https://wa.me/5551920000513?text=Quero%20agendar%20um%20diagn%C3%B3stico%20do%20START%20Google" target="_blank" rel="noopener noreferrer">Agendar Diagnóstico deste Módulo →</a>
             </div>
           </article>
 
@@ -3927,7 +4087,7 @@
             </div>
             <div class="start-card-action">
               <span class="badge">WebApp</span>
-              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20App" target="_blank" rel="noopener noreferrer">Solicitar →</a>
+              <a href="https://wa.me/5551920000513?text=Quero%20agendar%20um%20diagn%C3%B3stico%20do%20START%20App" target="_blank" rel="noopener noreferrer">Agendar Diagnóstico deste Módulo →</a>
             </div>
           </article>
 
@@ -3940,7 +4100,7 @@
             </div>
             <div class="start-card-action">
               <span class="badge">Automação</span>
-              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Flow" target="_blank" rel="noopener noreferrer">Solicitar →</a>
+              <a href="https://wa.me/5551920000513?text=Quero%20agendar%20um%20diagn%C3%B3stico%20do%20START%20Flow" target="_blank" rel="noopener noreferrer">Agendar Diagnóstico deste Módulo →</a>
             </div>
           </article>
 
@@ -3954,7 +4114,7 @@
             </div>
             <div class="start-card-action">
               <span class="badge">Gestão</span>
-              <a href="https://wa.me/5551920000513?text=Quero%20saber%20mais%20sobre%20o%20START%20Data" target="_blank" rel="noopener noreferrer">Solicitar →</a>
+              <a href="https://wa.me/5551920000513?text=Quero%20agendar%20um%20diagn%C3%B3stico%20do%20START%20Data" target="_blank" rel="noopener noreferrer">Agendar Diagnóstico deste Módulo →</a>
             </div>
           </article>
 
@@ -3967,7 +4127,7 @@
             </div>
             <div class="start-card-action">
               <span class="badge">100% Grátis</span>
-              <a href="#diagnostico">Iniciar Quiz →</a>
+              <a href="#diagnostico">Iniciar Quiz de Diagnóstico →</a>
             </div>
           </article>
         </div>
@@ -4035,7 +4195,7 @@
         <!-- Pilares em Ação: FLOW + CONTROL + SCALE + CARE -->
         <div class="flow-showcase fade-up">
           <div class="flow-card">
-            <h4>FLOW · Fluxo Comercial</h4>
+            <h3>FLOW · Fluxo Comercial</h3>
             <div class="flow-pipeline">
               <div class="flow-step-item"><span class="flow-icon">01</span> Lead entra pelo Site ou WhatsApp</div>
               <div class="flow-step-item"><span class="flow-icon">02</span> Agente de IA atende &amp; qualifica 24h</div>
@@ -4043,7 +4203,7 @@
             </div>
           </div>
           <div class="flow-card">
-            <h4>FLOW · Automação Interna</h4>
+            <h3>FLOW · Automação Interna</h3>
             <div class="flow-pipeline">
               <div class="flow-step-item"><span class="flow-icon">01</span> Formulário / Ordem de Serviço</div>
               <div class="flow-step-item"><span class="flow-icon">02</span> n8n processa dados &amp; conecta sistemas</div>
@@ -4051,7 +4211,7 @@
             </div>
           </div>
           <div class="flow-card">
-            <h4>FLOW · Descoberta Local</h4>
+            <h3>FLOW · Descoberta Local</h3>
             <div class="flow-pipeline">
               <div class="flow-step-item"><span class="flow-icon">01</span> Busca local no Google (Porto Alegre)</div>
               <div class="flow-step-item"><span class="flow-icon">02</span> Clique direto pro WhatsApp / Site</div>
@@ -4451,84 +4611,100 @@
           </p>
         </div>
 
-        <div class="faq-list">
-          <details class="faq-item fade-up">
+        <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="faq-item fade-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="faq-q">
-              <span>Vocês atendem somente Porto Alegre/RS?</span>
+              <span itemprop="name">Vocês atendem somente Porto Alegre/RS?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-a">
-              <strong>Não.</strong> Porto Alegre/RS é nossa base física, mas operamos de forma 100% digital. A web elimina qualquer barreira de distância: atendemos, implementamos e acompanhamos sua empresa onde quer que ela esteja, com a mesma agilidade, reuniões focadas e suporte contínuo.
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>Não.</strong> Porto Alegre/RS é nossa base física, mas operamos de forma 100% digital. A web elimina qualquer barreira de distância: atendemos, implementamos e acompanhamos sua empresa onde quer que ela esteja, com a mesma agilidade, reuniões focadas e suporte contínuo.
+              </div>
             </div>
           </details>
 
-          <details class="faq-item fade-up">
+          <details class="faq-item fade-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="faq-q">
-              <span>Vocês fazem sites e Landing Pages?</span>
+              <span itemprop="name">Vocês fazem sites e Landing Pages?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-a">
-              <strong>Sim.</strong> Desenvolvemos desde sites profissionais de alta autoridade até Landing Pages de conversão rápida e WebApps específicos. Seu site pode ser o primeiro módulo da sua operação digital, pronto para conectar automações e CRM no futuro.
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>Sim.</strong> Desenvolvemos desde sites profissionais de alta autoridade até Landing Pages de conversão rápida e WebApps específicos. Seu site pode ser o primeiro módulo da sua operação digital, pronto para conectar automações e CRM no futuro.
+              </div>
             </div>
           </details>
 
-          <details class="faq-item fade-up">
+          <details class="faq-item fade-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="faq-q">
-              <span>Posso começar apenas com um módulo (Linha START)?</span>
+              <span itemprop="name">Posso começar apenas com um módulo (Linha START)?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-a">
-              <strong>Sim — e é o que sempre recomendamos.</strong> A Linha START é pensada exatamente para resolver a dor imediata do seu negócio (como uma Landing Page nova ou o primeiro fluxo de WhatsApp) sem obrigar você a contratar um pacote complexo de uma só vez.
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>Sim — e é o que sempre recomendamos.</strong> A Linha START é pensada exatamente para resolver a dor imediata do seu negócio (como uma Landing Page nova ou o primeiro fluxo de WhatsApp) sem obrigar você a contratar um pacote complexo de uma só vez.
+              </div>
             </div>
           </details>
 
-          <details class="faq-item fade-up">
+          <details class="faq-item fade-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="faq-q">
-              <span>Como funcionam as automações de WhatsApp e Agentes de IA?</span>
+              <span itemprop="name">Como funcionam as automações de WhatsApp e Agentes de IA?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-a">
-              Criamos agentes inteligentes treinados com as informações e catálogo da sua empresa. Eles respondem dúvidas, realizam triagem e qualificação de leads, agendam horários e registram as conversas diretamente no seu CRM ou planilha, operando 24h por dia.
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                Criamos agentes inteligentes treinados com as informações e catálogo da sua empresa. Eles respondem dúvidas, realizam triagem e qualificação de leads, agendam horários e registram as conversas diretamente no seu CRM ou planilha, operando 24h por dia.
+              </div>
             </div>
           </details>
 
-          <details class="faq-item fade-up">
+          <details class="faq-item fade-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="faq-q">
-              <span>Vocês constroem sistemas sob medida e WebApps?</span>
+              <span itemprop="name">Vocês constroem sistemas sob medida e WebApps?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-a">
-              <strong>Sim.</strong> Quando planilhas se tornam confusas ou softwares genéricos limitam sua operação, criamos WebApps sob medida: controles de ordens de serviço, clientes, agendamentos, estoque ou painéis internos específicos.
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>Sim.</strong> Quando planilhas se tornam confusas ou softwares genéricos limitam sua operação, criamos WebApps sob medida: controles de ordens de serviço, clientes, agendamentos, estoque ou painéis internos específicos.
+              </div>
             </div>
           </details>
 
-          <details class="faq-item fade-up">
+          <details class="faq-item fade-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="faq-q">
-              <span>Vocês fazem CRM e Dashboards?</span>
+              <span itemprop="name">Vocês fazem CRM e Dashboards?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-a">
-              <strong>Sim.</strong> Na camada CONTROL, organizamos seu funil com CRM personalizado e desenhamos dashboards intuitivos para você acompanhar vendas, atendimento e métricas em uma tela clara, transformando dados em decisões assertivas.
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>Sim.</strong> Na camada CONTROL, organizamos seu funil com CRM personalizado e desenhamos dashboards intuitivos para você acompanhar vendas, atendimento e métricas em uma tela clara, transformando dados em decisões assertivas.
+              </div>
             </div>
           </details>
 
-          <details class="faq-item fade-up">
+          <details class="faq-item fade-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="faq-q">
-              <span>Posso evoluir o projeto depois?</span>
+              <span itemprop="name">Posso evoluir o projeto depois?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-a">
-              <strong>Com certeza.</strong> Toda a nossa arquitetura comercial é fundamentada na evolução contínua: START → FLOW → CONTROL → SCALE. Você resolve a dor de hoje e adiciona novas automações e recursos quando o negócio pedir.
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>Com certeza.</strong> Toda a nossa arquitetura comercial é fundamentada na evolução contínua: START → FLOW → CONTROL → SCALE. Você resolve a dor de hoje e adiciona novas automações e recursos quando o negócio pedir.
+              </div>
             </div>
           </details>
 
-          <details class="faq-item fade-up">
+          <details class="faq-item fade-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="faq-q">
-              <span>Como funciona a manutenção e continuidade (CARE/GROWTH)?</span>
+              <span itemprop="name">Como funciona a manutenção e continuidade (CARE/GROWTH)?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-a">
-              Não cobramos mensalidades forçadas que prendem o cliente. Oferecemos planos opcionais de continuidade (CARE para suporte, estabilidade e monitoramento; GROWTH para novos módulos, relatórios e evolução sob demanda).
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                Não cobramos mensalidades forçadas que prendem o cliente. Oferecemos planos opcionais de continuidade (CARE para suporte, estabilidade e monitoramento; GROWTH para novos módulos, relatórios e evolução sob demanda).
+              </div>
             </div>
           </details>
         </div>
@@ -4544,13 +4720,13 @@
         </h2>
         <p>
           Comece pelo que sua empresa precisa agora. Evolua quando fizer sentido.<br>
-          Agende uma <strong>call de imersão gratuita de 30 minutos</strong> diretamente com o especialista.
+          Agende seu <strong>diagnóstico individual gratuito de 30 minutos</strong> diretamente com o especialista Kiko Soares. Você sai da call com a arquitetura completa desenhada e estimativa de ROI para o seu negócio, mesmo que não contrate no momento.
         </p>
 
         <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-          <a href="https://wa.me/5551920000513?text=Quero%20agendar%20minha%20imers%C3%A3o%20gratuita" class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Agendar Imersão Gratuita no WhatsApp">
+          <a href="https://wa.me/5551920000513?text=Quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20de%20Agentes%20de%20IA" class="btn-primary btn-large btn-cta-claude" target="_blank" rel="noopener noreferrer" aria-label="Garantir Diagnóstico de 30 Minutos Gratuito no WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Agendar Imersão Gratuita
+            Garantir Diagnóstico de 30 Minutos Gratuito
           </a>
           <a href="#diagnostico" class="btn-secondary">
             Fazer Diagnóstico Primeiro
@@ -4558,9 +4734,8 @@
         </div>
 
         <div class="cta-note" style="justify-content: center; margin-top: 24px;">
-          <span>Sem compromisso</span>
-          <span>Diagnóstico real da operação</span>
-          <span>Direto com o especialista</span>
+          <span>Call técnica individual com Kiko Soares · Sem pressão comercial</span>
+          <span>Arquitetura desenhada e estimativa de ROI inclusas mesmo sem contratação</span>
         </div>
       </div>
     </section>
@@ -4606,19 +4781,20 @@
   </footer>
 
   <!-- JAVASCRIPT: Scroll Animations + Quiz Engine + Bottom Nav Spy -->
-  <!-- LGPD CONSENT TOAST (Ultra-compacto & À Esquerda) -->
-  <aside class="te-lgpd-toast" id="te-lgpd-toast" role="dialog" aria-live="polite" aria-label="Aviso de Privacidade e LGPD">
+  <!-- LGPD CONSENT TOAST (COMPLIANCE REAL · ACEITAR / RECUSAR NÃO ESSENCIAIS) -->
+  <aside class="te-lgpd-toast" id="te-lgpd-toast" role="dialog" aria-live="polite" aria-label="Aviso de Privacidade e Consentimento LGPD">
     <div style="display: flex; flex-direction: column; gap: 4px; flex: 1;">
       <div class="te-lgpd-toast-header">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <span>Privacidade &amp; LGPD</span>
       </div>
       <p>
-        Usamos cookies essenciais da operação. Seus dados são protegidos (Lei 13.709/2018). <a href="politica-de-privacidade">Política</a>
+        Usamos cookies essenciais da operação. Scripts analíticos e de marketing só são ativados com sua permissão expressa (Lei 13.709/2018). Saiba mais em nossa <a href="politica-de-privacidade">Política de Privacidade</a>.
       </p>
     </div>
     <div class="te-lgpd-toast-actions">
-      <button class="btn-lgpd-accept" id="btn-lgpd-accept" aria-label="Aceitar privacidade e fechar">Concordar</button>
+      <button type="button" class="btn-lgpd-accept" id="btn-lgpd-accept" aria-label="Aceitar todos os cookies">Concordar</button>
+      <button type="button" class="btn-lgpd-reject" id="btn-lgpd-reject" aria-label="Recusar cookies não essenciais">Recusar Não Essenciais</button>
     </div>
   </aside>
 
@@ -4650,10 +4826,11 @@
       });
     }
 
-    // LGPD Toast Controller (Auditoria Resiliente + Gatilhos de Clique)
+    // LGPD Toast Controller (Compliance Real · Consentimento Explícito & Gatilhos)
     function initLgpdToast() {
       const lgpdToast = document.getElementById('te-lgpd-toast');
       const btnLgpdAccept = document.getElementById('btn-lgpd-accept');
+      const btnLgpdReject = document.getElementById('btn-lgpd-reject');
       if (!lgpdToast) return;
 
       function showLgpd() {
@@ -4672,26 +4849,78 @@
         }, 300);
       }
 
-      // Check localStorage safely (wrapped in try-catch)
-      let accepted = false;
+      // Aplica consentimento e assegura que scripts analíticos/marketing só disparem sob consentimento explícito
+      function applyConsent(granted) {
+        window.teConsent = {
+          analytics: granted,
+          marketing: granted,
+          timestamp: new Date().toISOString()
+        };
+        if (granted) {
+          window.dispatchEvent(new CustomEvent('te_consent_granted', {
+            detail: { analytics: true, marketing: true }
+          }));
+          if (typeof window.gtag === 'function') {
+            window.gtag('consent', 'update', {
+              'analytics_storage': 'granted',
+              'ad_storage': 'granted'
+            });
+          }
+        } else {
+          window.dispatchEvent(new CustomEvent('te_consent_denied', {
+            detail: { analytics: false, marketing: false }
+          }));
+          if (typeof window.gtag === 'function') {
+            window.gtag('consent', 'update', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied'
+            });
+          }
+        }
+      }
+
+      // Check localStorage safely
+      let storedConsent = null;
       try {
-        accepted = localStorage.getItem('te_lgpd_accepted') === 'true';
+        storedConsent = localStorage.getItem('te_lgpd_consent');
+        if (!storedConsent && localStorage.getItem('te_lgpd_accepted') === 'true') {
+          storedConsent = 'all';
+        }
       } catch (e) {
-        accepted = false;
+        storedConsent = null;
+      }
+
+      if (storedConsent === 'all') {
+        applyConsent(true);
+      } else if (storedConsent === 'essential') {
+        applyConsent(false);
       }
 
       // Allow url query param or hash (#lgpd / ?lgpd=1) to force display
       const forceOpen = window.location.search.includes('lgpd') || window.location.hash === '#lgpd';
 
-      if (!accepted || forceOpen) {
+      if (!storedConsent || forceOpen) {
         setTimeout(showLgpd, 600);
       }
 
       if (btnLgpdAccept) {
         btnLgpdAccept.addEventListener('click', () => {
           try {
+            localStorage.setItem('te_lgpd_consent', 'all');
             localStorage.setItem('te_lgpd_accepted', 'true');
           } catch (e) {}
+          applyConsent(true);
+          hideLgpd();
+        });
+      }
+
+      if (btnLgpdReject) {
+        btnLgpdReject.addEventListener('click', () => {
+          try {
+            localStorage.setItem('te_lgpd_consent', 'essential');
+            localStorage.setItem('te_lgpd_accepted', 'essential');
+          } catch (e) {}
+          applyConsent(false);
           hideLgpd();
         });
       }
@@ -5077,16 +5306,16 @@
             <div class="quiz-result-badge">// ${rec.tag}</div>
             <h3 class="quiz-result-title">${rec.module}</h3>
             <p class="quiz-result-desc">${rec.desc}</p>
-            <a href="https://wa.me/5551920000513?text=${waMsg}" class="btn-primary btn-large" target="_blank" rel="noopener noreferrer" style="display: inline-flex;">
+
+            <div class="lgpd-quiz-badge" style="margin-bottom: 14px; text-align: left; line-height: 1.45;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;color:var(--green);flex-shrink:0;" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Seus dados serão utilizados apenas para o retorno do seu diagnóstico e agendamento. <a href="politica-de-privacidade" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:underline;">Política de Privacidade</a>.</span>
+            </div>
+
+            <a href="https://wa.me/5551920000513?text=${waMsg}" class="btn-primary btn-large btn-cta-claude" target="_blank" rel="noopener noreferrer" style="display: inline-flex; width: 100%; justify-content: center; min-height: 48px;">
               <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Enviar Diagnóstico pelo WhatsApp
             </a>
-
-            <div class="lgpd-quiz-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>Seus dados são protegidos em conformidade com a LGPD (Lei 13.709/2018). Sem spam.</span>
-            </div>
-
           </div>
         `;
       }

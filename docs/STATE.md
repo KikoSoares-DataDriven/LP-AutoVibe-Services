@@ -1,11 +1,42 @@
 # STATE — LP Turbinando Experts
 
-**Fase:** v2.4 Implementada (Cards de Contraste Vertical no Comparativo Mobile, Modal de Detalhes dos Dashboards Responsivo com Botão Fechar Ergonômico e Link Interativo para Portfólio no Rodapé) · 07/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, 100% de testes automatizados aprovados no Playwright ✅
+**Fase:** v2.5 Implementada (Compliance LGPD Real com Recusar Não Essenciais, Paleta Laranja Claude em Pontos de Alta Conversão, Alinhamento CRO Hero/Final/Linha START, Sticky Action Bar Mobile, SEO/GEO Local+Global com Schema ProfessionalService, FAQ Microdata e llms.txt para GEO/LLMs) · 08/nov/2026 · baseline: sem build/test (HTML estático), JSON-LD válido, zero build e 100% dos critérios aprovados ✅
 
 ## Estado atual
-- `index.html` = Versão 2.4 com tabela comparativa mantida em telas médias/grandes (`md:`) e convertida em Cards de Contraste Vertical no mobile (`// ASPECTO`, dor em bloco vermelho sutil `✕`, solução em bloco verde destacado `✓`), e link interativo para o portfólio no rodapé com affordance clara (botão pill com hover, transição, ícone de seta e touch target de 44px).
-- `portfolio-data-driven.html` = Versão 2.4 com comparativo "Planilhas Soltas vs. Dashboard Inteligente" em Cards de Contraste Vertical no mobile, e Modal de Detalhes com `max-w-[90vw] md:max-w-2xl lg:max-w-4xl`, rolagem estritamente vertical (`max-h-[85vh] overflow-y-auto overflow-x-hidden`) e botão "X" fixado relativamente no card (`absolute top-3 right-3`) com touch target de 44×44px sempre visível.
+- `index.html` = Versão 2.5 com:
+  1. **LGPD & Privacidade (Compliance Real):** Banner com botões explícitos "Concordar" e "Recusar Não Essenciais", bloqueio preventivo de scripts de terceiros / marketing e disparo via eventos customizados (`te_consent_granted`, `te_consent_denied`). Quiz do "Diagnóstico Guiado" com aviso claro de LGPD antes do envio para o WhatsApp com link para a Política de Privacidade.
+  2. **Design & Sistema de Cores (Verde Base + Laranja Claude):** Cor terracota vibrante (`#C96442` / `#D97706`) implementada nos pontos de alta conversão: botão primário de agendamento ("Garantir Diagnóstico de 30 Minutos Gratuito"), badge de urgência/velocidade (`< 7d deploy`) e estados ativos de seleção no quiz. Verde esmeralda preservado para confirmações (`✓`, WhatsApp simulator e status Online). Contraste WCAG AA auditado e garantido.
+  3. **Copywriting, Persuasão e Direcionamento (CRO):** Hero e CTA final com ação clara "Garantir Diagnóstico de 30 Minutos Gratuito" e micro-copy "Call técnica individual com Kiko Soares · Sem pressão comercial". Cards da Linha START atualizados de "Solicitar →" para "Agendar Diagnóstico deste Módulo →". Entregável da reunião reforçado em toda a página: o visitante sai com a arquitetura desenhada e estimativa de ROI mesmo sem contratação.
+  4. **Mobile-First & Usabilidade:** Implementada a Sticky Action Bar inferior fixa (`md:hidden`) contendo botão em Laranja Claude "Agendar Call (30 min)" direcionando para o WhatsApp oficial. Botões com altura mínima de 48px e proteção estrita contra overflow horizontal.
+  5. **SEO Técnico, GEO & Dados Estruturados:** Headings com hierarquia semântica estrita (único `<h1>` no hero, `<h2>` para seções e `<h3>` para cards). `<title>` e `<meta name="description">` atualizados com foco em Agentes de IA no WhatsApp e Porto Alegre/RS. Schema JSON-LD completo combinando `ProfessionalService`, `LocalBusiness` e `Organization` com knowAbout completo.
+  6. **GEO & Busca Generativa (LLMs):** Seção de FAQ marcada com HTML puro Microdata (`itemscope itemtype="https://schema.org/Question"` e `itemprop="acceptedAnswer"`). Arquivos `public/llms.txt` e `llms.txt` na raiz criados com a síntese completa da Turbinando Experts em Markdown.
+- `portfolio-data-driven.html` = Versão 2.4 com comparativo "Planilhas Soltas vs. Dashboard Inteligente" em Cards de Contraste Vertical no mobile, e Modal de Detalhes com rolagem vertical controlada.
 - Deploy: push no `main` → Cloudflare Pages.
+
+## Feito nesta sessão (Versão 2.5 - Otimizações Técnicas, Visuais e Estruturais)
+1. **LGPD e Privacidade:**
+   - Adicionada opção explícita "Recusar Não Essenciais" no toast de cookies, com controle de estado `localStorage.setItem('te_lgpd_consent', 'essential')`.
+   - Dispatcher de eventos `te_consent_granted` e `te_consent_denied` e hook para `window.gtag` de modo a respeitar consentimento estrito.
+   - Inserido disclaimer legal claro no Passo 8 do Quiz antes do envio dos dados para o WhatsApp.
+2. **Sistema de Cores Claude Terracotta + Verde:**
+   - Variáveis `--claude-clay`, `--claude-orange`, `--claude-amber` integradas no `:root` e `[data-theme="dark"]`.
+   - `.btn-primary`, `.btn-cta-claude`, `.btn-sticky-action`, `.btn-clay` estilizados com gradiente Laranja Claude e contraste WCAG AA.
+   - Badges de urgência `< 7d` estilizados em terracota e cards ativos do quiz com borda/fundo terracota e check verde esmeralda.
+3. **CRO e Alinhamento de Expectativas:**
+   - Padronização do CTA principal: "Garantir Diagnóstico de 30 Minutos Gratuito".
+   - Micro-copy inserido: "Call técnica individual com Kiko Soares · Sem pressão comercial".
+   - Cards da Linha START alinhados com "Agendar Diagnóstico deste Módulo →".
+   - Explicitação do entregável da reunião técnica (mapa da arquitetura e estimativa de ROI).
+4. **Sticky Action Bar e Mobile-First:**
+   - Barra fixa inferior mobile `.sticky-action-bar` com botão Laranja Claude de 48px de altura com espaçamento ergonômico.
+   - Blindagem de overflow-x mantida intacta.
+5. **SEO, GEO e Heading Hierarchy:**
+   - `<h1>` único no hero, `<h2>` para blocos mestres e `<h3>` para cards.
+   - Title e Description alinhados com foco local (Porto Alegre/RS) e global (atendimento 100% digital).
+   - JSON-LD atualizado com `ProfessionalService`, `LocalBusiness`, `Organization`, `founder` e `knowsAbout`.
+6. **LLMs e Busca Generativa:**
+   - FAQ convertido para Microdata Schema.org puro.
+   - `public/llms.txt` e `llms.txt` criados com síntese completa da empresa.
 
 ## Feito nesta sessão (Versão 2.4 - Cards de Contraste, Modal e Affordance de Links)
 1. **Seção "Genérico vs. Sob Medida" (Home / `index.html`):**
