@@ -646,7 +646,7 @@
        HERO
     ============================================================ */
     .hero {
-      padding: 60px var(--space) 56px;
+      padding: clamp(20px, 3.5vw, 32px) var(--space) clamp(36px, 5vw, 56px);
       position: relative;
       overflow: hidden;
       width: 100%;
@@ -666,6 +666,9 @@
       z-index: -1;
     }
     @media (max-width: 767px) {
+      .hero {
+        padding: 16px var(--space) 32px;
+      }
       .hero::before {
         top: -80px;
         right: -30px;
@@ -676,15 +679,15 @@
     }
     .hero-grid {
       display: grid;
-      gap: 48px;
+      gap: 36px;
       align-items: center;
     }
     @media (min-width: 960px) {
       .hero-grid {
         grid-template-columns: 1.3fr 1.05fr;
-        gap: 60px;
+        gap: 52px;
       }
-      .hero { padding: 84px var(--space) 80px; }
+      .hero { padding: 32px var(--space) 56px; }
     }
 
     .hero-eyebrow {
@@ -692,7 +695,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       font-family: var(--font-mono);
       font-size: clamp(10px, 2.3vw, 12px);
       font-weight: 600;
@@ -721,7 +724,7 @@
       line-height: 1.05;
       letter-spacing: -0.025em;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
       color: var(--text-0);
       text-wrap: balance;
       word-break: break-word;
@@ -744,13 +747,13 @@
     .hero .tldr {
       font-family: var(--font-mono);
       font-size: 13.5px;
-      line-height: 1.65;
+      line-height: 1.6;
       color: var(--text-1);
       background: var(--bg-1);
       border: 1px solid var(--border);
       border-left: 3px solid var(--green);
-      padding: 14px 18px;
-      margin-bottom: 22px;
+      padding: 13px 16px;
+      margin-bottom: 16px;
       border-radius: 0 var(--r-sm) var(--r-sm) 0;
       max-width: 640px;
       box-shadow: var(--shadow-sm);
