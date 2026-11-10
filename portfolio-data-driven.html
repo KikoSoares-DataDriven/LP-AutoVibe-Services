@@ -679,8 +679,13 @@
     }
     .hero-grid {
       display: grid;
-      gap: 36px;
+      gap: 32px;
       align-items: center;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      grid-template-columns: minmax(0, 1fr);
+      min-width: 0;
     }
     @media (min-width: 960px) {
       .hero-grid {
@@ -688,6 +693,13 @@
         gap: 52px;
       }
       .hero { padding: 32px var(--space) 56px; }
+    }
+    .hero-content,
+    .hero-visual {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
     }
 
     .hero-eyebrow {
@@ -756,7 +768,11 @@
       margin-bottom: 16px;
       border-radius: 0 var(--r-sm) var(--r-sm) 0;
       max-width: 640px;
+      width: 100%;
+      box-sizing: border-box;
       box-shadow: var(--shadow-sm);
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .hero .tldr strong { color: var(--text-0); font-weight: 700; }
     .hero .tldr-label {
@@ -909,6 +925,10 @@
       font-size: 12px;
       box-shadow: var(--shadow-terminal);
       position: relative;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
     }
     .terminal::before {
       content: '';
@@ -924,8 +944,9 @@
       padding: 10px 14px;
       border-bottom: 1px solid var(--dark-panel-border);
       background: var(--dark-panel-header);
+      min-width: 0;
     }
-    .terminal-dots { display: flex; gap: 6px; }
+    .terminal-dots { display: flex; gap: 6px; flex-shrink: 0; }
     .terminal-dots span { width: 10px; height: 10px; border-radius: 50%; }
     .terminal-dots span:nth-child(1) { background: #FF5F57; }
     .terminal-dots span:nth-child(2) { background: #FFBD2E; }
@@ -938,23 +959,47 @@
       font-size: 11px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
     }
     .terminal-body {
-      padding: 18px;
+      padding: 16px 14px;
       display: flex;
       flex-direction: column;
       gap: 12px;
-      min-height: 290px;
+      min-height: 270px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
     .term-line {
       display: flex;
       gap: 8px;
       align-items: flex-start;
-      line-height: 1.55;
+      line-height: 1.5;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
     }
     .term-prompt { color: var(--green-neon); flex-shrink: 0; font-weight: 700; }
-    .term-cmd { color: #FFFFFF; font-weight: 600; }
-    .term-out { color: #B8C8BC; padding-left: 18px; }
+    .term-cmd {
+      color: #FFFFFF;
+      font-weight: 600;
+      min-width: 0;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    .term-out {
+      color: #B8C8BC;
+      padding-left: 14px;
+      min-width: 0;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
     .term-tag {
       color: var(--green-neon);
       background: rgba(0, 230, 118, 0.1);
@@ -965,6 +1010,7 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      display: inline-block;
     }
     .term-out .hl { color: #39FF88; font-weight: 600; }
     .term-cursor {
@@ -975,28 +1021,36 @@
       animation: blink 1s steps(2) infinite;
       margin-left: 2px;
       vertical-align: middle;
+      flex-shrink: 0;
     }
 
     /* Quick KPI Row */
     .hero-kpis {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 32px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     @media (min-width: 640px) {
-      .hero-kpis { grid-template-columns: repeat(4, 1fr); }
+      .hero-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
     }
     .hero-kpi-card {
       background: var(--bg-1);
       border: 1px solid var(--border);
       border-radius: var(--r-md);
-      padding: 14px 16px;
+      padding: 12px 14px;
       box-shadow: var(--shadow-sm);
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
     }
     .hero-kpi-num {
       font-family: var(--font-display);
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--text-0);
       line-height: 1.2;
@@ -1004,11 +1058,12 @@
     .hero-kpi-num span { color: var(--green); }
     .hero-kpi-label {
       font-family: var(--font-mono);
-      font-size: 10.5px;
+      font-size: 10px;
       color: var(--text-2);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
       margin-top: 4px;
+      word-break: break-word;
     }
 
     /* Marquee */
@@ -1227,6 +1282,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
       font-family: var(--font-mono);
       font-size: 11px;
       color: var(--text-2);
@@ -1316,7 +1373,7 @@
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     .dash-category-badge {
       font-family: var(--font-mono);
@@ -1335,8 +1392,10 @@
       font-size: 22px;
       font-weight: 700;
       color: var(--text-0);
-      margin-bottom: 10px;
-      line-height: 1.25;
+      margin-bottom: 12px;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      word-break: break-word;
     }
     .dash-business-question {
       font-size: 14.5px;
@@ -2492,6 +2551,22 @@
         padding: 10px 14px !important;
         font-size: 10.5px !important;
         box-sizing: border-box !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px 12px !important;
+        justify-content: space-between !important;
+      }
+      .dash-card-category {
+        margin-bottom: 10px !important;
+        gap: 6px 8px !important;
+        flex-wrap: wrap !important;
+      }
+      .dash-card h3 {
+        font-size: 19px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 12px !important;
+        margin-top: 4px !important;
+        word-break: break-word !important;
       }
 
       /* ============================================================
@@ -3345,7 +3420,7 @@
           <article class="dash-card fade-up" data-category="clientes" data-title="Dashboard Análise de Perfil & ICP">
             <div class="dash-card-header">
               <span class="live-status">SEGMENTAÇÃO RFM</span>
-              <span>INTELIGÊNCIA DE CLIENTES</span>
+              <span>PERFIL &amp; LTV</span>
             </div>
             <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-analise-perfil.webp', 'Dashboard Análise de Perfil & ICP', 'Comportamento de compra, segmentação de base e perfil de cliente ideal que gera maior LTV.', 'Segmentação RFM (Recência, Frequência e Valor), LTV (Lifetime Value), Ticket Médio por Segmento, Taxa de Retenção e Churn.')">
               <img src="dashboards/dashboard-analise-perfil.webp" alt="Dashboard de Análise de Perfil de Clientes e ICP no Power BI" loading="lazy">
@@ -3362,7 +3437,7 @@
                   <span class="dash-category-badge">Inteligência de Mercado</span>
                   <span class="badge">ICP &amp; Segmentação</span>
                 </div>
-                <h3>Dashboard Análise de Perfil</h3>
+                <h3>Dashboard Análise de Perfil &amp; ICP</h3>
                 <p class="dash-business-question">
                   <strong>Pergunta respondida:</strong> "Quem é exatamente o perfil de cliente mais valioso da minha base e como direcionar novos esforços de tráfego para atrair clones dele?"
                 </p>
@@ -3389,7 +3464,7 @@
           <article class="dash-card fade-up" data-category="operacoes" data-title="Dashboard Produção & Operações">
             <div class="dash-card-header">
               <span class="live-status">LINHA OPERACIONAL</span>
-              <span>EFICIÊNCIA &amp; GARGALOS</span>
+              <span>OEE &amp; GARGALOS</span>
             </div>
             <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-producao.webp', 'Dashboard Produção & Operações', 'Monitoramento de capacidade produtiva, ordens de serviço, refugo e paradas de linha.', 'OEE (Eficiência Global), Volume Produzido vs Meta, Lead Time de Entrega, Perdas/Refugos e Tempo de Parada de Máquina.')">
               <img src="dashboards/dashboard-producao.webp" alt="Dashboard de Produção e Operações Industriais no Power BI" loading="lazy">
@@ -3406,7 +3481,7 @@
                   <span class="dash-category-badge">Operações &amp; Indústria</span>
                   <span class="badge">OEE &amp; Lead Time</span>
                 </div>
-                <h3>Dashboard Produção</h3>
+                <h3>Dashboard Produção &amp; Operações</h3>
                 <p class="dash-business-question">
                   <strong>Pergunta respondida:</strong> "Onde estão os gargalos que atrasam a entrega dos pedidos e como aumentar a capacidade produtiva sem inflar os custos?"
                 </p>
@@ -3476,8 +3551,8 @@
           <!-- 7. DASHBOARD SAC -->
           <article class="dash-card fade-up" data-category="sac" data-title="Dashboard SAC & Atendimento">
             <div class="dash-card-header">
-              <span class="live-status">PÓS-VENDA &amp; SUPORTE</span>
-              <span>EXPERIÊNCIA DO CLIENTE</span>
+              <span class="live-status">SUPORTE ATIVO</span>
+              <span>RETENÇÃO &amp; CSAT</span>
             </div>
             <div class="dash-card-media" onclick="openLightbox('dashboards/dashboard-sac.webp', 'Dashboard SAC & Atendimento', 'Tempo de resposta, resolução em primeiro contato, CSAT e volumetria de chamados.', 'Tempo Médio de Resposta (TMR), Tempo Médio de Atendimento (TMA), CSAT / NPS, Fila de Espera no WhatsApp e Motivos de Reclamação.')">
               <img src="dashboards/dashboard-sac.webp" alt="Dashboard de SAC e Atendimento ao Cliente em Tempo Real no Power BI" loading="lazy">
@@ -3494,7 +3569,7 @@
                   <span class="dash-category-badge">Suporte &amp; Customer Success</span>
                   <span class="badge">SLA &amp; Satisfação</span>
                 </div>
-                <h3>Dashboard SAC</h3>
+                <h3>Dashboard SAC &amp; Atendimento</h3>
                 <p class="dash-business-question">
                   <strong>Pergunta respondida:</strong> "Quanto tempo nossos clientes esperam para ser respondidos e quais problemas recorrentes estão queimando a reputação da marca?"
                 </p>
